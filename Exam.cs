@@ -9,7 +9,7 @@ namespace Solvish
     internal class Exam
     {
         public List<Question> Questions = new List<Question>();
-        public List<>
+        //public List<>;
         public int right_ans_ct { get; set; }
         public int wrong_ans_ct { get; set; }
         public int skipped_ct { get; set; }
