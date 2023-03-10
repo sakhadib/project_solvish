@@ -9,6 +9,7 @@ namespace Solvish
     internal class Utility
     {
         //Random Number Generator
+        //Other Necessary Functions
         
     }
 }
