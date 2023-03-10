@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Solvish
 {
-    class Utility
+    static class Utility
     {
         //Random Number Generator
         //just call with an int array and it will return the desired value.
-        private Random random = new Random(); // create an instance of the Random class
+        private static Random random = new Random(); // create an instance of the Random class
 
-        public int[] GenerateRandomNumbers(int count, int min, int max)
+        public static int[] GenerateRandomNumbers(int count, int min, int max)
         {
             int[] numbers = new int[count]; // create an array to store the random numbers
 
@@ -24,6 +24,8 @@ namespace Solvish
             return numbers;
         }
 
+        //master question list
+        public static List<Question> master_ques = new List<Question>();
 
         //Other Necessary Functions
 

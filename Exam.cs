@@ -21,7 +21,13 @@ namespace Solvish
 
         public void add_question(int code, int count)
         {
+            
+            int[] q_id = Utility.GenerateRandomNumbers(count, code, code + 25);
+            //these question id questions to be called from chapters.
+            foreach(int qid in q_id)
+            {
 
+            }
         }
     }
 }
