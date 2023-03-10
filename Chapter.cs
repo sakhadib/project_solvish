@@ -9,14 +9,14 @@ namespace Solvish
     internal class Chapter
     {
         public string name {  get; set; }
-        public int ChapterNumber { get; set; }
+        public int Chapter_ID { get; set; }
         
         List<Question> questions = new List<Question>();
 
         public Chapter (string name, int number) 
         {
             this.name = name;
-            ChapterNumber = number;
+            Chapter_ID = number;
         }
     }
 }
