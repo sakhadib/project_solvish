@@ -1,0 +1,18 @@
+Solvish
+
+	> Question Class
+		> statement
+		> options ...
+		> corr_ans
+
+	> Student Class
+		> info
+		> password
+		> list <exams>
+
+	> exam Class
+		> list <question>
+
+	> utility class
+		> random number generator
+		> other purpose
