@@ -39,6 +39,7 @@ namespace Solvish
             totalRight += e.right_ans_ct;
             totalWrong += e.wrong_ans_ct;
             totalPoint += e.point;
+            exams.Add(e);
         }
     }
 }
