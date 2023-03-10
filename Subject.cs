@@ -8,6 +8,13 @@ namespace Solvish
 {
     internal class Subject
     {
+        public string name { get; set; }
 
+        List<Chapter> chapters = new List<Chapter>();
+
+        public Subject(string name) 
+        {
+          this.name = name;
+        }
     }
 }
