@@ -26,6 +26,20 @@ namespace Solvish
 
         //master question list
         public static List<Question> master_ques = new List<Question>();
+        public static Question qq;
+        //return question from master list
+        public static Question getques(int id)
+        {
+            foreach (Question question in master_ques)
+            {
+                if(question.id == id)
+                {
+                    qq = question;
+                }
+            }
+            return qq;
+        }
+
 
         //Other Necessary Functions
 

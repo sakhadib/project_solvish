@@ -9,6 +9,7 @@ namespace Solvish
     internal class Exam
     {
         public List<Question> Questions = new List<Question>();
+        public List<>
         public int right_ans_ct { get; set; }
         public int wrong_ans_ct { get; set; }
         public int skipped_ct { get; set; }
@@ -26,7 +27,8 @@ namespace Solvish
             //these question id questions to be called from chapters.
             foreach(int qid in q_id)
             {
-
+                Question qq = Utility.getques(qid);
+                Questions.Add(qq);
             }
         }
     }
