@@ -1,0 +1,42 @@
+Solvish
+
+	k> Class Question
+		> statement
+		> op 1
+		> op 2
+		> op 3
+		> op 4
+		> corr_ans
+		-> f_constructor()
+
+	k> Class Chapter
+		> chapter_name;
+		> chapter_num;
+		> List <question>
+		-> f_constructor()
+
+	k> Class Subject
+		> subject_name;
+		> List <chapter>
+		-> f_constructor()
+
+	s> Class exam
+		> List<question>
+		> Right Ans ct;
+		> WA ct;
+		> skipped ct;
+		> point ct;
+		-> constructor()
+
+	s> Student Class
+		> info
+		> password
+		> total WA
+		> total RA
+		> total pt
+		> list <exams>
+		-> add_exam()
+
+	k> utility class
+		> random number generator
+		> other purpose
