@@ -79,7 +79,7 @@ namespace Solvish
             }
             studentread.Close();
 
-            //initializing question list
+            //initializing question list - Unlock after the question comes.
             /*StreamReader questread = new StreamReader(quespath);
             string quest = questread.ReadLine();
             while (quest != null)

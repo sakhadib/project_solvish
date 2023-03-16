@@ -22,6 +22,9 @@ namespace Solvish
         public signup_form()
         {
             InitializeComponent();
+            MessageBox.Show("If you are not connected to internet, Please connect to the " +
+                "internet before creating account. Or the questions will not be downloaded");
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -43,17 +46,24 @@ namespace Solvish
         { 
             try
             {
-                /*
+                
                    //code for web cliant. Turn on after question file is uploaded
 
-                   string url = "put your url here"; 
-                   string ok = @"F:\ok.txt";
-                   wc.DownloadFileCompleted += new AsyncCompletedEventHandler(filedw);
-                   Uri questions = new Uri(url);
-                   wc.DownloadFileAsync(questions, ok);
-               */
+                if(File.Exists(quespath))
+                {
+                    //do nothing
+                }
+                else
+                {
+                    string url = "https://sakhawatadib.com/wp-content/uploads/2023/03/questions.txt";
+                    string ok = quespath;
+                    wc.DownloadFileCompleted += new AsyncCompletedEventHandler(filedw);
+                    Uri questions = new Uri(url);
+                    wc.DownloadFileAsync(questions, ok);
+
+                }
             }
-            catch
+            catch(Exception)
             {
                 MessageBox.Show("You need to connect to internet to download the questions from server.");
             }
