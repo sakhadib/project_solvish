@@ -77,6 +77,28 @@ namespace Solvish
             }
         }
 
-        
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (tb_pass.UseSystemPasswordChar)
+            {
+                tb_pass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                tb_pass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (tb_retype_pass.UseSystemPasswordChar)
+            {
+                tb_retype_pass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                tb_retype_pass.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
