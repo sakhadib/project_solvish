@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +15,10 @@ namespace Solvish
 {
     public partial class signup_form : Form
     {
-        string studentpath = "username.txt";
+        WebClient wc = new WebClient(); //declaring the web cliant.
+        static string folderdir = @"C:\solvish";
+        public string studentpath = folderdir + @"\username.txt";
+        public string quespath = folderdir + @"\questions.txt";
         public signup_form()
         {
             InitializeComponent();
@@ -36,8 +40,25 @@ namespace Solvish
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            if(tb_name.Text == null || tb_uname.Text == null || tb_pass.Text == null || tb_retype_pass.Text == null) 
+        { 
+            try
+            {
+                /*
+                   //code for web cliant. Turn on after question file is uploaded
+
+                   string url = "put your url here"; 
+                   string ok = @"F:\ok.txt";
+                   wc.DownloadFileCompleted += new AsyncCompletedEventHandler(filedw);
+                   Uri questions = new Uri(url);
+                   wc.DownloadFileAsync(questions, ok);
+               */
+            }
+            catch
+            {
+                MessageBox.Show("You need to connect to internet to download the questions from server.");
+            }
+
+            if (tb_name.Text == null || tb_uname.Text == null || tb_pass.Text == null || tb_retype_pass.Text == null) 
             {
                 MessageBox.Show("Please Fill out All boxes");
             }
@@ -99,6 +120,11 @@ namespace Solvish
             {
                 tb_retype_pass.UseSystemPasswordChar = true;
             }
+        }
+
+        private void filedw(object sender, AsyncCompletedEventArgs e)
+        {
+            MessageBox.Show("Downloaded Questions. You are good to go now");
         }
     }
 }

@@ -16,13 +16,23 @@ namespace Solvish
     public partial class Form1 : Form
     {
         Exam current_exam = new Exam();
-        static string folderdir = @"C:\solvish";
-        public string studentpath = folderdir + @"\username.txt"; //for initializing the student list
-        public string quespath = folderdir + @"\questions.txt"; //for initializing the question list
-        WebClient wc = new WebClient(); //declaring the web cliant.
+        static string folderdir = @"C:\solvish\";
+        public string studentpath = folderdir + "username.txt"; //for initializing the student list
+        public string quespath = folderdir + "questions.txt"; //for initializing the question list
+        
         public Form1()
         {
             InitializeComponent();
+            if (Directory.Exists(folderdir))//kaj kore
+            {
+                // do nothing;
+            }
+            else
+            {
+                //if do not exist then create the directory first.
+                DirectoryInfo dir = new DirectoryInfo(folderdir);
+                dir.Create();
+            }
 
         }
 
@@ -52,27 +62,20 @@ namespace Solvish
         private void Start_Click(object sender, EventArgs e)
         {
 
-            if (Directory.Exists(folderdir))
+            
+
+            if (System.IO.File.Exists(folderdir + studentpath))
             {
-                // do nothing;
+
             }
             else
             {
-                //if do not exist then create the directory first.
-                DirectoryInfo dir = new DirectoryInfo(folderdir);
-                dir.Create();
+                System.IO.File.Create(folderdir + studentpath);
             }
 
-            /*
             
-            code for web cliant. Turn on after question file is updated
 
-            string url = "put your url here"; 
-            string ok = @"F:\ok.txt";
-            wc.DownloadFileCompleted += new AsyncCompletedEventHandler(filedw);
-            Uri questions = new Uri(url);
-            wc.DownloadFileAsync(questions, ok);
-            */
+
 
             //initializing student list
             StreamReader studentread = new StreamReader(studentpath);
@@ -126,10 +129,7 @@ namespace Solvish
 
         }
 
-        private void filedw(object sender, AsyncCompletedEventArgs e)
-        {
-            MessageBox.Show("You are good");
-        }
+        
 
 
     }
