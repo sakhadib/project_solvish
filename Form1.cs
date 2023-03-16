@@ -5,17 +5,21 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace Solvish
 {
     public partial class Form1 : Form
     {
         Exam current_exam = new Exam();
-        public string studentpath = "username.txt"; //for initializing the student list
-        public string quespath = "questions.txt"; //for initializing the question list
+        static string folderdir = @"C:\solvish";
+        public string studentpath = folderdir + @"\username.txt"; //for initializing the student list
+        public string quespath = folderdir + @"\questions.txt"; //for initializing the question list
+        WebClient wc = new WebClient(); //declaring the web cliant.
         public Form1()
         {
             InitializeComponent();
@@ -44,9 +48,32 @@ namespace Solvish
             ff.Show();
             this.Hide();
         }
-        
+
         private void Start_Click(object sender, EventArgs e)
         {
+
+            if (Directory.Exists(folderdir))
+            {
+                // do nothing;
+            }
+            else
+            {
+                //if do not exist then create the directory first.
+                DirectoryInfo dir = new DirectoryInfo(folderdir);
+                dir.Create();
+            }
+
+            /*
+            
+            code for web cliant. Turn on after question file is updated
+
+            string url = "put your url here"; 
+            string ok = @"F:\ok.txt";
+            wc.DownloadFileCompleted += new AsyncCompletedEventHandler(filedw);
+            Uri questions = new Uri(url);
+            wc.DownloadFileAsync(questions, ok);
+            */
+
             //initializing student list
             StreamReader studentread = new StreamReader(studentpath);
             string students = studentread.ReadLine();
@@ -97,6 +124,11 @@ namespace Solvish
                 listBox2.Items.Add(qp);
             }
 
+        }
+
+        private void filedw(object sender, AsyncCompletedEventArgs e)
+        {
+            MessageBox.Show("You are good");
         }
 
 
