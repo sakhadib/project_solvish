@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,10 +14,11 @@ namespace Solvish
     public partial class Form1 : Form
     {
         Exam current_exam = new Exam();
+        public string path = "username.txt"; //for initializing the student list
         public Form1()
         {
             InitializeComponent();
-            
+
         }
 
 
@@ -41,5 +43,21 @@ namespace Solvish
             ff.Show();
             this.Hide();
         }
+        
+        private void Start_Click(object sender, EventArgs e)
+        {
+            //initializing student list
+            StreamReader studentread = new StreamReader(path);
+            string students = studentread.ReadLine();
+            while(students != null)
+            {
+                string[] studentfrags = students.Split(',');
+                //stored as username,
+            }
+
+        }
+
+
     }
+
 }

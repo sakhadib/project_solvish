@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
 
 namespace Solvish
 {
     static class Utility
     {
+        //Nessesary list and static data
+        public static string username;
+        public static List<student> studentsArray = new List<student>();        //master student list
+        
+        
         //Random Number Generator
         //just call with an int array and it will return the desired value.
         private static Random random = new Random(); // create an instance of the Random class
@@ -40,8 +47,12 @@ namespace Solvish
             return qq;
         }
 
+        //initializer methods
+        // in start button. it is implimented
+        
+        
 
         //Other Necessary Functions
-
+        
     }
 }
