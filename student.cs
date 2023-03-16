@@ -18,7 +18,13 @@ namespace Solvish
         public int totalWrong { get; set; }
         public double totalPoint { get; set; }
 
-        
+        public student(string name, string username, string password)
+        {
+
+            this.name = name;
+            this.username = username;
+            this.password = password;
+        }
 
         public void addexam(Exam e)
         {

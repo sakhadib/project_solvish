@@ -32,12 +32,12 @@ namespace Solvish
         }
 
         //master question list
-        public static List<Question> master_ques = new List<Question>();
+        public static List<Question> QuestionsArray = new List<Question>();
         public static Question qq;
         //return question from master list
         public static Question getques(int id)
         {
-            foreach (Question question in master_ques)
+            foreach (Question question in QuestionsArray)
             {
                 if(question.id == id)
                 {

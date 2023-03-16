@@ -52,8 +52,16 @@ namespace Solvish
             while(students != null)
             {
                 string[] studentfrags = students.Split(',');
-                //stored as username,
+                //stored as name,username,password
+                string name = studentfrags[0];
+                string username = studentfrags[1];
+                string password = studentfrags[2];
+
+                student s = new student(name, username, password);
+                Utility.studentsArray.Add(s);
+                students = studentread.ReadLine();
             }
+            studentread.Close();
 
         }
 
