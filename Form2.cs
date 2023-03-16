@@ -47,7 +47,7 @@ namespace Solvish
             try
             {
                 
-                   //code for web cliant. Turn on after question file is uploaded
+                //code for web cliant. Turn on after question file is uploaded
 
                 if(File.Exists(quespath))
                 {
