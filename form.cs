@@ -59,5 +59,17 @@ namespace Solvish
                 MessageBox.Show("Wrong Username or Password");
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if(pass_tb.UseSystemPasswordChar)
+            {
+                pass_tb.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                pass_tb.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
