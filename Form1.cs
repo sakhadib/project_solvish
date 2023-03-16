@@ -62,21 +62,6 @@ namespace Solvish
         private void Start_Click(object sender, EventArgs e)
         {
 
-            
-
-            if (System.IO.File.Exists(folderdir + studentpath))
-            {
-
-            }
-            else
-            {
-                System.IO.File.Create(folderdir + studentpath);
-            }
-
-            
-
-
-
             //initializing student list
             StreamReader studentread = new StreamReader(studentpath);
             string students = studentread.ReadLine();
@@ -95,7 +80,7 @@ namespace Solvish
             studentread.Close();
 
             //initializing question list
-            StreamReader questread = new StreamReader(quespath);
+            /*StreamReader questread = new StreamReader(quespath);
             string quest = questread.ReadLine();
             while (quest != null)
             {
@@ -113,7 +98,7 @@ namespace Solvish
                 Utility.QuestionsArray.Add(q);
                 quest = questread.ReadLine();
             }
-            questread.Close();
+            questread.Close();*/
 
             //testing
             foreach(student s in Utility.studentsArray)
@@ -121,11 +106,11 @@ namespace Solvish
                 string wp = $"{s.name}\t{s.username}\t{s.password}";
                 listBox1.Items.Add(wp);
             }
-            foreach (Question qqqt in Utility.QuestionsArray)
+            /*foreach (Question qqqt in Utility.QuestionsArray)
             {
                 string qp = $"{qqqt.id}\t{qqqt.statement}\t{qqqt.Option1}\t{qqqt.Option2}\t{qqqt.Option3}\t{qqqt.Option4}\t{qqqt.CorrectAnswer}";
                 listBox2.Items.Add(qp);
-            }
+            }*/
 
         }
 
