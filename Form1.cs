@@ -114,9 +114,13 @@ namespace Solvish
 
         }
 
-        
-
-
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //Just a dummy button to check New_Exam Form
+            New_Exam e1 = new New_Exam();
+            e1.Show();
+            this.Hide();
+        }
     }
 
 }
