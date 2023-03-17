@@ -30,7 +30,10 @@ namespace Solvish
 
         private void button7_Click(object sender, EventArgs e)
         {
-           
+            timer.Stop();
+            Result result = new Result();
+            result.Show();
+            this.Hide();
         }
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
