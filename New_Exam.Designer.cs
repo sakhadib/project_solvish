@@ -104,6 +104,7 @@
             this.StartExambutton.TabIndex = 14;
             this.StartExambutton.Text = "Start Exam";
             this.StartExambutton.UseVisualStyleBackColor = false;
+            this.StartExambutton.Click += new System.EventHandler(this.StartExambutton_Click);
             // 
             // New_Exam
             // 

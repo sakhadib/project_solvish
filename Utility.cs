@@ -10,6 +10,11 @@ namespace Solvish
 {
     static class Utility
     {
+        //Three Variables to implement timer
+        public static int hour { get; set; }
+        public static int minute { get; set; }
+        public static int second { get; set; }
+
         //Nessesary list and static data
         public static string username;
         public static List<student> studentsArray = new List<student>();        //master student list
