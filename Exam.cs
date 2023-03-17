@@ -17,6 +17,8 @@ namespace Solvish
         public double point { get; set; }
         public int q_count { get; set; }
 
+        public DateTime time { get; set; }
+
         public Exam()
         {
 

@@ -13,6 +13,7 @@ namespace Solvish
         //Nessesary list and static data
         public static string username;
         public static List<student> studentsArray = new List<student>();        //master student list
+        public static List<Exam> ExamsArray = new List<Exam>(); 
         
         
         //Random Number Generator

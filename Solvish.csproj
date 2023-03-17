@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chapter.cs" />
+    <Compile Include="detailed_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detailed_view.Designer.cs">
+      <DependentUpon>detailed_view.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exam.cs" />
     <Compile Include="form.cs">
       <SubType>Form</SubType>
@@ -84,6 +90,9 @@
     <Compile Include="student.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="detailed_view.resx">
+      <DependentUpon>detailed_view.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form.resx">
       <DependentUpon>form.cs</DependentUpon>
     </EmbeddedResource>
