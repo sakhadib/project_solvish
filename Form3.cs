@@ -30,10 +30,7 @@ namespace Solvish
 
         private void button7_Click(object sender, EventArgs e)
         {
-            timer = new System.Timers.Timer();  
-            timer.Interval = 1000;
-            timer.Elapsed += Timer_Elapsed;
-            timer.Start();
+           
         }
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
@@ -54,9 +51,28 @@ namespace Solvish
                     s = 59;
                 
                 }
+                else { s--; }
+                if(m==0)
+                {
+                    if(h>0) 
+                    {
+                        h--;
+                        m = 59;
+                    }
+                }
+
+                TimeLabel.Text = $"{h} : {m} : {s}";
             }
 
             ));
+        }
+
+        private void examform_Load(object sender, EventArgs e)
+        {
+            timer = new System.Timers.Timer();
+            timer.Interval = 1000;
+            timer.Elapsed += Timer_Elapsed;
+            timer.Start();
         }
     }
 }
