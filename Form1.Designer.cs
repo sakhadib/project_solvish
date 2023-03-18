@@ -95,11 +95,19 @@
             // 
             // button4
             // 
+<<<<<<< HEAD
             this.button4.Location = new System.Drawing.Point(276, 476);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(137, 56);
             this.button4.TabIndex = 5;
             this.button4.Text = "dashboard Load";
+=======
+            this.button4.Location = new System.Drawing.Point(322, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(87, 36);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "DummyButton";
+>>>>>>> 813570b4a33e397f452747538b7bc1ea4d60743a
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

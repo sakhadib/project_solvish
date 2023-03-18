@@ -116,8 +116,15 @@ namespace Solvish
 
         private void button4_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             dashboard d = new dashboard();
             d.Show();
+=======
+            //Just a dummy button to check New_Exam Form
+            New_Exam e1 = new New_Exam();
+            e1.Show();
+            this.Hide();
+>>>>>>> 813570b4a33e397f452747538b7bc1ea4d60743a
         }
     }
 
