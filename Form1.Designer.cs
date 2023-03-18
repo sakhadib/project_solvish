@@ -34,6 +34,7 @@
             this.Start = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -92,11 +93,22 @@
             this.listBox2.Size = new System.Drawing.Size(644, 173);
             this.listBox2.TabIndex = 4;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(276, 476);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(137, 56);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "dashboard Load";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 728);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.Start);
@@ -117,6 +129,7 @@
         private System.Windows.Forms.Button Start;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button4;
     }
 }
 

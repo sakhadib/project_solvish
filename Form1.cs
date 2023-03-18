@@ -114,9 +114,11 @@ namespace Solvish
 
         }
 
-        
-
-
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dashboard d = new dashboard();
+            d.Show();
+        }
     }
 
 }
