@@ -15,6 +15,8 @@ namespace Solvish
         public New_Exam()
         {
             InitializeComponent();
+            string z = "subject\t\tchapter\t\tchaptercode";
+            listBox1.Items.Add(z);
         }
 
         private void StartExambutton_Click(object sender, EventArgs e)
@@ -26,6 +28,13 @@ namespace Solvish
             examform e1 = new examform();
             e1.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            string z = "subject\t\tchapter\t\tchaptercode";
+            listBox1.Items.Add(z);
         }
     }
 }
