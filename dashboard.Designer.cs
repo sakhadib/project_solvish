@@ -35,11 +35,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
+//<<<<<<< HEAD
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-=======
->>>>>>> 813570b4a33e397f452747538b7bc1ea4d60743a
+//=======
+//>>>>>>> 813570b4a33e397f452747538b7bc1ea4d60743a
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -148,7 +148,7 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-<<<<<<< HEAD
+//<<<<<<< HEAD
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(13)))));
@@ -183,8 +183,8 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button1_Click);
             // 
-=======
->>>>>>> 813570b4a33e397f452747538b7bc1ea4d60743a
+//=======
+//>>>>>>> 813570b4a33e397f452747538b7bc1ea4d60743a
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

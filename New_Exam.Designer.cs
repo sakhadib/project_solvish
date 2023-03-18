@@ -115,7 +115,7 @@
             this.tb_subject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
             this.tb_subject.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_subject.ForeColor = System.Drawing.SystemColors.Info;
-            this.tb_subject.Location = new System.Drawing.Point(225, 12);
+            this.tb_subject.Location = new System.Drawing.Point(225, 30);
             this.tb_subject.Name = "tb_subject";
             this.tb_subject.Size = new System.Drawing.Size(220, 40);
             this.tb_subject.TabIndex = 16;
@@ -125,7 +125,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(7, 18);
+            this.label3.Location = new System.Drawing.Point(7, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 29);
             this.label3.TabIndex = 15;
@@ -136,7 +136,7 @@
             this.tb_chapter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
             this.tb_chapter.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_chapter.ForeColor = System.Drawing.SystemColors.Info;
-            this.tb_chapter.Location = new System.Drawing.Point(225, 67);
+            this.tb_chapter.Location = new System.Drawing.Point(225, 85);
             this.tb_chapter.Name = "tb_chapter";
             this.tb_chapter.Size = new System.Drawing.Size(220, 40);
             this.tb_chapter.TabIndex = 18;
@@ -146,7 +146,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(7, 73);
+            this.label5.Location = new System.Drawing.Point(7, 91);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 29);
             this.label5.TabIndex = 17;
@@ -157,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(756, 324);
+            this.ClientSize = new System.Drawing.Size(493, 324);
             this.Controls.Add(this.tb_chapter);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tb_subject);
