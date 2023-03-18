@@ -119,6 +119,12 @@ namespace Solvish
             dashboard d = new dashboard();
             d.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            New_Exam ne = new New_Exam();
+            ne.Show();
+        }
     }
 
 }

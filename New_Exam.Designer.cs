@@ -153,6 +153,11 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Dynamics",
+            "Mechancis",
+            "WEAP",
+            "Pressure"});
             this.comboBox1.Location = new System.Drawing.Point(279, 238);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(300, 33);
@@ -162,6 +167,11 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "State of Matter",
+            "Structure of Matter",
+            "Periodic Table",
+            "Chemical Bond"});
             this.comboBox2.Location = new System.Drawing.Point(279, 307);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(300, 33);
@@ -171,6 +181,11 @@
             // 
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "ICT & Bangladesh",
+            "Computer security",
+            "Internet Education",
+            "Accounts"});
             this.comboBox3.Location = new System.Drawing.Point(279, 372);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(300, 33);
@@ -206,7 +221,7 @@
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(672, 92);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(680, 584);
+            this.listBox1.Size = new System.Drawing.Size(680, 604);
             this.listBox1.TabIndex = 17;
             // 
             // button3

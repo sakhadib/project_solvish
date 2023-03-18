@@ -102,6 +102,7 @@
     <Compile Include="student.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="Utility.cs" />
+    <Compile Include="utility2.cs" />
     <EmbeddedResource Include="detailed_view.resx">
       <DependentUpon>detailed_view.cs</DependentUpon>
     </EmbeddedResource>
