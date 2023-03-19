@@ -185,6 +185,7 @@
             this.skp_butt.TabIndex = 5;
             this.skp_butt.Text = "skip this question";
             this.skp_butt.UseVisualStyleBackColor = false;
+            this.skp_butt.Click += new System.EventHandler(this.skp_butt_Click);
             // 
             // examform
             // 

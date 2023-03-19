@@ -14,10 +14,10 @@ namespace Solvish
         public static int num_of_ques;
 
         //hisab nikas
-        public static int rt_ans;
-        public static int wr_ans;
-        public static int sk_ans;
-        public static double curr_point;
+        public static int rt_ans = 0;
+        public static int wr_ans = 0;
+        public static int sk_ans = 0 ;
+        public static double curr_point = 0;
 
         //hisab nikash back to zero
         public static void re_init()

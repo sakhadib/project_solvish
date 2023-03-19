@@ -92,6 +92,12 @@ namespace Solvish
             string ans = op_a_btn.Text;         //taking ans
             string st = lab_statement.Text;     //taking statement
             bool corr = iscorr(st, ans);        //checking
+            
+            if (corr)                           //for correct ans
+                pointct(2);                     //pass value 2
+            else                                //for incorrect ans   
+                pointct(0);                     //pass value 0
+
             quescng(index);                     //changing question
             index++;                            //increamenting index
         }
@@ -101,6 +107,12 @@ namespace Solvish
             string ans = op_b_btn.Text;         //taking ans
             string st = lab_statement.Text;     //taking statement
             bool corr = iscorr(st, ans);        //checking
+
+            if (corr)                           //for correct ans
+                pointct(2);                     //pass value 2
+            else                                //for incorrect ans   
+                pointct(0);                     //pass value 0
+
             quescng(index);                     //changing question
             index++;                            //increamenting index
         }
@@ -110,6 +122,12 @@ namespace Solvish
             string ans = op_c_btn.Text;         //taking ans
             string st = lab_statement.Text;     //taking statement
             bool corr = iscorr(st, ans);        //checking
+
+            if (corr)                           //for correct ans
+                pointct(2);                     //pass value 2
+            else                                //for incorrect ans   
+                pointct(0);                     //pass value 0
+
             quescng(index);                     //changing question
             index++;                            //increamenting index
         }
@@ -119,8 +137,19 @@ namespace Solvish
             string ans = op_d_btn.Text;         //taking ans
             string st = lab_statement.Text;     //taking statement
             bool corr = iscorr(st, ans);        //checking
-            quescng(index);         //changing question
-            index++;                //increamenting index
+
+            if (corr)                           //for correct ans
+                pointct(2);                     //pass value 2
+            else                                //for incorrect ans   
+                pointct(0);                     //pass value 0
+
+            quescng(index);                     //changing question
+            index++;                            //increamenting index
+        }
+
+        private void skp_butt_Click(object sender, EventArgs e)
+        {
+            
         }
 
 
@@ -163,6 +192,26 @@ namespace Solvish
         }
 
         //point er chorachori
+        private void pointct(int flag)
+        {
+            if(flag == 2)
+            {
+                utility2.rt_ans++;
+                utility2.curr_point = utility2.curr_point + 1;
+            }
 
+            else if(flag == 1)
+            {
+                utility2.sk_ans++;
+            }
+
+            else
+            {
+                utility2.wr_ans++;
+                utility2.curr_point = utility2.curr_point - 0.25;
+            }
+        }
+
+        
     }
 }
