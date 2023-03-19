@@ -30,15 +30,14 @@
         {
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lab_statement = new System.Windows.Forms.Label();
             this.op_a_btn = new System.Windows.Forms.Button();
             this.op_b_btn = new System.Windows.Forms.Button();
             this.op_c_btn = new System.Windows.Forms.Button();
             this.op_d_btn = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.TimeLabel = new System.Windows.Forms.Label();
+            this.skp_butt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,16 +62,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lab_statement
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(249, 244);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(810, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "This is a demo question for creating position about what the question should be\r\n" +
+            this.lab_statement.AutoSize = true;
+            this.lab_statement.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_statement.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lab_statement.Location = new System.Drawing.Point(98, 259);
+            this.lab_statement.Name = "lab_statement";
+            this.lab_statement.Size = new System.Drawing.Size(810, 29);
+            this.lab_statement.TabIndex = 2;
+            this.lab_statement.Text = "This is a demo question for creating position about what the question should be\r\n" +
     "";
             // 
             // op_a_btn
@@ -143,38 +142,6 @@
             this.op_d_btn.UseVisualStyleBackColor = false;
             this.op_d_btn.Click += new System.EventHandler(this.op_d_btn_Click);
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button5.Location = new System.Drawing.Point(853, 550);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(55, 76);
-            this.button5.TabIndex = 5;
-            this.button5.Text = ">";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button6.Location = new System.Drawing.Point(392, 550);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(55, 76);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "<";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
@@ -184,9 +151,9 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button7.Location = new System.Drawing.Point(465, 550);
+            this.button7.Location = new System.Drawing.Point(1110, 669);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(368, 76);
+            this.button7.Size = new System.Drawing.Size(165, 55);
             this.button7.TabIndex = 5;
             this.button7.Text = "SUBMIT";
             this.button7.UseVisualStyleBackColor = false;
@@ -203,21 +170,36 @@
             this.TimeLabel.TabIndex = 10;
             this.TimeLabel.Text = "Time :";
             // 
+            // skp_butt
+            // 
+            this.skp_butt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.skp_butt.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.skp_butt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.skp_butt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.skp_butt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.skp_butt.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skp_butt.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.skp_butt.Location = new System.Drawing.Point(329, 568);
+            this.skp_butt.Name = "skp_butt";
+            this.skp_butt.Size = new System.Drawing.Size(205, 52);
+            this.skp_butt.TabIndex = 5;
+            this.skp_butt.Text = "skip this question";
+            this.skp_butt.UseVisualStyleBackColor = false;
+            // 
             // examform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.ClientSize = new System.Drawing.Size(1314, 736);
+            this.ClientSize = new System.Drawing.Size(1287, 736);
             this.Controls.Add(this.TimeLabel);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.skp_butt);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.op_d_btn);
             this.Controls.Add(this.op_c_btn);
             this.Controls.Add(this.op_b_btn);
             this.Controls.Add(this.op_a_btn);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lab_statement);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "examform";
@@ -235,14 +217,13 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lab_statement;
         private System.Windows.Forms.Button op_a_btn;
         private System.Windows.Forms.Button op_b_btn;
         private System.Windows.Forms.Button op_c_btn;
         private System.Windows.Forms.Button op_d_btn;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label TimeLabel;
+        private System.Windows.Forms.Button skp_butt;
     }
 }
