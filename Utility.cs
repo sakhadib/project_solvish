@@ -20,8 +20,7 @@ namespace Solvish
         public static List<student> studentsArray = new List<student>();        //master student list
         public static List<Exam> ExamsArray = new List<Exam>();
 
-        //number of questions on current exam
-        public static int num_of_ques;
+        
         
         
         //Random Number Generator

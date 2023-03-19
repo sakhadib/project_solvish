@@ -40,12 +40,15 @@ namespace Solvish
             //getting the number of questions
             try
             {
-                Utility.num_of_ques = Convert.ToInt32(num_of_ques_tb.Text);
+                utility2.num_of_ques = Convert.ToInt32(num_of_ques_tb.Text);
             }
             catch (Exception w)
             { 
                 MessageBox.Show(w.Message);
             }
+
+            //initializing randomized questions for exam
+            utility2.init_ques();
         }
 
        
