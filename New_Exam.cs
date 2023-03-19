@@ -32,17 +32,13 @@ namespace Solvish
             Utility.minute = Convert.ToInt32(tb_minute.Text);
             Utility.second = 0;
 
+            // exam form loading
             examform e1 = new examform();
             e1.Show();
             this.Hide();
         }
 
-        /*
-         * Dynamics
-         * Mechancis
-         * WEAP
-         * Pressure
-         */
+       
         private void button3_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
@@ -64,12 +60,7 @@ namespace Solvish
             listBox1.Items.Add(s);
             utility2.current_exam_chaps.Add(chapcode);
         }
-        /*
-         * State of Matter
-            Structure of Matter
-            Periodic Table
-            Chemical Bond
-        */
+        
         private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Get the selected item in the ComboBox
@@ -84,12 +75,7 @@ namespace Solvish
             utility2.current_exam_chaps.Add(chapcode);
         }
 
-        /*
-          ICT & Bangladesh
-          Computer security
-          Internet Education
-          Accounts
-         */
+        
 
         private void ComboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
