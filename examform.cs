@@ -17,8 +17,12 @@ namespace Solvish
         public examform()
         {
             InitializeComponent();
+            //initializing randomized questions for exam
+            utility2.init_ques();
+
             TimeLabel.Text = $"{Utility.hour} : {Utility.minute} : {Utility.second}";
             quescng(index);
+            index++;
         }
 
         System.Timers.Timer timer;
@@ -97,9 +101,15 @@ namespace Solvish
                 pointct(2);                     //pass value 2
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
-
-            quescng(index);                     //changing question
-            index++;                            //increamenting index
+            if (index != utility2.num_of_ques - 1)
+            {
+                quescng(index);                     //changing question
+                index++;                            //increamenting index
+            }
+            else
+            {
+                MessageBox.Show("Exam is finished. Hit the submit button");
+            }
         }
 
         private void op_b_btn_Click(object sender, EventArgs e)
@@ -113,8 +123,15 @@ namespace Solvish
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
 
-            quescng(index);                     //changing question
-            index++;                            //increamenting index
+            if (index != utility2.num_of_ques - 1)
+            {
+                quescng(index);                     //changing question
+                index++;                            //increamenting index
+            }
+            else
+            {
+                MessageBox.Show("Exam is finished. Hit the submit button");
+            }
         }
 
         private void op_c_btn_Click(object sender, EventArgs e)
@@ -128,8 +145,15 @@ namespace Solvish
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
 
-            quescng(index);                     //changing question
-            index++;                            //increamenting index
+            if (index != utility2.num_of_ques - 1)
+            {
+                quescng(index);                     //changing question
+                index++;                            //increamenting index
+            }
+            else
+            {
+                MessageBox.Show("Exam is finished. Hit the submit button");
+            }
         }
 
         private void op_d_btn_Click(object sender, EventArgs e)
@@ -143,13 +167,29 @@ namespace Solvish
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
 
-            quescng(index);                     //changing question
-            index++;                            //increamenting index
+            if (index != utility2.num_of_ques - 1)
+            {
+                quescng(index);                     //changing question
+                index++;                            //increamenting index
+            }
+            else
+            {
+                MessageBox.Show("Exam is finished. Hit the submit button");
+            }
         }
 
         private void skp_butt_Click(object sender, EventArgs e)
         {
-            
+            pointct(1);
+            if (index != utility2.num_of_ques - 1)
+            {
+                quescng(index);                     //changing question
+                index++;                            //increamenting index
+            }
+            else
+            {
+                MessageBox.Show("Exam is finished. Hit the submit button");
+            }
         }
 
 
@@ -158,7 +198,8 @@ namespace Solvish
         //for question change
         private void quescng(int idx)
         {
-            Question q = utility2.current_questions[idx+1];
+            int xdx = idx + 1;
+            Question q = Utility.QuestionsArray[xdx];   //eikhane utility 2 er list ta dite hobe jeta kaj korteses na
             lab_statement.Text = q.statement;
             op_a_btn.Text = q.Option1;
             op_b_btn.Text = q.Option2;

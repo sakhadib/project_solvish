@@ -47,8 +47,7 @@ namespace Solvish
                 MessageBox.Show(w.Message);
             }
 
-            //initializing randomized questions for exam
-            utility2.init_ques();
+            
         }
 
        
