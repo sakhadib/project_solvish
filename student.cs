@@ -16,6 +16,7 @@ namespace Solvish
 
         public int totalRight { get; set; }
         public int totalWrong { get; set; }
+        public int totalSkipped { get; set; }
         public double totalPoint { get; set; }
 
         public student(string name, string username, string password)

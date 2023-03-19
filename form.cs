@@ -42,6 +42,7 @@ namespace Solvish
                 {
                     //initialize dashboard
                     flag = true;
+                    Utility.current_student= ss;
                     break;
                 }
                 else

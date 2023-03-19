@@ -20,6 +20,8 @@ namespace Solvish
         public static List<student> studentsArray = new List<student>();        //master student list
         public static List<Exam> ExamsArray = new List<Exam>();
 
+        public static student current_student;
+
         
         
         

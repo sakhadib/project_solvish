@@ -13,6 +13,22 @@ namespace Solvish
         public static List<Question> current_questions = new List<Question>();
         public static int num_of_ques;
 
+        //hisab nikas
+        public static int rt_ans;
+        public static int wr_ans;
+        public static int sk_ans;
+        public static double curr_point;
+
+        //hisab nikash back to zero
+        public static void re_init()
+        {
+            Utility.current_student.totalRight += rt_ans;   rt_ans = 0;
+            Utility.current_student.totalWrong += wr_ans;   wr_ans = 0;
+            Utility.current_student.totalSkipped += sk_ans; sk_ans = 0;
+            Utility.current_student.totalPoint += curr_point; curr_point = 0;
+        }
+
+
         //get questions from master list to this list to be appear on exam.
         public static void init_ques()
         {

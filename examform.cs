@@ -34,6 +34,7 @@ namespace Solvish
         //submit button
         private void button7_Click(object sender, EventArgs e)
         {
+            utility2.re_init();
             timer.Stop();
             Result result = new Result();
             result.Show();
@@ -160,5 +161,8 @@ namespace Solvish
                 return false;
             }
         }
+
+        //point er chorachori
+
     }
 }
