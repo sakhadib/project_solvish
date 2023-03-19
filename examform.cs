@@ -28,6 +28,7 @@ namespace Solvish
             
         }
 
+        //submit button
         private void button7_Click(object sender, EventArgs e)
         {
             timer.Stop();
@@ -35,6 +36,8 @@ namespace Solvish
             result.Show();
             this.Hide();
         }
+
+        //method for timer
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
@@ -76,6 +79,28 @@ namespace Solvish
             timer.Interval = 1000;
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
+        }
+
+
+        //option buttons
+        private void op_a_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void op_b_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void op_c_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void op_d_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
