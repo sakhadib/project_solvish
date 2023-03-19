@@ -41,7 +41,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.num_of_ques_tb = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -202,15 +202,15 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Number of question";
             // 
-            // textBox1
+            // num_of_ques_tb
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(380, 462);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 40);
-            this.textBox1.TabIndex = 10;
+            this.num_of_ques_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.num_of_ques_tb.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_of_ques_tb.ForeColor = System.Drawing.SystemColors.Info;
+            this.num_of_ques_tb.Location = new System.Drawing.Point(380, 462);
+            this.num_of_ques_tb.Name = "num_of_ques_tb";
+            this.num_of_ques_tb.Size = new System.Drawing.Size(199, 40);
+            this.num_of_ques_tb.TabIndex = 10;
             // 
             // listBox1
             // 
@@ -260,7 +260,7 @@
             this.Controls.Add(this.tb_minute);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.num_of_ques_tb);
             this.Controls.Add(this.tb_hour);
             this.Controls.Add(this.label4);
             this.Name = "New_Exam";
@@ -285,7 +285,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox num_of_ques_tb;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button3;
     }

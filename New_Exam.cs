@@ -36,6 +36,16 @@ namespace Solvish
             examform e1 = new examform();
             e1.Show();
             this.Hide();
+
+            //getting the number of questions
+            try
+            {
+                Utility.num_of_ques = Convert.ToInt32(num_of_ques_tb.Text);
+            }
+            catch (Exception w)
+            { 
+                MessageBox.Show(w.Message);
+            }
         }
 
        
