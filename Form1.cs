@@ -125,6 +125,15 @@ namespace Solvish
             New_Exam ne = new New_Exam();
             ne.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int[] rn = Utility.GenerateRandomNumbers(7, 1101, 1120);
+            foreach(int r in rn)
+            {
+                listBox3.Items.Add(r);
+            }
+        }
     }
 
 }

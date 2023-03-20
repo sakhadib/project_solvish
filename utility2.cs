@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Solvish
 {
@@ -32,28 +33,33 @@ namespace Solvish
         //get questions from master list to this list to be appear on exam.
         public static void init_ques()
         {
-            int count = current_exam_chaps.Count();
-            int perchap = num_of_ques/ count;
-            int rem = num_of_ques % count;
+            int chapter_count = current_exam_chaps.Count();
+            int perchap = num_of_ques/ chapter_count;
+            int rem = num_of_ques % chapter_count;
 
-            foreach(int c in current_exam_chaps)
+            for(int i=0; i<chapter_count; i++)
             {
-                int[] quesids = Utility.GenerateRandomNumbers(perchap,c+1,c+20);
-                foreach(int s in quesids)
+                int[] quesids = Utility.GenerateRandomNumbers(perchap, current_exam_chaps[i] + 1, current_exam_chaps[i] + 20);
+                foreach(int id in quesids)
                 {
-                    Question q = Utility.getques(s);
-                    current_questions.Add(q);
+                    foreach(Question q in Utility.QuestionsArray)
+                    {
+                        if(q.id == id)
+                        {
+                            utility2.current_questions.Add(q);
+                        }
+                    }
+                    
                 }
             }
-            if(rem != 0)
-            {
-                int c = current_exam_chaps[0];
-                int[] againquesid = Utility.GenerateRandomNumbers(rem, c + 1, c + 20);
-            }
+
+            
             //making the question list random so it wont look like its in serial in chapter.
-            ShuffleQuestions(current_questions);
+            //ShuffleQuestions(current_questions);
             
         }
+
+
 
         public static void ShuffleQuestions(List<Question> current_quest)
         {

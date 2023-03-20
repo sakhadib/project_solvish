@@ -28,6 +28,7 @@ namespace Solvish
 
         private void StartExambutton_Click(object sender, EventArgs e)
         {
+            
             Utility.hour = Convert.ToInt32(tb_hour.Text);
             Utility.minute = Convert.ToInt32(tb_minute.Text);
             Utility.second = 0;
