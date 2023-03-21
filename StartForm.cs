@@ -32,6 +32,7 @@ namespace Solvish
                 //if do not exist then create the directory first.
                 DirectoryInfo dir = new DirectoryInfo(folderdir);
                 dir.Create();
+                
             }
 
         }
@@ -63,6 +64,7 @@ namespace Solvish
                 studentread.Close();
             }
             
+            
             else
             {
                 System.IO.File.Create(studentpath);
@@ -83,52 +85,7 @@ namespace Solvish
                 studentread.Close();
             }
 
-            //initializing question list - Unlock after the question comes.
-            if(System.IO.File.Exists(quespath))
-            {
-                StreamReader questread = new StreamReader(quespath);
-                string quest = questread.ReadLine();
-                while (quest != null)
-                {
-                    string[] quesfrags = quest.Split(',');
-                    //stored as statement,op1,op2,op3,op4,ans
-                    string ID = quesfrags[0];
-                    string statement = quesfrags[1];
-                    string op1 = quesfrags[2];
-                    string op2 = quesfrags[3];
-                    string op3 = quesfrags[4];
-                    string op4 = quesfrags[5];
-                    string corr = quesfrags[6];
-                    int id = Convert.ToInt32(ID);
-                    Question q = new Question(id, statement, op1, op2, op3, op4, corr);
-                    Utility.QuestionsArray.Add(q);
-                    quest = questread.ReadLine();
-                }
-                questread.Close();
-            }
-            else
-            {
-                System.IO.File.Create(quespath);
-                StreamReader questread = new StreamReader(quespath);
-                string quest = questread.ReadLine();
-                while (quest != null)
-                {
-                    string[] quesfrags = quest.Split(',');
-                    //stored as statement,op1,op2,op3,op4,ans
-                    string ID = quesfrags[0];
-                    string statement = quesfrags[1];
-                    string op1 = quesfrags[2];
-                    string op2 = quesfrags[3];
-                    string op3 = quesfrags[4];
-                    string op4 = quesfrags[5];
-                    string corr = quesfrags[6];
-                    int id = Convert.ToInt32(ID);
-                    Question q = new Question(id, statement, op1, op2, op3, op4, corr);
-                    Utility.QuestionsArray.Add(q);
-                    quest = questread.ReadLine();
-                }
-                questread.Close();
-            }
+            
 
             Login_form login = new Login_form();
             login.Show();
