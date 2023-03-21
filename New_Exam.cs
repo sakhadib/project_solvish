@@ -53,8 +53,8 @@ namespace Solvish
 
         public static void initiate_exam()
         {
-            utility2.current_exam = new Exam();
-            utility2.current_exam.
+            //utility2.current_exam = new Exam();
+            //utility2.current_exam.
 
         }
 

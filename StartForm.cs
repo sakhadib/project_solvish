@@ -44,42 +44,91 @@ namespace Solvish
         {
 
             //initializing student list
-            StreamReader studentread = new StreamReader(studentpath);
-            string students = studentread.ReadLine();
-            while(students != null)
+            if(System.IO.File.Exists(studentpath))
             {
-                string[] studentfrags = students.Split(',');
-                //stored as name,username,password
-                string name = studentfrags[0];
-                string username = studentfrags[1];
-                string password = studentfrags[2];
+                StreamReader studentread = new StreamReader(studentpath);
+                string students = studentread.ReadLine();
+                while (students != null)
+                {
+                    string[] studentfrags = students.Split(',');
+                    //stored as name,username,password
+                    string name = studentfrags[0];
+                    string username = studentfrags[1];
+                    string password = studentfrags[2];
 
-                student s = new student(name, username, password);
-                Utility.studentsArray.Add(s);
-                students = studentread.ReadLine();
+                    student s = new student(name, username, password);
+                    Utility.studentsArray.Add(s);
+                    students = studentread.ReadLine();
+                }
+                studentread.Close();
             }
-            studentread.Close();
+            
+            else
+            {
+                System.IO.File.Create(studentpath);
+                StreamReader studentread = new StreamReader(studentpath);
+                string students = studentread.ReadLine();
+                while (students != null)
+                {
+                    string[] studentfrags = students.Split(',');
+                    //stored as name,username,password
+                    string name = studentfrags[0];
+                    string username = studentfrags[1];
+                    string password = studentfrags[2];
+
+                    student s = new student(name, username, password);
+                    Utility.studentsArray.Add(s);
+                    students = studentread.ReadLine();
+                }
+                studentread.Close();
+            }
 
             //initializing question list - Unlock after the question comes.
-            StreamReader questread = new StreamReader(quespath);
-            string quest = questread.ReadLine();
-            while (quest != null)
+            if(System.IO.File.Exists(quespath))
             {
-                string[] quesfrags = quest.Split(',');
-                //stored as statement,op1,op2,op3,op4,ans
-                string ID = quesfrags[0];
-                string statement = quesfrags[1];
-                string op1 = quesfrags[2];
-                string op2 = quesfrags[3];
-                string op3 = quesfrags[4];
-                string op4 = quesfrags[5];
-                string corr = quesfrags[6];
-                int id = Convert.ToInt32(ID);
-                Question q = new Question(id, statement, op1, op2, op3, op4, corr);
-                Utility.QuestionsArray.Add(q);
-                quest = questread.ReadLine();
+                StreamReader questread = new StreamReader(quespath);
+                string quest = questread.ReadLine();
+                while (quest != null)
+                {
+                    string[] quesfrags = quest.Split(',');
+                    //stored as statement,op1,op2,op3,op4,ans
+                    string ID = quesfrags[0];
+                    string statement = quesfrags[1];
+                    string op1 = quesfrags[2];
+                    string op2 = quesfrags[3];
+                    string op3 = quesfrags[4];
+                    string op4 = quesfrags[5];
+                    string corr = quesfrags[6];
+                    int id = Convert.ToInt32(ID);
+                    Question q = new Question(id, statement, op1, op2, op3, op4, corr);
+                    Utility.QuestionsArray.Add(q);
+                    quest = questread.ReadLine();
+                }
+                questread.Close();
             }
-            questread.Close();
+            else
+            {
+                System.IO.File.Create(quespath);
+                StreamReader questread = new StreamReader(quespath);
+                string quest = questread.ReadLine();
+                while (quest != null)
+                {
+                    string[] quesfrags = quest.Split(',');
+                    //stored as statement,op1,op2,op3,op4,ans
+                    string ID = quesfrags[0];
+                    string statement = quesfrags[1];
+                    string op1 = quesfrags[2];
+                    string op2 = quesfrags[3];
+                    string op3 = quesfrags[4];
+                    string op4 = quesfrags[5];
+                    string corr = quesfrags[6];
+                    int id = Convert.ToInt32(ID);
+                    Question q = new Question(id, statement, op1, op2, op3, op4, corr);
+                    Utility.QuestionsArray.Add(q);
+                    quest = questread.ReadLine();
+                }
+                questread.Close();
+            }
 
             Login_form login = new Login_form();
             login.Show();
