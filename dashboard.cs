@@ -21,6 +21,7 @@ namespace Solvish
         public dashboard()
         {
             InitializeComponent();
+            name_label.Text = Convert.ToString(Utility.current_student.username) + "!";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,6 +59,33 @@ namespace Solvish
         private void filedw(object sender, AsyncCompletedEventArgs e)
         {
             MessageBox.Show("Downloaded Questions. You are good to go now");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            New_Exam ne = new New_Exam();
+            ne.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            detailed_view de = new detailed_view();
+            de.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //edit frofile er form dite hobe eikhane............
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Utility.current_student = null;
+            Login_form loo = new Login_form();
+            loo.Show();
+            this.Hide();
         }
     }
 }

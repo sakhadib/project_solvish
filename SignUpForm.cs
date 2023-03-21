@@ -91,7 +91,7 @@ namespace Solvish
                         {
                             if(ss.username == tb_uname.Text)
                             {
-                                MessageBox.Show("Passwords must be more than 7 characters");
+                                MessageBox.Show("Username Exist. Try another");
                                 flag = false;
                                 break;
                             }
@@ -99,13 +99,20 @@ namespace Solvish
                         if(flag)
                         {
                             student s = new student(tb_name.Text, tb_uname.Text, tb_pass.Text);
+                            Utility.studentsArray.Add(s);
                             StreamWriter sw = File.AppendText(studentpath);
                             sw.WriteLine($"{tb_name.Text},{tb_uname.Text},{tb_pass.Text}");
                             sw.Close();
+
+                            Login_form llo = new Login_form();
+                            llo.Show();
+                            this.Hide();
                         }
                     }
                 }
             }
+
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -135,6 +142,13 @@ namespace Solvish
         private void filedw(object sender, AsyncCompletedEventArgs e)
         {
             MessageBox.Show("Downloaded Questions. You are good to go now");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login_form lf = new Login_form();
+            lf.Show();
+            this.Close();
         }
     }
 }

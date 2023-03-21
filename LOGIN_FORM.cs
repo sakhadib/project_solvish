@@ -53,7 +53,9 @@ namespace Solvish
 
             if(flag)
             {
-                MessageBox.Show("You are authenticated");
+                dashboard dd = new dashboard();
+                dd.Show();
+                this.Hide();
             }
             else
             {
@@ -71,6 +73,13 @@ namespace Solvish
             {
                 pass_tb.UseSystemPasswordChar = true;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            signup_form sf = new signup_form();
+            sf.Show();
+            this.Close();
         }
     }
 }

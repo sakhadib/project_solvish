@@ -13,6 +13,9 @@ namespace Solvish
         public static List<int> current_exam_chaps = new List<int>();
         public static List<Question> current_questions = new List<Question>();
         public static int num_of_ques;
+        public static Exam current_exam = new Exam();
+
+        
 
         //hisab nikas
         public static int rt_ans = 0;

@@ -51,7 +51,14 @@ namespace Solvish
             
         }
 
-       
+        public static void initiate_exam()
+        {
+            utility2.current_exam = new Exam();
+            utility2.current_exam.
+
+        }
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();

@@ -13,14 +13,14 @@ using static System.Net.WebRequestMethods;
 
 namespace Solvish
 {
-    public partial class Form1 : Form
+    public partial class StartForm : Form
     {
         Exam current_exam = new Exam();
         static string folderdir = @"C:\solvish\";
         public string studentpath = folderdir + "username.txt"; //for initializing the student list
         public string quespath = folderdir + "questions.txt"; //for initializing the question list
         
-        public Form1()
+        public StartForm()
         {
             InitializeComponent();
             if (Directory.Exists(folderdir))//kaj kore
@@ -38,26 +38,7 @@ namespace Solvish
 
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Login_form f = new Login_form();
-            f.Show();
-            this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            signup_form f1 = new signup_form();
-            f1.Show();
-            this.Hide();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            examform ff = new examform();
-            ff.Show();
-            this.Hide();
-        }
+        
 
         private void Start_Click(object sender, EventArgs e)
         {
@@ -100,8 +81,12 @@ namespace Solvish
             }
             questread.Close();
 
+            Login_form login = new Login_form();
+            login.Show();
+            this.Hide();
+
             //testing
-            foreach(student s in Utility.studentsArray)
+            /*foreach(student s in Utility.studentsArray)
             {
                 string wp = $"{s.name}\t{s.username}\t{s.password}";
                 listBox1.Items.Add(wp);
@@ -110,30 +95,13 @@ namespace Solvish
             {
                 string qp = $"{qqqt.id}\t{qqqt.statement}\t{qqqt.Option1}\t{qqqt.Option2}\t{qqqt.Option3}\t{qqqt.Option4}\t{qqqt.CorrectAnswer}";
                 listBox2.Items.Add(qp);
-            }
+            }*/
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            dashboard d = new dashboard();
-            d.Show();
-        }
+        
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            New_Exam ne = new New_Exam();
-            ne.Show();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            int[] rn = Utility.GenerateRandomNumbers(7, 1101, 1120);
-            foreach(int r in rn)
-            {
-                listBox3.Items.Add(r);
-            }
-        }
+        
     }
 
 }
