@@ -16,6 +16,9 @@ namespace Solvish
         public New_Exam()
         {
             InitializeComponent();
+            tb_hour.Text = "0";
+            tb_minute.Text = "0";
+
             string z = "code\t\tsubject\t\tchapter";
             listBox1.Items.Add(z);
 
@@ -29,9 +32,27 @@ namespace Solvish
         private void StartExambutton_Click(object sender, EventArgs e)
         {
             
-            Utility.hour = Convert.ToInt32(tb_hour.Text);
-            Utility.minute = Convert.ToInt32(tb_minute.Text);
-            Utility.second = 0;
+            try
+            {
+                Utility.hour = Convert.ToInt32(tb_hour.Text);
+                Utility.minute = Convert.ToInt32(tb_minute.Text);
+                Utility.second = 0;
+
+                if (Utility.minute >= 60)
+                {
+                    throw new ArgumentException("Invalid minute value. Value must be between 0 and 60.");
+                }
+
+                if (Utility.hour >= 24)
+                {
+                    throw new ArgumentException("Invalid hour value. Value must be between 0 and 24.");
+                }
+
+            }
+            catch (Exception z)
+            {
+                MessageBox.Show(z.Message + "in the timer");
+            }
 
             // exam form loading
             examform e1 = new examform();

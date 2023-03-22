@@ -16,7 +16,7 @@ namespace Solvish
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new dashboard());
+            Application.Run(new New_Exam());
             
         }
     }

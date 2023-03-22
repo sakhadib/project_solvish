@@ -21,7 +21,7 @@ namespace Solvish
         public dashboard()
         {
             InitializeComponent();
-            //name_label.Text = Convert.ToString(Utility.current_student.username) + "!";
+            name_label.Text = Convert.ToString(Utility.current_student.name) + "!";
         }
 
         private void button1_Click(object sender, EventArgs e)

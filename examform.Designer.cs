@@ -191,6 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
             this.ClientSize = new System.Drawing.Size(1287, 736);
             this.Controls.Add(this.TimeLabel);
@@ -203,6 +204,7 @@
             this.Controls.Add(this.lab_statement);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "examform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Exam";
