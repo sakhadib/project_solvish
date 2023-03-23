@@ -31,14 +31,28 @@ namespace Solvish
 
         public static int[] GenerateRandomNumbers(int count, int min, int max)
         {
-            int[] numbers = new int[count]; // create an array to store the random numbers
+            if (count > (max - min + 1))
+            {
+                throw new ArgumentOutOfRangeException("count", "Count cannot be greater than the range between min and max.");
+            }
+
+            Random random = new Random();
+            HashSet<int> generatedNumbers = new HashSet<int>();
+            int[] result = new int[count];
 
             for (int i = 0; i < count; i++)
             {
-                numbers[i] = random.Next(min, max); // generate a random number between min and max
+                int nextNumber;
+                do
+                {
+                    nextNumber = random.Next(min, max + 1);
+                } while (generatedNumbers.Contains(nextNumber));
+
+                generatedNumbers.Add(nextNumber);
+                result[i] = nextNumber;
             }
 
-            return numbers;
+            return result;
         }
 
         //master question list

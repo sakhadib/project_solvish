@@ -180,15 +180,22 @@ namespace Solvish
 
         private void skp_butt_Click(object sender, EventArgs e)
         {
-            pointct(1);
-            if (index != utility2.num_of_ques - 1)
+            try
             {
-                quescng(index);                     //changing question
-                index++;                            //increamenting index
+                pointct(1);
+                if (index <= utility2.num_of_ques - 1)
+                {
+                    quescng(index);                     //changing question
+                    index++;                            //increamenting index
+                }
+                else
+                {
+                    MessageBox.Show("Exam is finished. Hit the submit button");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Exam is finished. Hit the submit button");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -202,7 +209,7 @@ namespace Solvish
             {
                 int xdx = idx + 1;
                 Question q = utility2.current_questions[xdx];   //eikhane utility 2 er list ta dite hobe jeta kaj kortese na
-                lab_statement.Text = q.statement;
+                lab_statement.Text = q.id + "\t" + q.statement;
                 op_a_btn.Text = q.Option1;
                 op_b_btn.Text = q.Option2;
                 op_c_btn.Text = q.Option3;
