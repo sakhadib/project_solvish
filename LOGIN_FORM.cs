@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -13,6 +14,8 @@ namespace Solvish
 {
     public partial class Login_form : Form
     {
+        
+        
         public Login_form()
         {
             InitializeComponent();
@@ -67,6 +70,15 @@ namespace Solvish
             catch
             {
                 MessageBox.Show("Input Valid Characters");
+            }
+
+            try
+            {
+
+            }
+            catch(Exception ee)
+            {
+                MessageBox.Show(ee.Message);
             }
         }
 

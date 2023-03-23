@@ -18,10 +18,37 @@ namespace Solvish
         static string folderdir = @"C:\solvish";
         public string studentpath = folderdir + @"\username.txt";
         public string quespath = folderdir + @"\questions.txt";
+        public static string exampath = folderdir + folderdir + Utility.current_student.username + ".txt";
+
+        
         public dashboard()
         {
             InitializeComponent();
-            name_label.Text = Convert.ToString(Utility.current_student.name) + "!";
+            name_label.Text = Convert.ToString(Utility.current_student.name) + " !";
+
+            //initializing all previous exams
+            if (System.IO.File.Exists(exampath))
+            {
+                StreamReader examread = new StreamReader(exampath);
+                string exams = examread.ReadLine();
+                while (exams != null)
+                {
+                    string[] examfrags = exams.Split(',');
+                    //stored as name,username,password
+                    string Time = examfrags[0];
+                    int rt_ans = Convert.ToInt32(exams[1]);
+                    int wr_ans = Convert.ToInt32(examfrags[2]);
+                    int skippded = Convert.ToInt32(examfrags[3]);
+                    double point = Convert.ToDouble(examfrags[4]);
+                    int q_count = Convert.ToInt32(examfrags[5]);
+
+                    Exam e = new Exam(rt_ans, wr_ans, skippded, point, q_count, Time);
+                    Utility.ExamsArray.Add(e);
+                    exams = examread.ReadLine();
+                }
+                examread.Close();
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)

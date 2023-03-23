@@ -44,7 +44,7 @@ namespace Solvish
             {
                 StreamWriter sw = File.AppendText(exampath);
                 sw.WriteLine($"{utility2.current_exam.time},{utility2.current_exam.right_ans_ct},{utility2.current_exam.wrong_ans_ct}" +
-                    $",{utility2.current_exam.skipped_ct},{utility2.current_exam.point}");
+                    $",{utility2.current_exam.skipped_ct},{utility2.current_exam.point},{ utility2.current_exam.q_count}");
                 sw.Close();
                 
             }
