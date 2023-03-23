@@ -38,9 +38,9 @@ namespace Solvish
         //submit button
         private void button7_Click(object sender, EventArgs e)
         {
-            utility2.re_init();
+            //utility2.re_init();
             timer.Stop();
-            Result result = new Result();
+            ResultForm result = new ResultForm();
             result.Show();
             this.Hide();
         }
@@ -54,7 +54,7 @@ namespace Solvish
                 if(TimeLabel.Text== "0 : 0 : 0")
                 {
                     timer.Stop();
-                    Result result = new Result();
+                    ResultForm result = new ResultForm();
                     result.Show();
                     this.Hide();
                 }
@@ -209,7 +209,7 @@ namespace Solvish
             {
                 int xdx = idx + 1;
                 Question q = utility2.current_questions[xdx];   //eikhane utility 2 er list ta dite hobe jeta kaj kortese na
-                lab_statement.Text = q.id + "\t" + q.statement;
+                lab_statement.Text = q.statement;
                 op_a_btn.Text = q.Option1;
                 op_b_btn.Text = q.Option2;
                 op_c_btn.Text = q.Option3;
@@ -226,7 +226,7 @@ namespace Solvish
         private bool iscorr(string statement, string ans)
         {
             bool flag = false;
-            foreach (Question q in Utility.QuestionsArray)
+            foreach (Question q in utility2.current_questions)
             {
                 if (statement == q.statement)
                 {

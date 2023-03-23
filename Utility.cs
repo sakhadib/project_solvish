@@ -10,6 +10,9 @@ namespace Solvish
 {
     static class Utility
     {
+        //creating forms
+        //public static dashboard de = new dashboard();
+        
         //Three Variables to implement timer
         public static int hour { get; set; }
         public static int minute { get; set; }

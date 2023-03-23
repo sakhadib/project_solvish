@@ -26,10 +26,25 @@ namespace Solvish
         //hisab nikash back to zero
         public static void re_init()
         {
-            Utility.current_student.totalRight += rt_ans;   rt_ans = 0;
-            Utility.current_student.totalWrong += wr_ans;   wr_ans = 0;
-            Utility.current_student.totalSkipped += sk_ans; sk_ans = 0;
-            Utility.current_student.totalPoint += curr_point; curr_point = 0;
+            current_exam.time = DateTime.Now.ToString();
+            current_exam.right_ans_ct = rt_ans;
+            current_exam.wrong_ans_ct = wr_ans;
+            current_exam.skipped_ct = sk_ans;
+            current_exam.point = curr_point;
+            current_exam.q_count = num_of_ques;
+
+
+
+            Utility.current_student.totalRight += rt_ans;   
+            rt_ans = 0;
+            Utility.current_student.totalWrong += wr_ans;   
+            wr_ans = 0;
+            Utility.current_student.totalSkipped += sk_ans; 
+            sk_ans = 0;
+            Utility.current_student.totalPoint += curr_point; 
+            curr_point = 0;
+
+            
         }
 
 
