@@ -35,31 +35,38 @@ namespace Solvish
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool flag = false;
-            foreach(student ss in Utility.studentsArray)
+            try
             {
-                if(ss.username == uname_tb.Text && ss.password == pass_tb.Text)
+                bool flag = false;
+                foreach (student ss in Utility.studentsArray)
                 {
-                    //initialize dashboard
-                    flag = true;
-                    Utility.current_student= ss;
-                    break;
+                    if (ss.username == uname_tb.Text && ss.password == pass_tb.Text)
+                    {
+                        //initialize dashboard
+                        flag = true;
+                        Utility.current_student = ss;
+                        break;
+                    }
+                    else
+                    {
+                        flag = false;
+                    }
+                }
+
+                if (flag)
+                {
+                    dashboard dd = new dashboard();
+                    dd.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    flag = false;
+                    MessageBox.Show("Wrong Username or Password");
                 }
             }
-
-            if(flag)
+            catch
             {
-                dashboard dd = new dashboard();
-                dd.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Wrong Username or Password");
+                MessageBox.Show("Input Valid Characters");
             }
         }
 

@@ -50,6 +50,7 @@ namespace Solvish
                         if(q.id == id)
                         {
                             utility2.current_questions.Add(q);
+                            break;
                         }
                     }
                     

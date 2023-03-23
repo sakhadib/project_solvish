@@ -198,13 +198,21 @@ namespace Solvish
         //for question change
         private void quescng(int idx)
         {
-            int xdx = idx + 1;
-            Question q = Utility.QuestionsArray[xdx];   //eikhane utility 2 er list ta dite hobe jeta kaj kortese na
-            lab_statement.Text = q.statement;
-            op_a_btn.Text = q.Option1;
-            op_b_btn.Text = q.Option2;
-            op_c_btn.Text = q.Option3;
-            op_d_btn.Text = q.Option4;
+            try
+            {
+                int xdx = idx + 1;
+                Question q = utility2.current_questions[xdx];   //eikhane utility 2 er list ta dite hobe jeta kaj kortese na
+                lab_statement.Text = q.statement;
+                op_a_btn.Text = q.Option1;
+                op_b_btn.Text = q.Option2;
+                op_c_btn.Text = q.Option3;
+                op_d_btn.Text = q.Option4;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //Application.Exit();
+            }
         }
 
         //for correct ans check

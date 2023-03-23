@@ -101,6 +101,12 @@
     </Compile>
     <Compile Include="student.cs" />
     <Compile Include="Subject.cs" />
+    <Compile Include="test_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test_form.Designer.cs">
+      <DependentUpon>test_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility.cs" />
     <Compile Include="utility2.cs" />
     <EmbeddedResource Include="detailed_view.resx">
@@ -136,6 +142,9 @@
     </Compile>
     <EmbeddedResource Include="Result.resx">
       <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test_form.resx">
+      <DependentUpon>test_form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

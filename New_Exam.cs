@@ -54,10 +54,7 @@ namespace Solvish
                 MessageBox.Show(z.Message + "in the timer");
             }
 
-            // exam form loading
-            examform e1 = new examform();
-            e1.Show();
-            this.Hide();
+            
 
             //getting the number of questions
             try
@@ -69,7 +66,12 @@ namespace Solvish
                 MessageBox.Show(w.Message);
             }
 
-            
+            utility2.init_ques();
+
+            // exam form loading
+            examform e1 = new examform();
+            e1.Show();
+            this.Hide();
         }
 
         public static void initiate_exam()
