@@ -59,7 +59,7 @@ namespace Solvish
 
             
             //making the question list random so it wont look like its in serial in chapter.
-            //ShuffleQuestions(current_questions);
+            ShuffleQuestions(current_questions);
             
         }
 
