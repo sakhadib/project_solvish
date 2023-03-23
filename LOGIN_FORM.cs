@@ -72,14 +72,7 @@ namespace Solvish
                 MessageBox.Show("Input Valid Characters");
             }
 
-            try
-            {
-
-            }
-            catch(Exception ee)
-            {
-                MessageBox.Show(ee.Message);
-            }
+            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

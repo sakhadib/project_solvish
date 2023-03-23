@@ -15,10 +15,10 @@ namespace Solvish
     public partial class dashboard : Form
     {
         WebClient wc = new WebClient(); //declaring the web cliant.
-        static string folderdir = @"C:\solvish";
-        public string studentpath = folderdir + @"\username.txt";
-        public string quespath = folderdir + @"\questions.txt";
-        public static string exampath = folderdir + folderdir + Utility.current_student.username + ".txt";
+        static string folderdir = @"C:\solvish\";
+        public string studentpath = folderdir + @"username.txt";
+        public string quespath = folderdir + @"questions.txt";
+        public static string exampath = folderdir + Utility.current_student.username + ".txt";
 
         
         public dashboard()
@@ -27,7 +27,8 @@ namespace Solvish
             name_label.Text = Convert.ToString(Utility.current_student.name) + " !";
 
             //initializing all previous exams
-            if (System.IO.File.Exists(exampath))
+            
+            try
             {
                 StreamReader examread = new StreamReader(exampath);
                 string exams = examread.ReadLine();
@@ -48,7 +49,10 @@ namespace Solvish
                 }
                 examread.Close();
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
