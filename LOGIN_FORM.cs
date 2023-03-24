@@ -14,8 +14,11 @@ namespace Solvish
 {
     public partial class Login_form : Form
     {
+        static string folderdir = @"C:\solvish\";
+        public string studentpath = folderdir + @"username.txt";
+        public string quespath = folderdir + @"questions.txt";
         
-        
+
         public Login_form()
         {
             InitializeComponent();
@@ -72,7 +75,34 @@ namespace Solvish
                 MessageBox.Show("Input Valid Characters");
             }
 
-            
+            //initializing all previous exams
+
+            try
+            {
+                string exampath = folderdir + Utility.current_student.username + ".txt";
+                StreamReader examread = new StreamReader(exampath);
+                string exams = examread.ReadLine();
+                while (exams != null)
+                {
+                    string[] examfrags = exams.Split(',');
+                    //stored as name,username,password
+                    string Time = examfrags[0];
+                    int rt_ans = Convert.ToInt32(examfrags[1]);
+                    int wr_ans = Convert.ToInt32(examfrags[2]);
+                    int skippded = Convert.ToInt32(examfrags[3]);
+                    double point = Convert.ToDouble(examfrags[4]);
+                    int q_count = Convert.ToInt32(examfrags[5]);
+
+                    Exam eq = new Exam(rt_ans, wr_ans, skippded, point, q_count, Time);
+                    Utility.ExamsArray.Add(eq);
+                    exams = examread.ReadLine();
+                }
+                examread.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

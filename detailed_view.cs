@@ -12,24 +12,36 @@ namespace Solvish
 {
     public partial class detailed_view : Form
     {
+        public static int x = 0;
         public detailed_view()
         {
             InitializeComponent();
+            
             List<Exam> ExamsArrayCopy = new List<Exam>(Utility.ExamsArray);
             ExamsArrayCopy.Reverse();
-            string start = "\tDate and Time of exam\tn(Q)\tCA\tWA\tSk\tPt";
-            string mid = "\t                     \t    \t  \t  \t  \t   ";
-            string end = "\t_____________________\t____\t__\t__\t__\t___";
+            string uu = "\t\t\t\tYOUR DETAILED EXAM VIEW";
+            result_lb.Items.Add(uu);
+            string start = "\tNo.\tDate and Time of exam\tn(Q)\tCA\tWA\tSk\tPt";
+            string mid = "\t   \t                     \t    \t  \t  \t  \t   ";
+            string end = "\t___\t_____________________\t____\t__\t__\t__\t___";
+            result_lb.Items.Add(mid);
             result_lb.Items.Add(start);
             result_lb.Items.Add(end);
             result_lb.Items.Add(mid);
-            foreach (Exam e in Utility.ExamsArray)
+            foreach (Exam e in ExamsArrayCopy)
             {
-                string st = $"\t{e.time}\t{e.q_count}\t{e.right_ans_ct}\t{e.wrong_ans_ct}\t{e.skipped_ct}\t{e.point}";
+                string st = $"\t{++x}\t{e.time}\t{e.q_count}\t{e.right_ans_ct}\t{e.wrong_ans_ct}\t{e.skipped_ct}\t{e.point}";
                 result_lb.Items.Add(st);
+                result_lb.Items.Add(mid);
             }
         }
 
-        
+        private void dashboard_btn_Click(object sender, EventArgs e)
+        {
+            x = 0;
+            dashboard d = new dashboard();
+            d.Show();
+            this.Hide();
+        }
     }
 }

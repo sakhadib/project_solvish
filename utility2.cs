@@ -33,6 +33,8 @@ namespace Solvish
             current_exam.point = curr_point;
             current_exam.q_count = num_of_ques;
 
+            Utility.ExamsArray.Add(current_exam);
+
 
 
             Utility.current_student.totalRight += rt_ans;   
