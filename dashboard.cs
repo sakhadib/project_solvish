@@ -65,6 +65,8 @@ namespace Solvish
             Login_form loo = new Login_form();
             loo.Show();
             this.Hide();
+
+            Utility.ExamsArray.Clear();
         }
 
         private void initialize_question_button_Click(object sender, EventArgs e)
@@ -99,6 +101,16 @@ namespace Solvish
             {
                 MessageBox.Show("You need to connect to internet to download the questions from server.");
             }
+        }
+
+        private void dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

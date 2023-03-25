@@ -111,47 +111,53 @@ namespace Solvish
         private void Start_Click(object sender, EventArgs e)
         {
 
-            //initializing student list
-            if(System.IO.File.Exists(studentpath))
+            try
             {
-                StreamReader studentread = new StreamReader(studentpath);
-                string students = studentread.ReadLine();
-                while (students != null)
+                //initializing student list
+                if (System.IO.File.Exists(studentpath))
                 {
-                    string[] studentfrags = students.Split(',');
-                    //stored as name,username,password
-                    string name = studentfrags[0];
-                    string username = studentfrags[1];
-                    string password = studentfrags[2];
+                    StreamReader studentread = new StreamReader(studentpath);
+                    string students = studentread.ReadLine();
+                    while (students != null)
+                    {
+                        string[] studentfrags = students.Split(',');
+                        //stored as name,username,password
+                        string name = studentfrags[0];
+                        string username = studentfrags[1];
+                        string password = studentfrags[2];
 
-                    student s = new student(name, username, password);
-                    Utility.studentsArray.Add(s);
-                    students = studentread.ReadLine();
+                        student s = new student(name, username, password);
+                        Utility.studentsArray.Add(s);
+                        students = studentread.ReadLine();
+                    }
+                    studentread.Close();
                 }
-                studentread.Close();
+
+
+                else
+                {
+                    System.IO.File.Create(studentpath);
+                    StreamReader studentread = new StreamReader(studentpath);
+                    string students = studentread.ReadLine();
+                    while (students != null)
+                    {
+                        string[] studentfrags = students.Split(',');
+                        //stored as name,username,password
+                        string name = studentfrags[0];
+                        string username = studentfrags[1];
+                        string password = studentfrags[2];
+
+                        student s = new student(name, username, password);
+                        Utility.studentsArray.Add(s);
+                        students = studentread.ReadLine();
+                    }
+                    studentread.Close();
+                }
             }
-            
-            
-            else
+            catch (Exception ex)
             {
-                System.IO.File.Create(studentpath);
-                StreamReader studentread = new StreamReader(studentpath);
-                string students = studentread.ReadLine();
-                while (students != null)
-                {
-                    string[] studentfrags = students.Split(',');
-                    //stored as name,username,password
-                    string name = studentfrags[0];
-                    string username = studentfrags[1];
-                    string password = studentfrags[2];
-
-                    student s = new student(name, username, password);
-                    Utility.studentsArray.Add(s);
-                    students = studentread.ReadLine();
-                }
-                studentread.Close();
+                MessageBox.Show(ex.Message);
             }
-
             
 
             Login_form login = new Login_form();

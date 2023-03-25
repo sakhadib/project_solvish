@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.initialize_question_button = new System.Windows.Forms.Button();
@@ -37,8 +38,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.hello_label = new System.Windows.Forms.Label();
             this.name_label = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -150,7 +153,7 @@
             this.hello_label.AutoSize = true;
             this.hello_label.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hello_label.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.hello_label.Location = new System.Drawing.Point(871, 9);
+            this.hello_label.Location = new System.Drawing.Point(258, 12);
             this.hello_label.Name = "hello_label";
             this.hello_label.Size = new System.Drawing.Size(65, 29);
             this.hello_label.TabIndex = 2;
@@ -161,11 +164,22 @@
             this.name_label.AutoSize = true;
             this.name_label.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_label.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.name_label.Location = new System.Drawing.Point(942, 9);
+            this.name_label.Location = new System.Drawing.Point(329, 12);
             this.name_label.Name = "name_label";
             this.name_label.Size = new System.Drawing.Size(65, 29);
             this.name_label.TabIndex = 2;
             this.name_label.Text = "Hello";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1110, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dashboard
             // 
@@ -174,6 +188,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1160, 726);
+            this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.name_label);
             this.Controls.Add(this.hello_label);
@@ -181,9 +197,11 @@
             this.MaximizeBox = false;
             this.Name = "dashboard";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +218,6 @@
         private System.Windows.Forms.Button past_exams_btn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button initialize_question_button;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

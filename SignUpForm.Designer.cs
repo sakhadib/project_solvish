@@ -73,7 +73,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(1068, 63);
+            this.button1.Location = new System.Drawing.Point(1075, 63);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(220, 51);
             this.button1.TabIndex = 5;
@@ -198,7 +198,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1368, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(1262, 10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 47);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -209,7 +209,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Solvish.Properties.Resources.signup_vector;
-            this.pictureBox3.Location = new System.Drawing.Point(641, 235);
+            this.pictureBox3.Location = new System.Drawing.Point(546, 420);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(820, 402);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -253,7 +253,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.ClientSize = new System.Drawing.Size(1427, 855);
+            this.ClientSize = new System.Drawing.Size(1318, 855);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tb_retype_pass);
             this.Controls.Add(this.tb_uname);
