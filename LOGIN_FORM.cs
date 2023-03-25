@@ -124,9 +124,9 @@ namespace Solvish
 
         private void label4_Click(object sender, EventArgs e)
         {
-            signup_form sf = new signup_form();
-            sf.Show();
-            this.Close();
+            
+            utility_form.signup_Form.Show();
+            this.Hide();
         }
     }
 }

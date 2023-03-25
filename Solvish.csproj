@@ -88,6 +88,7 @@
       <DependentUpon>edit_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Exam.cs" />
+    <Compile Include="utility_form.cs" />
     <Compile Include="LOGIN_FORM.cs">
       <SubType>Form</SubType>
     </Compile>

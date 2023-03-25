@@ -135,9 +135,8 @@ namespace Solvish
 
         private void label2_Click_1(object sender, EventArgs e)
         {
-            Login_form lf = new Login_form();
-            lf.Show();
-            this.Close();
+            utility_form.login_form.Show();
+            this.Hide();
         }
     }
 }

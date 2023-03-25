@@ -158,10 +158,10 @@ namespace Solvish
             {
                 MessageBox.Show(ex.Message);
             }
-            
 
-            Login_form login = new Login_form();
-            login.Show();
+            utility_form.signup_Form = new signup_form();
+            utility_form.login_form = new Login_form();
+            utility_form.login_form.Show();
             /*test_form tf = new test_form();
             tf.Show();*/
             this.Hide();
