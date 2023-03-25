@@ -25,6 +25,8 @@ namespace Solvish
             MessageBox.Show("If you are not connected to internet, Please connect to the " +
                 "internet before creating account. Or the questions will not be downloaded");
 
+            tb_name.Focus();
+
         }
 
         private void label2_Click(object sender, EventArgs e)
