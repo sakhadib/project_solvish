@@ -48,12 +48,13 @@
             // 
             // tb_hour
             // 
-            this.tb_hour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.tb_hour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.tb_hour.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_hour.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_hour.ForeColor = System.Drawing.SystemColors.Info;
             this.tb_hour.Location = new System.Drawing.Point(250, 106);
             this.tb_hour.Name = "tb_hour";
-            this.tb_hour.Size = new System.Drawing.Size(63, 40);
+            this.tb_hour.Size = new System.Drawing.Size(63, 33);
             this.tb_hour.TabIndex = 10;
             // 
             // label4
@@ -91,26 +92,27 @@
             // 
             // tb_minute
             // 
-            this.tb_minute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.tb_minute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.tb_minute.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_minute.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_minute.ForeColor = System.Drawing.SystemColors.Info;
             this.tb_minute.Location = new System.Drawing.Point(443, 106);
             this.tb_minute.Name = "tb_minute";
-            this.tb_minute.Size = new System.Drawing.Size(63, 40);
+            this.tb_minute.Size = new System.Drawing.Size(63, 33);
             this.tb_minute.TabIndex = 13;
             // 
             // StartExambutton
             // 
-            this.StartExambutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.StartExambutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(8)))));
             this.StartExambutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
             this.StartExambutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.StartExambutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(13)))), ((int)(((byte)(5)))));
+            this.StartExambutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.StartExambutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StartExambutton.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartExambutton.ForeColor = System.Drawing.Color.Black;
-            this.StartExambutton.Location = new System.Drawing.Point(318, 637);
+            this.StartExambutton.Location = new System.Drawing.Point(70, 556);
             this.StartExambutton.Name = "StartExambutton";
-            this.StartExambutton.Size = new System.Drawing.Size(261, 56);
+            this.StartExambutton.Size = new System.Drawing.Size(509, 56);
             this.StartExambutton.TabIndex = 14;
             this.StartExambutton.Text = "Start Exam";
             this.StartExambutton.UseVisualStyleBackColor = false;
@@ -204,36 +206,37 @@
             // 
             // num_of_ques_tb
             // 
-            this.num_of_ques_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.num_of_ques_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.num_of_ques_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.num_of_ques_tb.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.num_of_ques_tb.ForeColor = System.Drawing.SystemColors.Info;
-            this.num_of_ques_tb.Location = new System.Drawing.Point(380, 462);
+            this.num_of_ques_tb.Location = new System.Drawing.Point(380, 471);
             this.num_of_ques_tb.Name = "num_of_ques_tb";
-            this.num_of_ques_tb.Size = new System.Drawing.Size(199, 40);
+            this.num_of_ques_tb.Size = new System.Drawing.Size(199, 33);
             this.num_of_ques_tb.TabIndex = 10;
             // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(189)))));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(672, 92);
+            this.listBox1.ItemHeight = 24;
+            this.listBox1.Location = new System.Drawing.Point(630, 92);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(680, 604);
+            this.listBox1.Size = new System.Drawing.Size(529, 604);
             this.listBox1.TabIndex = 17;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(8)))));
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(13)))), ((int)(((byte)(5)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Location = new System.Drawing.Point(1091, 35);
+            this.button3.Location = new System.Drawing.Point(898, 35);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(261, 51);
             this.button3.TabIndex = 18;
@@ -246,7 +249,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1410, 768);
+            this.ClientSize = new System.Drawing.Size(1217, 768);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.comboBox3);

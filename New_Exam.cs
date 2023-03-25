@@ -12,15 +12,19 @@ namespace Solvish
 {
     public partial class New_Exam : Form
     {
-        
+        static string k = "                  ";
+        static string x = "__\t_______\t\t___________";
+        static int pp = 0;
         public New_Exam()
         {
             InitializeComponent();
             tb_hour.Text = "0";
             tb_minute.Text = "0";
 
-            string z = "code\t\tsubject\t\tchapter";
+            string z = "no\tsubject\t\tchapter";
+            
             listBox1.Items.Add(z);
+            listBox1.Items.Add(x);
 
             comboBox1.SelectedIndexChanged += ComboBox1_SelectedIndexChanged;
             comboBox2.SelectedIndexChanged += ComboBox2_SelectedIndexChanged;
@@ -31,7 +35,7 @@ namespace Solvish
 
         private void StartExambutton_Click(object sender, EventArgs e)
         {
-            
+            pp = 0;
             try
             {
                 Utility.hour = Convert.ToInt32(tb_hour.Text);
@@ -85,8 +89,10 @@ namespace Solvish
         private void button3_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            string z = "code\t\tsubject\t\tchapter";
+            pp = 0;
+            string z = "no\tsubject\t\tchapter";
             listBox1.Items.Add(z);
+            listBox1.Items.Add(x);
             utility2.current_exam_chaps.Clear();
         }
 
@@ -99,8 +105,9 @@ namespace Solvish
             else if (selectedItem == "Mechancis") chapcode = 1200;
             else if (selectedItem == "WEAP") chapcode = 1300;
             else if (selectedItem == "Pressure") chapcode = 1400;
-            string s = $"physics\t\t{selectedItem}\t\t{chapcode}";
+            string s = $"{++pp}\tphysics\t\t{selectedItem}";
             listBox1.Items.Add(s);
+            //listBox1.Items.Add(k);
             utility2.current_exam_chaps.Add(chapcode);
         }
         
@@ -113,7 +120,7 @@ namespace Solvish
             else if (selectedItem == "Structure of Matter") chapcode = 2200;
             else if (selectedItem == "Periodic Table") chapcode = 2300;
             else if (selectedItem == "Chemical Bond") chapcode = 2400;
-            string s = $"Chemistry\t\t{selectedItem}\t\t{chapcode}";
+            string s = $"{++pp}\tChemistry\t\t{selectedItem}";
             listBox1.Items.Add(s);
             utility2.current_exam_chaps.Add(chapcode);
         }
@@ -129,8 +136,9 @@ namespace Solvish
             else if (selectedItem == "Computer security") chapcode = 3200;
             else if (selectedItem == "Internet Education") chapcode = 3300;
             else if (selectedItem == "Accounts") chapcode = 3400;
-            string s = $"Chemistry\t\t{selectedItem}\t\t{chapcode}";
+            string s = $"{++pp}\tICT\t\t{selectedItem}";
             listBox1.Items.Add(s);
+            //listBox1.Items.Add(k);
             utility2.current_exam_chaps.Add(chapcode);
         }
     }
