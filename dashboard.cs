@@ -27,6 +27,12 @@ namespace Solvish
             name_label.Text = Convert.ToString(Utility.current_student.name) + " !!";
 
             
+
+            lab_corr.Text = "C " + Convert.ToString(Utility.total_corr);
+            lab_wr.Text = "W " + Convert.ToString(Utility.total_wrong);
+            lab_skp.Text = "S " + Convert.ToString(Utility.total_skip);
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -109,6 +115,11 @@ namespace Solvish
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

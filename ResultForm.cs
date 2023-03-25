@@ -25,8 +25,25 @@ namespace Solvish
                 lab_w_ans.Text = Convert.ToString(utility2.wr_ans);
                 lab_sk_ans.Text = Convert.ToString(utility2.sk_ans);
                 lab_pt.Text = Convert.ToString(utility2.curr_point);
+
+
             }
             catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            utility2.re_init();
+            Utility.count_result();
+            try
+            {
+                StreamWriter sw = File.AppendText(exampath);
+                sw.WriteLine($"{utility2.current_exam.time},{utility2.current_exam.right_ans_ct},{utility2.current_exam.wrong_ans_ct}" +
+                    $",{utility2.current_exam.skipped_ct},{utility2.current_exam.point},{utility2.current_exam.q_count}");
+                sw.Close();
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -39,20 +56,7 @@ namespace Solvish
 
         private void save_and_close_button_Click(object sender, EventArgs e)
         {
-            utility2.re_init();
-            try
-            {
-                StreamWriter sw = File.AppendText(exampath);
-                sw.WriteLine($"{utility2.current_exam.time},{utility2.current_exam.right_ans_ct},{utility2.current_exam.wrong_ans_ct}" +
-                    $",{utility2.current_exam.skipped_ct},{utility2.current_exam.point},{ utility2.current_exam.q_count}");
-                sw.Close();
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);    
-            }
-
+            
             dashboard de = new dashboard();
             de.Show();
             this.Hide();

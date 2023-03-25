@@ -25,6 +25,11 @@ namespace Solvish
 
         public static student current_student;
 
+        public static int total_corr;
+        public static int total_wrong;
+        public static int total_skip;
+        public static double total_point;
+
         
         
         
@@ -80,6 +85,21 @@ namespace Solvish
         
 
         //Other Necessary Functions
+        public static void count_result()
+        {
+            Utility.total_corr = 0;
+            Utility.total_wrong = 0;
+            Utility.total_skip = 0;
+            Utility.total_point = 0;
+
+            foreach (Exam exam in Utility.ExamsArray)
+            {
+                Utility.total_corr += exam.right_ans_ct;
+                Utility.total_wrong += exam.wrong_ans_ct;
+                Utility.total_skip += exam.skipped_ct;
+                Utility.total_point += exam.point;
+            }
+        }
         
     }
 }

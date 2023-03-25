@@ -41,9 +41,10 @@ namespace Solvish
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool flag = false;
             try
             {
-                bool flag = false;
+                
                 foreach (student ss in Utility.studentsArray)
                 {
                     if (ss.username == uname_tb.Text && ss.password == pass_tb.Text)
@@ -59,16 +60,7 @@ namespace Solvish
                     }
                 }
 
-                if (flag)
-                {
-                    dashboard dd = new dashboard();
-                    dd.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Wrong Username or Password");
-                }
+                
             }
             catch
             {
@@ -98,10 +90,26 @@ namespace Solvish
                     exams = examread.ReadLine();
                 }
                 examread.Close();
+
+                Utility.count_result();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message+"Examfrags e somossa");
+            }
+
+            if (flag)
+            {
+                utility_form.dashboard = new dashboard();
+                utility_form.dashboard.Show();
+
+                /*dashboard dd = new dashboard();
+                dd.Show();*/
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Wrong Username or Password");
             }
         }
 
