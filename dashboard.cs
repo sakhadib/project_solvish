@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Net;
+using System.Diagnostics;
 
 namespace Solvish
 {
@@ -122,6 +123,12 @@ namespace Solvish
         private void label2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string url = "https://sakhawatadib.com/solvish/";
+            Process.Start(url);
         }
     }
 }
