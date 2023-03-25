@@ -128,6 +128,11 @@ namespace Solvish
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
             Login_form lf = new Login_form();
             lf.Show();
             this.Close();

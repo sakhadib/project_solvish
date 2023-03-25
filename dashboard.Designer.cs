@@ -39,6 +39,7 @@
             this.hello_label = new System.Windows.Forms.Label();
             this.name_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -153,7 +154,7 @@
             this.hello_label.AutoSize = true;
             this.hello_label.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hello_label.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.hello_label.Location = new System.Drawing.Point(258, 12);
+            this.hello_label.Location = new System.Drawing.Point(258, 17);
             this.hello_label.Name = "hello_label";
             this.hello_label.Size = new System.Drawing.Size(65, 29);
             this.hello_label.TabIndex = 2;
@@ -164,7 +165,7 @@
             this.name_label.AutoSize = true;
             this.name_label.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_label.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.name_label.Location = new System.Drawing.Point(329, 12);
+            this.name_label.Location = new System.Drawing.Point(329, 17);
             this.name_label.Name = "name_label";
             this.name_label.Size = new System.Drawing.Size(65, 29);
             this.name_label.TabIndex = 2;
@@ -181,6 +182,14 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Black;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(244, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1308, 62);
+            this.flowLayoutPanel1.TabIndex = 12;
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +202,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.name_label);
             this.Controls.Add(this.hello_label);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.MaximizeBox = false;
             this.Name = "dashboard";
@@ -219,5 +229,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button initialize_question_button;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
