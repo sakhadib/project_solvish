@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -33,7 +34,15 @@ namespace Solvish
             current_exam.point = curr_point;
             current_exam.q_count = num_of_ques;
 
-            Utility.ExamsArray.Add(current_exam);
+            Exam ee = new Exam();
+            ee.time = DateTime.Now.ToString();
+            ee.right_ans_ct = rt_ans;
+            ee.wrong_ans_ct = wr_ans;
+            ee.skipped_ct = sk_ans;
+            ee.point = curr_point;
+            ee.q_count = num_of_ques;
+
+            Utility.ExamsArray.Add(ee);
 
 
 

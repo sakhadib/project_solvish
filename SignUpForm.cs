@@ -16,9 +16,9 @@ namespace Solvish
     public partial class signup_form : Form
     {
         WebClient wc = new WebClient(); //declaring the web cliant.
-        static string folderdir = @"C:\solvish";
-        public string studentpath = folderdir + @"\username.txt";
-        public string quespath = folderdir + @"\questions.txt";
+        static string folderdir = @"C:\solvish\";
+        public string studentpath = folderdir + @"username.txt";
+        public string quespath = folderdir + @"questions.txt";
         public signup_form()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace Solvish
                 }
                 else
                 {
-                    if(tb_pass.Text.Length <= 8)
+                    if(tb_pass.Text.Length < 8)
                     {
                         MessageBox.Show("Passwords must be more than 7 characters");
                     }
@@ -76,11 +76,18 @@ namespace Solvish
                         }
                         if(flag)
                         {
+                            
                             student s = new student(tb_name.Text, tb_uname.Text, tb_pass.Text);
+                            Utility.current_student = s;
                             Utility.studentsArray.Add(s);
                             StreamWriter sw = File.AppendText(studentpath);
                             sw.WriteLine($"{tb_name.Text},{tb_uname.Text},{tb_pass.Text}");
                             sw.Close();
+
+                            string exampath = folderdir + Utility.current_student.username + ".txt";
+                            var myfile = File.Create(exampath);
+                            myfile.Close();
+                            
 
                             Login_form llo = new Login_form();
                             llo.Show();

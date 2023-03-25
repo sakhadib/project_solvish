@@ -39,6 +39,7 @@ namespace Solvish
         private void button7_Click(object sender, EventArgs e)
         {
             //utility2.re_init();
+            index = -1;
             timer.Stop();
             ResultForm result = new ResultForm();
             result.Show();

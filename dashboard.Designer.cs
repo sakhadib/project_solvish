@@ -30,14 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.initialize_question_button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.past_exams_btn = new System.Windows.Forms.Button();
+            this.new_exam_button = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.hello_label = new System.Windows.Forms.Label();
             this.name_label = new System.Windows.Forms.Label();
-            this.new_exam_button = new System.Windows.Forms.Button();
-            this.past_exams_btn = new System.Windows.Forms.Button();
-            this.Edit_profile_button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.initialize_question_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +57,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
             this.panel1.Controls.Add(this.initialize_question_button);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.Edit_profile_button);
             this.panel1.Controls.Add(this.past_exams_btn);
             this.panel1.Controls.Add(this.new_exam_button);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -68,6 +66,74 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 726);
             this.panel1.TabIndex = 3;
+            // 
+            // initialize_question_button
+            // 
+            this.initialize_question_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.initialize_question_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.initialize_question_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.initialize_question_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.initialize_question_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.initialize_question_button.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.initialize_question_button.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.initialize_question_button.Location = new System.Drawing.Point(-29, 574);
+            this.initialize_question_button.Name = "initialize_question_button";
+            this.initialize_question_button.Size = new System.Drawing.Size(321, 51);
+            this.initialize_question_button.TabIndex = 11;
+            this.initialize_question_button.Text = "Re initialize questions";
+            this.initialize_question_button.UseVisualStyleBackColor = false;
+            this.initialize_question_button.Click += new System.EventHandler(this.initialize_question_button_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.Location = new System.Drawing.Point(-29, 631);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(321, 51);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Log Out";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // past_exams_btn
+            // 
+            this.past_exams_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.past_exams_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.past_exams_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.past_exams_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.past_exams_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.past_exams_btn.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.past_exams_btn.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.past_exams_btn.Location = new System.Drawing.Point(-28, 268);
+            this.past_exams_btn.Name = "past_exams_btn";
+            this.past_exams_btn.Size = new System.Drawing.Size(321, 51);
+            this.past_exams_btn.TabIndex = 11;
+            this.past_exams_btn.Text = "Past Exams";
+            this.past_exams_btn.UseVisualStyleBackColor = false;
+            this.past_exams_btn.Click += new System.EventHandler(this.past_exams_btn_Click);
+            // 
+            // new_exam_button
+            // 
+            this.new_exam_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.new_exam_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.new_exam_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.new_exam_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.new_exam_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.new_exam_button.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.new_exam_button.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.new_exam_button.Location = new System.Drawing.Point(-29, 211);
+            this.new_exam_button.Name = "new_exam_button";
+            this.new_exam_button.Size = new System.Drawing.Size(321, 51);
+            this.new_exam_button.TabIndex = 11;
+            this.new_exam_button.Text = "New Exam";
+            this.new_exam_button.UseVisualStyleBackColor = false;
+            this.new_exam_button.Click += new System.EventHandler(this.new_exam_button_Click);
             // 
             // pictureBox2
             // 
@@ -101,91 +167,6 @@
             this.name_label.TabIndex = 2;
             this.name_label.Text = "Hello";
             // 
-            // new_exam_button
-            // 
-            this.new_exam_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.new_exam_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.new_exam_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.new_exam_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.new_exam_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.new_exam_button.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.new_exam_button.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.new_exam_button.Location = new System.Drawing.Point(-29, 211);
-            this.new_exam_button.Name = "new_exam_button";
-            this.new_exam_button.Size = new System.Drawing.Size(321, 51);
-            this.new_exam_button.TabIndex = 11;
-            this.new_exam_button.Text = "New Exam";
-            this.new_exam_button.UseVisualStyleBackColor = false;
-            this.new_exam_button.Click += new System.EventHandler(this.new_exam_button_Click);
-            // 
-            // past_exams_btn
-            // 
-            this.past_exams_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.past_exams_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.past_exams_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.past_exams_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.past_exams_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.past_exams_btn.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.past_exams_btn.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.past_exams_btn.Location = new System.Drawing.Point(-28, 268);
-            this.past_exams_btn.Name = "past_exams_btn";
-            this.past_exams_btn.Size = new System.Drawing.Size(321, 51);
-            this.past_exams_btn.TabIndex = 11;
-            this.past_exams_btn.Text = "Past Exams";
-            this.past_exams_btn.UseVisualStyleBackColor = false;
-            this.past_exams_btn.Click += new System.EventHandler(this.past_exams_btn_Click);
-            // 
-            // Edit_profile_button
-            // 
-            this.Edit_profile_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.Edit_profile_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.Edit_profile_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.Edit_profile_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.Edit_profile_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Edit_profile_button.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Edit_profile_button.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Edit_profile_button.Location = new System.Drawing.Point(-28, 325);
-            this.Edit_profile_button.Name = "Edit_profile_button";
-            this.Edit_profile_button.Size = new System.Drawing.Size(321, 51);
-            this.Edit_profile_button.TabIndex = 11;
-            this.Edit_profile_button.Text = "Edit Profile";
-            this.Edit_profile_button.UseVisualStyleBackColor = false;
-            this.Edit_profile_button.Click += new System.EventHandler(this.Edit_profile_button_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(-29, 631);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(321, 51);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Log Out";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // initialize_question_button
-            // 
-            this.initialize_question_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.initialize_question_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.initialize_question_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.initialize_question_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.initialize_question_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.initialize_question_button.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.initialize_question_button.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.initialize_question_button.Location = new System.Drawing.Point(-29, 574);
-            this.initialize_question_button.Name = "initialize_question_button";
-            this.initialize_question_button.Size = new System.Drawing.Size(321, 51);
-            this.initialize_question_button.TabIndex = 11;
-            this.initialize_question_button.Text = "Re initialize questions";
-            this.initialize_question_button.UseVisualStyleBackColor = false;
-            this.initialize_question_button.Click += new System.EventHandler(this.initialize_question_button_Click);
-            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,7 +198,6 @@
         private System.Windows.Forms.Label name_label;
         private System.Windows.Forms.Button new_exam_button;
         private System.Windows.Forms.Button past_exams_btn;
-        private System.Windows.Forms.Button Edit_profile_button;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button initialize_question_button;
     }

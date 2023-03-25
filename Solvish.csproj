@@ -53,6 +53,12 @@
     <Compile Include="detailed_view.Designer.cs">
       <DependentUpon>detailed_view.cs</DependentUpon>
     </Compile>
+    <Compile Include="edit_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_form.Designer.cs">
+      <DependentUpon>edit_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exam.cs" />
     <Compile Include="LOGIN_FORM.cs">
       <SubType>Form</SubType>
@@ -111,6 +117,9 @@
     <Compile Include="utility2.cs" />
     <EmbeddedResource Include="detailed_view.resx">
       <DependentUpon>detailed_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_form.resx">
+      <DependentUpon>edit_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN_FORM.resx">
       <DependentUpon>LOGIN_FORM.cs</DependentUpon>
