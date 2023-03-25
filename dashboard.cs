@@ -78,6 +78,7 @@ namespace Solvish
                 if (File.Exists(quespath))
                 {
                     File.Delete(quespath);
+
                     string url = "https://sakhawatadib.com/wp-content/uploads/2023/03/questions.txt";
                     string ok = quespath;
                     wc.DownloadFileCompleted += new AsyncCompletedEventHandler(filedw);
