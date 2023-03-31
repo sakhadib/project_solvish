@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.performance_button = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.initialize_question_button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.past_exams_btn = new System.Windows.Forms.Button();
             this.new_exam_button = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.hello_label = new System.Windows.Forms.Label();
             this.name_label = new System.Windows.Forms.Label();
             this.lab_corr = new System.Windows.Forms.Label();
@@ -43,8 +46,7 @@
             this.lab_wr = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.performance_button = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +79,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 726);
             this.panel1.TabIndex = 3;
+            // 
+            // performance_button
+            // 
+            this.performance_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.performance_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.performance_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.performance_button.FlatAppearance.BorderSize = 0;
+            this.performance_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.performance_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.performance_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.performance_button.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.performance_button.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.performance_button.Location = new System.Drawing.Point(-29, 329);
+            this.performance_button.Name = "performance_button";
+            this.performance_button.Size = new System.Drawing.Size(321, 70);
+            this.performance_button.TabIndex = 16;
+            this.performance_button.Text = "Performance";
+            this.performance_button.UseVisualStyleBackColor = false;
+            this.performance_button.Click += new System.EventHandler(this.performance_button_Click);
             // 
             // button2
             // 
@@ -183,8 +204,19 @@
             this.new_exam_button.Size = new System.Drawing.Size(321, 70);
             this.new_exam_button.TabIndex = 11;
             this.new_exam_button.Text = "New Exam";
+            this.toolTip1.SetToolTip(this.new_exam_button, "To give an exam");
             this.new_exam_button.UseVisualStyleBackColor = false;
             this.new_exam_button.Click += new System.EventHandler(this.new_exam_button_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Solvish.Properties.Resources.main_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(72, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(93, 99);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // hello_label
             // 
@@ -263,34 +295,10 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "/";
             // 
-            // performance_button
+            // toolTip1
             // 
-            this.performance_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.performance_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.performance_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.performance_button.FlatAppearance.BorderSize = 0;
-            this.performance_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.performance_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.performance_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.performance_button.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.performance_button.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.performance_button.Location = new System.Drawing.Point(-29, 329);
-            this.performance_button.Name = "performance_button";
-            this.performance_button.Size = new System.Drawing.Size(321, 70);
-            this.performance_button.TabIndex = 16;
-            this.performance_button.Text = "Performance";
-            this.performance_button.UseVisualStyleBackColor = false;
-            this.performance_button.Click += new System.EventHandler(this.performance_button_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Solvish.Properties.Resources.main_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(72, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(93, 99);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipTitle = "Click";
             // 
             // dashboard
             // 
@@ -341,5 +349,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button performance_button;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
