@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.initialize_question_button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.past_exams_btn = new System.Windows.Forms.Button();
@@ -37,13 +39,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.hello_label = new System.Windows.Forms.Label();
             this.name_label = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lab_corr = new System.Windows.Forms.Label();
             this.lab_skp = new System.Windows.Forms.Label();
             this.lab_wr = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.performance_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +63,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.performance_button);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.initialize_question_button);
@@ -75,6 +77,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 726);
             this.panel1.TabIndex = 3;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(0, 333);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(265, 71);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "About Solvish";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Underline);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(172)))), ((int)(((byte)(255)))));
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(38, 660);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(184, 29);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Close Application";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // initialize_question_button
             // 
@@ -186,20 +220,6 @@
             this.name_label.TabIndex = 2;
             this.name_label.Text = "Hello";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Underline);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(172)))), ((int)(((byte)(255)))));
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(38, 660);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 29);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Close Application";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // lab_corr
             // 
             this.lab_corr.AutoSize = true;
@@ -253,23 +273,24 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "/";
             // 
-            // button2
+            // performance_button
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 333);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(265, 71);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "About Solvish";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.performance_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
+            this.performance_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.performance_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.performance_button.FlatAppearance.BorderSize = 0;
+            this.performance_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.performance_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.performance_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.performance_button.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.performance_button.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.performance_button.Location = new System.Drawing.Point(-29, 396);
+            this.performance_button.Name = "performance_button";
+            this.performance_button.Size = new System.Drawing.Size(321, 70);
+            this.performance_button.TabIndex = 16;
+            this.performance_button.Text = "Performance";
+            this.performance_button.UseVisualStyleBackColor = false;
+            this.performance_button.Click += new System.EventHandler(this.performance_button_Click);
             // 
             // dashboard
             // 
@@ -319,5 +340,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button performance_button;
     }
 }

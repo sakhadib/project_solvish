@@ -130,5 +130,12 @@ namespace Solvish
             string url = "https://sakhawatadib.com/solvish/";
             Process.Start(url);
         }
+
+        private void performance_button_Click(object sender, EventArgs e)
+        {
+            Performance p1 = new Performance();
+            p1.Show();
+            this.Hide();
+        }
     }
 }
