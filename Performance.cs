@@ -15,6 +15,13 @@ namespace Solvish
         public Performance()
         {
             InitializeComponent();
+
+            //Add data to the piechart
+            right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Right", utility2.rt_ans);
+            right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Wrong", utility2.wr_ans);
+            right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Skipped",utility2.sk_ans);
+
+
         }
     }
 }
