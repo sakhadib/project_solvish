@@ -16,6 +16,8 @@ namespace Solvish
         public static int num_of_ques;
         public static Exam current_exam = new Exam();
 
+        public static int examcount = 1;  //To add every exam to the graph
+
         
 
         //hisab nikas

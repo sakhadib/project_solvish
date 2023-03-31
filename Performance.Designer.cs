@@ -36,6 +36,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.exam_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.right_wrong_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.back_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.exam_chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.right_wrong_chart)).BeginInit();
             this.SuspendLayout();
@@ -73,12 +74,32 @@
             this.right_wrong_chart.TabIndex = 1;
             this.right_wrong_chart.Text = "right_wrong_chart";
             // 
+            // back_button
+            // 
+            this.back_button.BackColor = System.Drawing.Color.DarkSalmon;
+            this.back_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.back_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.back_button.FlatAppearance.BorderSize = 0;
+            this.back_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.back_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.back_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back_button.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back_button.ForeColor = System.Drawing.Color.Black;
+            this.back_button.Location = new System.Drawing.Point(690, 654);
+            this.back_button.Name = "back_button";
+            this.back_button.Size = new System.Drawing.Size(109, 39);
+            this.back_button.TabIndex = 12;
+            this.back_button.Text = "Back";
+            this.back_button.UseVisualStyleBackColor = false;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
+            // 
             // Performance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 694);
+            this.Controls.Add(this.back_button);
             this.Controls.Add(this.right_wrong_chart);
             this.Controls.Add(this.exam_chart);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -95,5 +116,6 @@
 
         private System.Windows.Forms.DataVisualization.Charting.Chart exam_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart right_wrong_chart;
+        private System.Windows.Forms.Button back_button;
     }
 }
