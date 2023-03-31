@@ -49,7 +49,9 @@
             this.exam_chart.Legends.Add(legend1);
             this.exam_chart.Location = new System.Drawing.Point(0, 1);
             this.exam_chart.Name = "exam_chart";
+            series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
             series1.Name = "Exam";
             this.exam_chart.Series.Add(series1);
@@ -63,7 +65,7 @@
             this.right_wrong_chart.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.right_wrong_chart.Legends.Add(legend2);
-            this.right_wrong_chart.Location = new System.Drawing.Point(93, 358);
+            this.right_wrong_chart.Location = new System.Drawing.Point(93, 330);
             this.right_wrong_chart.Name = "right_wrong_chart";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -98,7 +100,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 694);
+            this.ClientSize = new System.Drawing.Size(800, 698);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.right_wrong_chart);
             this.Controls.Add(this.exam_chart);
