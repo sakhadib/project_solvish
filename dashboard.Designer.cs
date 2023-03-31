@@ -46,6 +46,12 @@
             this.lab_wr = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.new_exam_toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.Past_exam = new System.Windows.Forms.ToolTip(this.components);
+            this.performancetoolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.about_toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.ques_toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.log_out_toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,6 +102,7 @@
             this.performance_button.Size = new System.Drawing.Size(321, 70);
             this.performance_button.TabIndex = 16;
             this.performance_button.Text = "Performance";
+            this.performancetoolTip.SetToolTip(this.performance_button, "To see your performance");
             this.performance_button.UseVisualStyleBackColor = false;
             this.performance_button.Click += new System.EventHandler(this.performance_button_Click);
             // 
@@ -114,6 +121,7 @@
             this.button2.Size = new System.Drawing.Size(265, 71);
             this.button2.TabIndex = 15;
             this.button2.Text = "About Solvish";
+            this.about_toolTip.SetToolTip(this.button2, "To know more about us");
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -129,6 +137,7 @@
             this.label2.Size = new System.Drawing.Size(184, 29);
             this.label2.TabIndex = 13;
             this.label2.Text = "Close Application";
+            this.toolTip1.SetToolTip(this.label2, "Will Close the application");
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // initialize_question_button
@@ -147,6 +156,7 @@
             this.initialize_question_button.Size = new System.Drawing.Size(321, 70);
             this.initialize_question_button.TabIndex = 11;
             this.initialize_question_button.Text = "Re initialize questions";
+            this.ques_toolTip.SetToolTip(this.initialize_question_button, "To download new questions");
             this.initialize_question_button.UseVisualStyleBackColor = false;
             this.initialize_question_button.Click += new System.EventHandler(this.initialize_question_button_Click);
             // 
@@ -166,6 +176,7 @@
             this.button1.Size = new System.Drawing.Size(321, 70);
             this.button1.TabIndex = 11;
             this.button1.Text = "Log Out";
+            this.log_out_toolTip.SetToolTip(this.button1, "To go back to LogIn Form ");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
@@ -185,6 +196,7 @@
             this.past_exams_btn.Size = new System.Drawing.Size(321, 71);
             this.past_exams_btn.TabIndex = 11;
             this.past_exams_btn.Text = "Past Exams";
+            this.Past_exam.SetToolTip(this.past_exams_btn, "To view a list of previously taken exams");
             this.past_exams_btn.UseVisualStyleBackColor = false;
             this.past_exams_btn.Click += new System.EventHandler(this.past_exams_btn_Click);
             // 
@@ -204,7 +216,7 @@
             this.new_exam_button.Size = new System.Drawing.Size(321, 70);
             this.new_exam_button.TabIndex = 11;
             this.new_exam_button.Text = "New Exam";
-            this.toolTip1.SetToolTip(this.new_exam_button, "To give an exam");
+            this.new_exam_toolTip.SetToolTip(this.new_exam_button, "To give an exam");
             this.new_exam_button.UseVisualStyleBackColor = false;
             this.new_exam_button.Click += new System.EventHandler(this.new_exam_button_Click);
             // 
@@ -295,9 +307,46 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "/";
             // 
+            // new_exam_toolTip
+            // 
+            this.new_exam_toolTip.IsBalloon = true;
+            this.new_exam_toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.new_exam_toolTip.ToolTipTitle = "Click";
+            // 
+            // Past_exam
+            // 
+            this.Past_exam.IsBalloon = true;
+            this.Past_exam.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.Past_exam.ToolTipTitle = "Click";
+            // 
+            // performancetoolTip
+            // 
+            this.performancetoolTip.IsBalloon = true;
+            this.performancetoolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.performancetoolTip.ToolTipTitle = "Click";
+            // 
+            // about_toolTip
+            // 
+            this.about_toolTip.IsBalloon = true;
+            this.about_toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.about_toolTip.ToolTipTitle = "Click";
+            // 
+            // ques_toolTip
+            // 
+            this.ques_toolTip.IsBalloon = true;
+            this.ques_toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ques_toolTip.ToolTipTitle = "Click";
+            // 
+            // log_out_toolTip
+            // 
+            this.log_out_toolTip.IsBalloon = true;
+            this.log_out_toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.log_out_toolTip.ToolTipTitle = "Click";
+            // 
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
             this.toolTip1.ToolTipTitle = "Click";
             // 
             // dashboard
@@ -349,6 +398,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button performance_button;
+        private System.Windows.Forms.ToolTip new_exam_toolTip;
+        private System.Windows.Forms.ToolTip Past_exam;
+        private System.Windows.Forms.ToolTip performancetoolTip;
+        private System.Windows.Forms.ToolTip about_toolTip;
+        private System.Windows.Forms.ToolTip ques_toolTip;
+        private System.Windows.Forms.ToolTip log_out_toolTip;
         private System.Windows.Forms.ToolTip toolTip1;
     }
 }
