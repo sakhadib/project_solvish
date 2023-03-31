@@ -21,6 +21,7 @@ namespace Solvish
             right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Wrong", utility2.wr_ans);
             right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Skipped",utility2.sk_ans);
 
+            //Add data to the graph
 
         }
     }
