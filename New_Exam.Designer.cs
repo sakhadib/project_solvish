@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tb_hour = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +45,13 @@
             this.num_of_ques_tb = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip6 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip7 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // tb_hour
@@ -67,6 +75,7 @@
             this.label4.Size = new System.Drawing.Size(73, 29);
             this.label4.TabIndex = 9;
             this.label4.Text = "Time :";
+            this.toolTip1.SetToolTip(this.label4, "Input your desired time");
             // 
             // label1
             // 
@@ -115,6 +124,7 @@
             this.StartExambutton.Size = new System.Drawing.Size(509, 56);
             this.StartExambutton.TabIndex = 14;
             this.StartExambutton.Text = "Start Exam";
+            this.toolTip6.SetToolTip(this.StartExambutton, "To Start The Exam");
             this.StartExambutton.UseVisualStyleBackColor = false;
             this.StartExambutton.Click += new System.EventHandler(this.StartExambutton_Click);
             // 
@@ -164,6 +174,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(300, 33);
             this.comboBox1.TabIndex = 16;
+            this.toolTip2.SetToolTip(this.comboBox1, "Select Chapters");
             // 
             // comboBox2
             // 
@@ -178,6 +189,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(300, 33);
             this.comboBox2.TabIndex = 16;
+            this.toolTip3.SetToolTip(this.comboBox2, "Select Chapters");
             // 
             // comboBox3
             // 
@@ -192,6 +204,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(300, 33);
             this.comboBox3.TabIndex = 16;
+            this.toolTip4.SetToolTip(this.comboBox3, "Select Chapters");
             // 
             // label7
             // 
@@ -214,6 +227,7 @@
             this.num_of_ques_tb.Name = "num_of_ques_tb";
             this.num_of_ques_tb.Size = new System.Drawing.Size(199, 33);
             this.num_of_ques_tb.TabIndex = 10;
+            this.toolTip5.SetToolTip(this.num_of_ques_tb, "Select Number of Questions");
             // 
             // listBox1
             // 
@@ -241,15 +255,48 @@
             this.button3.Size = new System.Drawing.Size(261, 51);
             this.button3.TabIndex = 18;
             this.button3.Text = "Clear Selection";
+            this.toolTip7.SetToolTip(this.button3, "Clear Selected Chapters");
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
+            // toolTip2
+            // 
+            this.toolTip2.IsBalloon = true;
+            // 
+            // toolTip3
+            // 
+            this.toolTip3.IsBalloon = true;
+            // 
+            // toolTip4
+            // 
+            this.toolTip4.IsBalloon = true;
+            // 
+            // toolTip5
+            // 
+            this.toolTip5.IsBalloon = true;
+            // 
+            // toolTip6
+            // 
+            this.toolTip6.IsBalloon = true;
+            this.toolTip6.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip6.ToolTipTitle = "Click";
+            // 
+            // toolTip7
+            // 
+            this.toolTip7.IsBalloon = true;
+            this.toolTip7.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip7.ToolTipTitle = "Click";
             // 
             // New_Exam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1217, 768);
+            this.ClientSize = new System.Drawing.Size(1217, 749);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.comboBox3);
@@ -291,5 +338,12 @@
         private System.Windows.Forms.TextBox num_of_ques_tb;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip6;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.ToolTip toolTip5;
+        private System.Windows.Forms.ToolTip toolTip7;
     }
 }
