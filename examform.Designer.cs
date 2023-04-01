@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lab_statement = new System.Windows.Forms.Label();
@@ -38,6 +39,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.TimeLabel = new System.Windows.Forms.Label();
             this.skp_butt = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -156,6 +160,7 @@
             this.button7.Size = new System.Drawing.Size(165, 55);
             this.button7.TabIndex = 5;
             this.button7.Text = "SUBMIT";
+            this.toolTip3.SetToolTip(this.button7, "When you are done.");
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -169,6 +174,7 @@
             this.TimeLabel.Size = new System.Drawing.Size(90, 36);
             this.TimeLabel.TabIndex = 10;
             this.TimeLabel.Text = "Time :";
+            this.toolTip1.SetToolTip(this.TimeLabel, "Remaining Time");
             // 
             // skp_butt
             // 
@@ -184,8 +190,26 @@
             this.skp_butt.Size = new System.Drawing.Size(205, 52);
             this.skp_butt.TabIndex = 5;
             this.skp_butt.Text = "skip this question";
+            this.toolTip2.SetToolTip(this.skp_butt, "Don\'t know the answer? Skip and try the next one");
             this.skp_butt.UseVisualStyleBackColor = false;
             this.skp_butt.Click += new System.EventHandler(this.skp_butt_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
+            // 
+            // toolTip2
+            // 
+            this.toolTip2.IsBalloon = true;
+            this.toolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip2.ToolTipTitle = "Click";
+            // 
+            // toolTip3
+            // 
+            this.toolTip3.IsBalloon = true;
+            this.toolTip3.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip3.ToolTipTitle = "Click";
             // 
             // examform
             // 
@@ -228,5 +252,8 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Button skp_butt;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

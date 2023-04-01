@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.result_lb = new System.Windows.Forms.ListBox();
             this.dashboard_btn = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // result_lb
@@ -58,8 +60,15 @@
             this.dashboard_btn.Size = new System.Drawing.Size(321, 51);
             this.dashboard_btn.TabIndex = 12;
             this.dashboard_btn.Text = "Back to Dashboard";
+            this.toolTip1.SetToolTip(this.dashboard_btn, "To go back to dashboard");
             this.dashboard_btn.UseVisualStyleBackColor = false;
             this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Click";
             // 
             // detailed_view
             // 
@@ -80,5 +89,6 @@
 
         private System.Windows.Forms.ListBox result_lb;
         private System.Windows.Forms.Button dashboard_btn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
