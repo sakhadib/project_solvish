@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -37,6 +38,9 @@
             this.exam_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.right_wrong_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.back_button = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.exam_chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.right_wrong_chart)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +62,7 @@
             this.exam_chart.Size = new System.Drawing.Size(799, 303);
             this.exam_chart.TabIndex = 0;
             this.exam_chart.Text = "exam_chart";
+            this.toolTip1.SetToolTip(this.exam_chart, "Individual Exam and obtained marks");
             // 
             // right_wrong_chart
             // 
@@ -75,6 +80,7 @@
             this.right_wrong_chart.Size = new System.Drawing.Size(580, 316);
             this.right_wrong_chart.TabIndex = 1;
             this.right_wrong_chart.Text = "right_wrong_chart";
+            this.toolTip2.SetToolTip(this.right_wrong_chart, "Your lifetime Progress");
             // 
             // back_button
             // 
@@ -92,8 +98,25 @@
             this.back_button.Size = new System.Drawing.Size(109, 39);
             this.back_button.TabIndex = 12;
             this.back_button.Text = "Back";
+            this.toolTip3.SetToolTip(this.back_button, "To go back to Dashboard");
             this.back_button.UseVisualStyleBackColor = false;
             this.back_button.Click += new System.EventHandler(this.back_button_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // toolTip2
+            // 
+            this.toolTip2.IsBalloon = true;
+            this.toolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // toolTip3
+            // 
+            this.toolTip3.IsBalloon = true;
+            this.toolTip3.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip3.ToolTipTitle = "Click";
             // 
             // Performance
             // 
@@ -119,5 +142,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart exam_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart right_wrong_chart;
         private System.Windows.Forms.Button back_button;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
     }
 }

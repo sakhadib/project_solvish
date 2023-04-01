@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signup_form));
             this.label4 = new System.Windows.Forms.Label();
             this.tb_name = new System.Windows.Forms.TextBox();
@@ -47,6 +48,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip6 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -66,6 +73,7 @@
             resources.ApplyResources(this.tb_name, "tb_name");
             this.tb_name.ForeColor = System.Drawing.SystemColors.Info;
             this.tb_name.Name = "tb_name";
+            this.toolTip1.SetToolTip(this.tb_name, resources.GetString("tb_name.ToolTip"));
             // 
             // label5
             // 
@@ -80,6 +88,7 @@
             resources.ApplyResources(this.tb_uname, "tb_uname");
             this.tb_uname.ForeColor = System.Drawing.SystemColors.Info;
             this.tb_uname.Name = "tb_uname";
+            this.toolTip2.SetToolTip(this.tb_uname, resources.GetString("tb_uname.ToolTip"));
             // 
             // label8
             // 
@@ -94,6 +103,7 @@
             resources.ApplyResources(this.tb_pass, "tb_pass");
             this.tb_pass.ForeColor = System.Drawing.SystemColors.Info;
             this.tb_pass.Name = "tb_pass";
+            this.toolTip3.SetToolTip(this.tb_pass, resources.GetString("tb_pass.ToolTip"));
             this.tb_pass.UseSystemPasswordChar = true;
             // 
             // label9
@@ -109,6 +119,7 @@
             resources.ApplyResources(this.tb_retype_pass, "tb_retype_pass");
             this.tb_retype_pass.ForeColor = System.Drawing.SystemColors.Info;
             this.tb_retype_pass.Name = "tb_retype_pass";
+            this.toolTip4.SetToolTip(this.tb_retype_pass, resources.GetString("tb_retype_pass.ToolTip"));
             this.tb_retype_pass.UseSystemPasswordChar = true;
             // 
             // button2
@@ -121,6 +132,7 @@
             resources.ApplyResources(this.button2, "button2");
             this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button2.Name = "button2";
+            this.toolTip5.SetToolTip(this.button2, resources.GetString("button2.ToolTip"));
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -165,6 +177,7 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(172)))), ((int)(((byte)(255)))));
             this.label2.Name = "label2";
+            this.toolTip6.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // panel1
@@ -190,6 +203,32 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
+            // toolTip2
+            // 
+            this.toolTip2.IsBalloon = true;
+            // 
+            // toolTip3
+            // 
+            this.toolTip3.IsBalloon = true;
+            // 
+            // toolTip4
+            // 
+            this.toolTip4.IsBalloon = true;
+            // 
+            // toolTip5
+            // 
+            this.toolTip5.IsBalloon = true;
+            this.toolTip5.ToolTipTitle = "Click";
+            // 
+            // toolTip6
+            // 
+            this.toolTip6.IsBalloon = true;
+            this.toolTip6.ToolTipTitle = "Click";
             // 
             // signup_form
             // 
@@ -248,7 +287,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-
-        
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.ToolTip toolTip5;
+        private System.Windows.Forms.ToolTip toolTip6;
     }
 }
