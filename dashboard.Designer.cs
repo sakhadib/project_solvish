@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.performance_button = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.initialize_question_button = new System.Windows.Forms.Button();
@@ -46,15 +50,12 @@
             this.lab_wr = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.new_exam_toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.Past_exam = new System.Windows.Forms.ToolTip(this.components);
-            this.performancetoolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.about_toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.ques_toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.log_out_toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.exam_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.right_wrong_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exam_chart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.right_wrong_chart)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +72,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.performance_button);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.initialize_question_button);
@@ -86,26 +86,6 @@
             this.panel1.Size = new System.Drawing.Size(252, 726);
             this.panel1.TabIndex = 3;
             // 
-            // performance_button
-            // 
-            this.performance_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
-            this.performance_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.performance_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.performance_button.FlatAppearance.BorderSize = 0;
-            this.performance_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.performance_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.performance_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.performance_button.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.performance_button.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.performance_button.Location = new System.Drawing.Point(-29, 329);
-            this.performance_button.Name = "performance_button";
-            this.performance_button.Size = new System.Drawing.Size(321, 70);
-            this.performance_button.TabIndex = 16;
-            this.performance_button.Text = "Performance";
-            this.performancetoolTip.SetToolTip(this.performance_button, "To see your performance");
-            this.performance_button.UseVisualStyleBackColor = false;
-            this.performance_button.Click += new System.EventHandler(this.performance_button_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(13)))));
@@ -116,12 +96,11 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(-13, 396);
+            this.button2.Location = new System.Drawing.Point(-8, 335);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(265, 71);
             this.button2.TabIndex = 15;
             this.button2.Text = "About Solvish";
-            this.about_toolTip.SetToolTip(this.button2, "To know more about us");
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -137,7 +116,6 @@
             this.label2.Size = new System.Drawing.Size(184, 29);
             this.label2.TabIndex = 13;
             this.label2.Text = "Close Application";
-            this.toolTip1.SetToolTip(this.label2, "Will Close the application");
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // initialize_question_button
@@ -156,7 +134,6 @@
             this.initialize_question_button.Size = new System.Drawing.Size(321, 70);
             this.initialize_question_button.TabIndex = 11;
             this.initialize_question_button.Text = "Re initialize questions";
-            this.ques_toolTip.SetToolTip(this.initialize_question_button, "To download new questions");
             this.initialize_question_button.UseVisualStyleBackColor = false;
             this.initialize_question_button.Click += new System.EventHandler(this.initialize_question_button_Click);
             // 
@@ -176,7 +153,6 @@
             this.button1.Size = new System.Drawing.Size(321, 70);
             this.button1.TabIndex = 11;
             this.button1.Text = "Log Out";
-            this.log_out_toolTip.SetToolTip(this.button1, "To go back to LogIn Form ");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
@@ -196,7 +172,6 @@
             this.past_exams_btn.Size = new System.Drawing.Size(321, 71);
             this.past_exams_btn.TabIndex = 11;
             this.past_exams_btn.Text = "Past Exams";
-            this.Past_exam.SetToolTip(this.past_exams_btn, "To view a list of previously taken exams");
             this.past_exams_btn.UseVisualStyleBackColor = false;
             this.past_exams_btn.Click += new System.EventHandler(this.past_exams_btn_Click);
             // 
@@ -216,7 +191,6 @@
             this.new_exam_button.Size = new System.Drawing.Size(321, 70);
             this.new_exam_button.TabIndex = 11;
             this.new_exam_button.Text = "New Exam";
-            this.new_exam_toolTip.SetToolTip(this.new_exam_button, "To give an exam");
             this.new_exam_button.UseVisualStyleBackColor = false;
             this.new_exam_button.Click += new System.EventHandler(this.new_exam_button_Click);
             // 
@@ -307,47 +281,41 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "/";
             // 
-            // new_exam_toolTip
+            // exam_chart
             // 
-            this.new_exam_toolTip.IsBalloon = true;
-            this.new_exam_toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.new_exam_toolTip.ToolTipTitle = "Click";
+            chartArea1.Name = "ChartArea1";
+            this.exam_chart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.exam_chart.Legends.Add(legend1);
+            this.exam_chart.Location = new System.Drawing.Point(263, 57);
+            this.exam_chart.Name = "exam_chart";
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Exam";
+            this.exam_chart.Series.Add(series1);
+            this.exam_chart.Size = new System.Drawing.Size(885, 333);
+            this.exam_chart.TabIndex = 15;
+            this.exam_chart.Text = "exam_chart";
             // 
-            // Past_exam
+            // right_wrong_chart
             // 
-            this.Past_exam.IsBalloon = true;
-            this.Past_exam.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.Past_exam.ToolTipTitle = "Click";
-            // 
-            // performancetoolTip
-            // 
-            this.performancetoolTip.IsBalloon = true;
-            this.performancetoolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.performancetoolTip.ToolTipTitle = "Click";
-            // 
-            // about_toolTip
-            // 
-            this.about_toolTip.IsBalloon = true;
-            this.about_toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.about_toolTip.ToolTipTitle = "Click";
-            // 
-            // ques_toolTip
-            // 
-            this.ques_toolTip.IsBalloon = true;
-            this.ques_toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.ques_toolTip.ToolTipTitle = "Click";
-            // 
-            // log_out_toolTip
-            // 
-            this.log_out_toolTip.IsBalloon = true;
-            this.log_out_toolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.log_out_toolTip.ToolTipTitle = "Click";
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.IsBalloon = true;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
-            this.toolTip1.ToolTipTitle = "Click";
+            this.right_wrong_chart.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            chartArea2.Name = "ChartArea1";
+            this.right_wrong_chart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.right_wrong_chart.Legends.Add(legend2);
+            this.right_wrong_chart.Location = new System.Drawing.Point(263, 396);
+            this.right_wrong_chart.Name = "right_wrong_chart";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Right_Wrong";
+            this.right_wrong_chart.Series.Add(series2);
+            this.right_wrong_chart.Size = new System.Drawing.Size(885, 300);
+            this.right_wrong_chart.TabIndex = 16;
+            this.right_wrong_chart.Text = "right_wrong_chart";
             // 
             // dashboard
             // 
@@ -357,6 +325,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1160, 726);
             this.ControlBox = false;
+            this.Controls.Add(this.right_wrong_chart);
+            this.Controls.Add(this.exam_chart);
             this.Controls.Add(this.lab_wr);
             this.Controls.Add(this.lab_skp);
             this.Controls.Add(this.label4);
@@ -374,6 +344,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exam_chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.right_wrong_chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,13 +369,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button performance_button;
-        private System.Windows.Forms.ToolTip new_exam_toolTip;
-        private System.Windows.Forms.ToolTip Past_exam;
-        private System.Windows.Forms.ToolTip performancetoolTip;
-        private System.Windows.Forms.ToolTip about_toolTip;
-        private System.Windows.Forms.ToolTip ques_toolTip;
-        private System.Windows.Forms.ToolTip log_out_toolTip;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart exam_chart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart right_wrong_chart;
     }
 }
