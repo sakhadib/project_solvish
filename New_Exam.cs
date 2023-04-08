@@ -38,6 +38,7 @@ namespace Solvish
             pp = 0;
             try
             {
+                //initializing the timer
                 Utility.hour = Convert.ToInt32(tb_hour.Text);
                 Utility.minute = Convert.ToInt32(tb_minute.Text);
                 Utility.second = 0;
