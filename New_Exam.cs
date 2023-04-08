@@ -134,7 +134,7 @@ namespace Solvish
             else if (selectedItem == "Accounts") chapcode = 3400;
             string s = $"{++pp}\tICT\t\t{selectedItem}";
             listBox1.Items.Add(s);
-            //listBox1.Items.Add(k);
+            
             utility2.current_exam_chaps.Add(chapcode);
         }
     }
