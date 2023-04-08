@@ -43,6 +43,8 @@ namespace Solvish
                 Utility.minute = Convert.ToInt32(tb_minute.Text);
                 Utility.second = 0;
 
+                //Checking for timer isuues
+
                 if (Utility.minute >= 60)
                 {
                     throw new ArgumentException("Invalid minute value. Value must be between 0 and 60.");
