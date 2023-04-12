@@ -33,6 +33,19 @@ namespace Solvish
             lab_wr.Text = "W " + Convert.ToString(Utility.total_wrong);
             lab_skp.Text = "S " + Convert.ToString(Utility.total_skip);
 
+            //Add data to the piechart
+            right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Right", Utility.total_corr);
+            right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Wrong", Utility.total_wrong);
+            right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Skipped", Utility.total_skip);
+
+            //Add data to the graph
+            foreach (Exam eq in Utility.ExamsArray)
+            {
+                exam_chart.Series["Exam"].Points.AddXY($"Exam-{utility2.examcount}", eq.point);
+                utility2.examcount++;
+            }
+            utility2.examcount = 1;
+
 
         }
 
@@ -131,11 +144,6 @@ namespace Solvish
             Process.Start(url);
         }
 
-        private void performance_button_Click(object sender, EventArgs e)
-        {
-            Performance p1 = new Performance();
-            p1.Show();
-            this.Hide();
-        }
+
     }
 }

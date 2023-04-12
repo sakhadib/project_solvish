@@ -38,9 +38,12 @@ namespace Solvish
             pp = 0;
             try
             {
+                //initializing the timer
                 Utility.hour = Convert.ToInt32(tb_hour.Text);
                 Utility.minute = Convert.ToInt32(tb_minute.Text);
                 Utility.second = 0;
+
+                //Checking for timer isuues
 
                 if (Utility.minute >= 60)
                 {
@@ -60,7 +63,7 @@ namespace Solvish
 
             
 
-            //getting the number of questions
+            //Aquiring the number of questions
             try
             {
                 utility2.num_of_ques = Convert.ToInt32(num_of_ques_tb.Text);
@@ -78,12 +81,7 @@ namespace Solvish
             this.Hide();
         }
 
-        public static void initiate_exam()
-        {
-            //utility2.current_exam = new Exam();
-            //utility2.current_exam.
-
-        }
+        
 
 
         private void button3_Click(object sender, EventArgs e)
@@ -138,7 +136,7 @@ namespace Solvish
             else if (selectedItem == "Accounts") chapcode = 3400;
             string s = $"{++pp}\tICT\t\t{selectedItem}";
             listBox1.Items.Add(s);
-            //listBox1.Items.Add(k);
+            
             utility2.current_exam_chaps.Add(chapcode);
         }
     }
