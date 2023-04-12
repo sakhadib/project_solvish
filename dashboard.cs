@@ -144,6 +144,9 @@ namespace Solvish
             Process.Start(url);
         }
 
+        private void right_wrong_chart_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

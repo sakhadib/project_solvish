@@ -31,6 +31,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -283,11 +284,16 @@
             // 
             // exam_chart
             // 
+            this.exam_chart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
             chartArea1.Name = "ChartArea1";
             this.exam_chart.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            legend1.ForeColor = System.Drawing.Color.WhiteSmoke;
             legend1.Name = "Legend1";
             this.exam_chart.Legends.Add(legend1);
-            this.exam_chart.Location = new System.Drawing.Point(263, 57);
+            this.exam_chart.Location = new System.Drawing.Point(263, 73);
             this.exam_chart.Name = "exam_chart";
             series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
@@ -295,18 +301,25 @@
             series1.Legend = "Legend1";
             series1.Name = "Exam";
             this.exam_chart.Series.Add(series1);
-            this.exam_chart.Size = new System.Drawing.Size(885, 333);
+            this.exam_chart.Size = new System.Drawing.Size(885, 317);
             this.exam_chart.TabIndex = 15;
             this.exam_chart.Text = "exam_chart";
+            title1.Name = "Title1";
+            this.exam_chart.Titles.Add(title1);
             // 
             // right_wrong_chart
             // 
+            this.right_wrong_chart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.right_wrong_chart.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            this.right_wrong_chart.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             chartArea2.Name = "ChartArea1";
             this.right_wrong_chart.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            legend2.ForeColor = System.Drawing.Color.Linen;
             legend2.Name = "Legend1";
             this.right_wrong_chart.Legends.Add(legend2);
-            this.right_wrong_chart.Location = new System.Drawing.Point(263, 396);
+            this.right_wrong_chart.Location = new System.Drawing.Point(263, 405);
             this.right_wrong_chart.Name = "right_wrong_chart";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -316,6 +329,7 @@
             this.right_wrong_chart.Size = new System.Drawing.Size(885, 300);
             this.right_wrong_chart.TabIndex = 16;
             this.right_wrong_chart.Text = "right_wrong_chart";
+            this.right_wrong_chart.Click += new System.EventHandler(this.right_wrong_chart_Click);
             // 
             // dashboard
             // 
