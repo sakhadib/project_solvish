@@ -209,7 +209,7 @@ namespace Solvish
             try
             {
                 int xdx = idx + 1;
-                Question q = utility2.current_questions[xdx];   //eikhane utility 2 er list ta dite hobe jeta kaj kortese na
+                Question q = utility2.current_questions[xdx];  
                 lab_statement.Text = q.statement;
                 op_a_btn.Text = q.Option1;
                 op_b_btn.Text = q.Option2;

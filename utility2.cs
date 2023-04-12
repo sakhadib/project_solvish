@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -29,7 +30,9 @@ namespace Solvish
         //hisab nikash back to zero
         public static void re_init()
         {
-            current_exam.time = DateTime.Now.ToString();
+            string format = "dd/MM/yyyy hh:mm:ss";
+            string v = DateTime.Now.ToString(format);
+            current_exam.time = v;
             current_exam.right_ans_ct = rt_ans;
             current_exam.wrong_ans_ct = wr_ans;
             current_exam.skipped_ct = sk_ans;
