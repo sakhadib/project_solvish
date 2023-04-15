@@ -165,12 +165,6 @@
   <data name="tb_name.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="tb_name.ToolTip" xml:space="preserve">
-    <value>Write Your full name</value>
-  </data>
   <data name="&gt;&gt;tb_name.Name" xml:space="preserve">
     <value>tb_name</value>
   </data>
@@ -230,12 +224,6 @@
   </data>
   <data name="tb_uname.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
-  </data>
-  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 17</value>
-  </metadata>
-  <data name="tb_uname.ToolTip" xml:space="preserve">
-    <value>Write username</value>
   </data>
   <data name="&gt;&gt;tb_uname.Name" xml:space="preserve">
     <value>tb_uname</value>
@@ -297,12 +285,6 @@
   <data name="tb_pass.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>211, 17</value>
-  </metadata>
-  <data name="tb_pass.ToolTip" xml:space="preserve">
-    <value>Write a password</value>
-  </data>
   <data name="&gt;&gt;tb_pass.Name" xml:space="preserve">
     <value>tb_pass</value>
   </data>
@@ -363,12 +345,6 @@
   <data name="tb_retype_pass.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>308, 17</value>
-  </metadata>
-  <data name="tb_retype_pass.ToolTip" xml:space="preserve">
-    <value>Confirm the password</value>
-  </data>
   <data name="&gt;&gt;tb_retype_pass.Name" xml:space="preserve">
     <value>tb_retype_pass</value>
   </data>
@@ -398,12 +374,6 @@
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>CREATE ACCOUNT</value>
-  </data>
-  <metadata name="toolTip5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>405, 17</value>
-  </metadata>
-  <data name="button2.ToolTip" xml:space="preserve">
-    <value>To Create an account</value>
   </data>
   <data name="&gt;&gt;button2.Name" xml:space="preserve">
     <value>button2</value>
@@ -562,12 +532,6 @@
   <data name="label2.Text" xml:space="preserve">
     <value>log in instead</value>
   </data>
-  <metadata name="toolTip6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>502, 17</value>
-  </metadata>
-  <data name="label2.ToolTip" xml:space="preserve">
-    <value>If you already have an account LogIn</value>
-  </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
   </data>
@@ -678,42 +642,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Sign Up</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolTip2.Name" xml:space="preserve">
-    <value>toolTip2</value>
-  </data>
-  <data name="&gt;&gt;toolTip2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolTip3.Name" xml:space="preserve">
-    <value>toolTip3</value>
-  </data>
-  <data name="&gt;&gt;toolTip3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolTip4.Name" xml:space="preserve">
-    <value>toolTip4</value>
-  </data>
-  <data name="&gt;&gt;toolTip4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolTip5.Name" xml:space="preserve">
-    <value>toolTip5</value>
-  </data>
-  <data name="&gt;&gt;toolTip5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolTip6.Name" xml:space="preserve">
-    <value>toolTip6</value>
-  </data>
-  <data name="&gt;&gt;toolTip6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>signup_form</value>

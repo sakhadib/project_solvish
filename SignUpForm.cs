@@ -22,8 +22,8 @@ namespace Solvish
         public signup_form()
         {
             InitializeComponent();
-            MessageBox.Show("If you are not connected to internet, Please connect to the " +
-                "internet before creating account. Or the questions will not be downloaded");
+            //MessageBox.Show("If you are not connected to internet, Please connect to the " +
+               // "internet before creating account. Or the questions will not be downloaded");
 
             tb_name.Focus();
 

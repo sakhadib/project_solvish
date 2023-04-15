@@ -51,7 +51,19 @@ namespace Solvish
             }
 
            
-             try
+            
+            
+
+        }
+
+
+
+        
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+
+            try
             {
                 StreamReader questread = new StreamReader(quespath);
                 string quest = questread.ReadLine();
@@ -77,16 +89,6 @@ namespace Solvish
             {
                 MessageBox.Show("Bye");
             }
-            
-
-        }
-
-
-
-        
-
-        private void Start_Click(object sender, EventArgs e)
-        {
 
             try
             {
@@ -159,12 +161,13 @@ namespace Solvish
 
         private void filedw(object sender, AsyncCompletedEventArgs e)
         {
-            MessageBox.Show("Downloaded Questions. You are good to go now");
+            
         }
 
-
-
-
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+        }
     }
 
 }
