@@ -39,68 +39,45 @@ namespace Solvish
 
             try
             {
-
-                //code for web cliant. Turn on after question file is uploaded
-
-                if (System.IO.File.Exists(quespath))
-                {
-                    StreamReader questread = new StreamReader(quespath);
-                    string quest = questread.ReadLine();
-                    while (quest != null)
-                    {
-                        string[] quesfrags = quest.Split(',');
-                        //stored as statement,op1,op2,op3,op4,ans
-                        string ID = quesfrags[0];
-                        string statement = quesfrags[1];
-                        string op1 = quesfrags[2];
-                        string op2 = quesfrags[3];
-                        string op3 = quesfrags[4];
-                        string op4 = quesfrags[5];
-                        string corr = quesfrags[6];
-                        int id = Convert.ToInt32(ID);
-                        Question q = new Question(id, statement, op1, op2, op3, op4, corr);
-                        Utility.QuestionsArray.Add(q);
-                        quest = questread.ReadLine();
-                    }
-                    questread.Close();
-                }
-                else
-                {
-                    string url = "https://sakhawatadib.com/wp-content/uploads/2023/03/questions.txt";
-                    string ok = quespath;
-                    wc.DownloadFileCompleted += new AsyncCompletedEventHandler(filedw);
-                    Uri questions = new Uri(url);
-                    wc.DownloadFileAsync(questions, ok);
-
-
-                    StreamReader questread = new StreamReader(quespath);
-                    string quest = questread.ReadLine();
-                    while (quest != null)
-                    {
-                        string[] quesfrags = quest.Split(',');
-                        //stored as statement,op1,op2,op3,op4,ans
-                        string ID = quesfrags[0];
-                        string statement = quesfrags[1];
-                        string op1 = quesfrags[2];
-                        string op2 = quesfrags[3];
-                        string op3 = quesfrags[4];
-                        string op4 = quesfrags[5];
-                        string corr = quesfrags[6];
-                        int id = Convert.ToInt32(ID);
-                        Question q = new Question(id, statement, op1, op2, op3, op4, corr);
-                        Utility.QuestionsArray.Add(q);
-                        quest = questread.ReadLine();
-                    }
-                    questread.Close();
-
-                }
-
-
+                string url = "https://sakhawatadib.com/wp-content/uploads/2023/04/questions.txt";
+                string ok = quespath;
+                wc.DownloadFileCompleted += new AsyncCompletedEventHandler(filedw);
+                Uri questions = new Uri(url);
+                wc.DownloadFileAsync(questions, ok);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("You need to connect to internet to download the questions from server.");
+                MessageBox.Show(ex.Message);
             }
+
+           
+             try
+            {
+                StreamReader questread = new StreamReader(quespath);
+                string quest = questread.ReadLine();
+                while (quest != null)
+                {
+                    string[] quesfrags = quest.Split(',');
+                    //stored as statement,op1,op2,op3,op4,ans
+                    string ID = quesfrags[0];
+                    string statement = quesfrags[1];
+                    string op1 = quesfrags[2];
+                    string op2 = quesfrags[3];
+                    string op3 = quesfrags[4];
+                    string op4 = quesfrags[5];
+                    string corr = quesfrags[6];
+                    int id = Convert.ToInt32(ID);
+                    Question q = new Question(id, statement, op1, op2, op3, op4, corr);
+                    Utility.QuestionsArray.Add(q);
+                    quest = questread.ReadLine();
+                }
+                questread.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Bye");
+            }
+            
 
         }
 
