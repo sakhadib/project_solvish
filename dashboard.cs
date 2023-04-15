@@ -29,9 +29,9 @@ namespace Solvish
 
             
 
-            lab_corr.Text = "C " + Convert.ToString(Utility.total_corr);
-            lab_wr.Text = "W " + Convert.ToString(Utility.total_wrong);
-            lab_skp.Text = "S " + Convert.ToString(Utility.total_skip);
+            lab_corr.Text = Convert.ToString(Utility.total_corr);
+            lab_wr.Text = Convert.ToString(Utility.total_wrong);
+            lab_skp.Text = Convert.ToString(Utility.total_skip);
 
             //Add data to the piechart
             right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Right", Utility.total_corr);

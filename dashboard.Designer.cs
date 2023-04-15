@@ -49,10 +49,11 @@
             this.lab_corr = new System.Windows.Forms.Label();
             this.lab_skp = new System.Windows.Forms.Label();
             this.lab_wr = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.exam_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.right_wrong_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exam_chart)).BeginInit();
@@ -234,18 +235,19 @@
             this.lab_corr.AutoSize = true;
             this.lab_corr.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_corr.ForeColor = System.Drawing.Color.Lime;
-            this.lab_corr.Location = new System.Drawing.Point(839, 17);
+            this.lab_corr.Location = new System.Drawing.Point(481, 155);
             this.lab_corr.Name = "lab_corr";
             this.lab_corr.Size = new System.Drawing.Size(27, 36);
             this.lab_corr.TabIndex = 14;
             this.lab_corr.Text = "c";
+            this.lab_corr.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lab_skp
             // 
             this.lab_skp.AutoSize = true;
             this.lab_skp.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_skp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lab_skp.Location = new System.Drawing.Point(935, 17);
+            this.lab_skp.Location = new System.Drawing.Point(487, 198);
             this.lab_skp.Name = "lab_skp";
             this.lab_skp.Size = new System.Drawing.Size(27, 36);
             this.lab_skp.TabIndex = 14;
@@ -256,31 +258,11 @@
             this.lab_wr.AutoSize = true;
             this.lab_wr.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_wr.ForeColor = System.Drawing.Color.Tomato;
-            this.lab_wr.Location = new System.Drawing.Point(1031, 17);
+            this.lab_wr.Location = new System.Drawing.Point(474, 244);
             this.lab_wr.Name = "lab_wr";
             this.lab_wr.Size = new System.Drawing.Size(27, 36);
             this.lab_wr.TabIndex = 14;
             this.lab_wr.Text = "c";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(915, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 36);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "/";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1011, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 36);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "/";
             // 
             // exam_chart
             // 
@@ -320,7 +302,7 @@
             legend2.ForeColor = System.Drawing.Color.Linen;
             legend2.Name = "Legend1";
             this.right_wrong_chart.Legends.Add(legend2);
-            this.right_wrong_chart.Location = new System.Drawing.Point(779, 89);
+            this.right_wrong_chart.Location = new System.Drawing.Point(673, 89);
             this.right_wrong_chart.Name = "right_wrong_chart";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -331,6 +313,45 @@
             this.right_wrong_chart.TabIndex = 16;
             this.right_wrong_chart.Text = "right_wrong_chart";
             this.right_wrong_chart.Click += new System.EventHandler(this.right_wrong_chart_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(317, 160);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(158, 29);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Total Correct : ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(317, 203);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 29);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Total Skipped : ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(317, 249);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(151, 29);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Total Wrong : ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dashboard
             // 
@@ -344,11 +365,12 @@
             this.Controls.Add(this.exam_chart);
             this.Controls.Add(this.lab_wr);
             this.Controls.Add(this.lab_skp);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.lab_corr);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.name_label);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.hello_label);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.MaximizeBox = false;
@@ -381,10 +403,11 @@
         private System.Windows.Forms.Label lab_corr;
         private System.Windows.Forms.Label lab_skp;
         private System.Windows.Forms.Label lab_wr;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataVisualization.Charting.Chart exam_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart right_wrong_chart;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

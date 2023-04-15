@@ -30,7 +30,7 @@ namespace Solvish
             result_lb.Items.Add(mid);
             foreach (Exam e in ExamsArrayCopy)
             {
-                string st = $"\t{++x}\t{e.time}\t{e.q_count}\t{e.right_ans_ct}\t{e.wrong_ans_ct}\t{e.skipped_ct}\t{e.point}";
+                string st = $"\t{++x}\t{e.time}    {e.q_count}\t{e.right_ans_ct}\t{e.wrong_ans_ct}\t{e.skipped_ct}\t{e.point}";
                 result_lb.Items.Add(st);
                 result_lb.Items.Add(mid);
             }
