@@ -15,11 +15,11 @@ namespace Solvish
 {
     public partial class signup_form : Form
     {
-        static string studentdir;
+        //static string studentdir;
         WebClient wc = new WebClient(); //declaring the web cliant.
-        static string folderdir = @"C:\solvish\";
-        public string studentpath = folderdir + @"username.txt";
-        public string quespath = folderdir + @"questions.txt";
+        static string folderdir = Utility.folderdir;
+        public string studentpath = Utility.studentpath;
+        public string quespath = Utility.quespath;
         public signup_form()
         {
             InitializeComponent();
@@ -47,17 +47,7 @@ namespace Solvish
 
         private void button2_Click(object sender, EventArgs e)
         { 
-            //creating student folder
-            studentdir = folderdir + tb_uname.Text;
-            try
-            {
-                DirectoryInfo dir = new DirectoryInfo(studentdir);
-                dir.Create();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
 
 
 
@@ -99,8 +89,21 @@ namespace Solvish
                             sw.WriteLine($"{tb_name.Text},{tb_uname.Text},{tb_pass.Text}");
                             sw.Close();
 
-                            string exampath = folderdir + Utility.current_student.username + ".txt";
-                            var myfile = File.Create(exampath);
+                            //creating student folder
+                            string slash = @"\";
+                            Utility.studentdir = folderdir + tb_uname.Text + slash;
+                            try
+                            {
+                                DirectoryInfo dir = new DirectoryInfo(Utility.studentdir);
+                                dir.Create();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+
+                            Utility.exampath = Utility.studentdir + Utility.current_student.username + ".txt";
+                            var myfile = File.Create(Utility.exampath);
                             myfile.Close();
                             
 

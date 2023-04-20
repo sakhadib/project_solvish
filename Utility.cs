@@ -100,6 +100,13 @@ namespace Solvish
                 Utility.total_point += exam.point;
             }
         }
-        
+
+        //All Directories
+        public static string studentdir;
+        public static string folderdir = @"C:\solvish\";
+        public static string studentpath = folderdir + @"username.txt";
+        public static string quespath = folderdir + @"questions.txt";
+        public static string exampath;
+
     }
 }
