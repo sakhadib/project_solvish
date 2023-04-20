@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Policy;
 
 namespace Solvish
 {
@@ -52,6 +53,8 @@ namespace Solvish
                         //initialize dashboard
                         flag = true;
                         Utility.current_student = ss;
+                        Utility.studentdir = folderdir + Utility.current_student.username + Utility.slash;
+                        Utility.exampath = Utility.studentdir + Utility.current_student.username + ".txt";
                         break;
                     }
                     else
@@ -71,7 +74,7 @@ namespace Solvish
 
             try
             {
-                string exampath = folderdir + Utility.current_student.username + ".txt";
+                string exampath = Utility.exampath;
                 StreamReader examread = new StreamReader(exampath);
                 string exams = examread.ReadLine();
                 while (exams != null)

@@ -13,8 +13,8 @@ namespace Solvish
 {
     public partial class ResultForm : Form
     {
-        public static string folderdir = @"C:\solvish\";
-        public static string exampath = folderdir + Utility.current_student.username + ".txt";
+        public static string folderdir = Utility.folderdir;
+        public static string exampath = Utility.exampath;
         
         public ResultForm()
         {

@@ -102,6 +102,7 @@ namespace Solvish
         }
 
         //All Directories
+        public static string slash = @"\";
         public static string studentdir;
         public static string folderdir = @"C:\solvish\";
         public static string studentpath = folderdir + @"username.txt";
