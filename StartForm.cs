@@ -19,6 +19,7 @@ namespace Solvish
         
         Exam current_exam = new Exam();
         static string folderdir = @"C:\solvish\";
+        //public string studentdir = folderdir + 
         public string studentpath = folderdir + "username.txt"; //for initializing the student list
         public string quespath = folderdir + "questions.txt"; //for initializing the question list
         

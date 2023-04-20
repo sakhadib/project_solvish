@@ -15,6 +15,7 @@ namespace Solvish
 {
     public partial class signup_form : Form
     {
+        static string studentdir;
         WebClient wc = new WebClient(); //declaring the web cliant.
         static string folderdir = @"C:\solvish\";
         public string studentpath = folderdir + @"username.txt";
@@ -31,7 +32,7 @@ namespace Solvish
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -46,7 +47,19 @@ namespace Solvish
 
         private void button2_Click(object sender, EventArgs e)
         { 
-            
+            //creating student folder
+            studentdir = folderdir + tb_uname.Text;
+            try
+            {
+                DirectoryInfo dir = new DirectoryInfo(studentdir);
+                dir.Create();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
 
             if (tb_name.Text == null || tb_uname.Text == null || tb_pass.Text == null || tb_retype_pass.Text == null) 
             {
