@@ -67,6 +67,7 @@ namespace Solvish
         //get questions from master list to this list to be appear on exam.
         public static void init_ques()
         {
+            utility2.current_questions.Clear();
             int chapter_count = current_exam_chaps.Count();
             int perchap = num_of_ques/ chapter_count;
             int rem = num_of_ques % chapter_count;

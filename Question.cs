@@ -15,6 +15,7 @@ namespace Solvish
         public string Option3 { get; set; }
         public string Option4 { get; set; }
         public string CorrectAnswer { get; set; }
+        public string givenans { get; set; }
 
         public Question(int id, string statement, string option1, string option2, string option3, string option4, string correctAnswer)
         {

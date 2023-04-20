@@ -42,6 +42,21 @@ namespace Solvish
                     $",{utility2.current_exam.skipped_ct},{utility2.current_exam.point},{utility2.current_exam.q_count}");
                 sw.Close();
 
+                //Creating exam file
+                string examdetaipath = Utility.studentdir + utility2.current_exam.time + ".txt";
+                var myfile = File.Create(examdetaipath);
+                myfile.Close();
+
+
+
+                //Saving the exam details
+                foreach (Question qq in utility2.current_questions)
+                {
+                    StreamWriter sww = File.AppendText(examdetaipath);
+                    sww.WriteLine($"{qq.statement},{qq.Option1},{qq.Option2},{qq.Option3},{qq.Option4},{qq.CorrectAnswer},{qq.givenans}");
+                    sww.Close();
+                }
+
             }
             catch (Exception ex)
             {

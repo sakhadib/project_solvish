@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using static System.Windows.Forms.AxHost;
 
 namespace Solvish
@@ -14,6 +15,7 @@ namespace Solvish
     public partial class examform : Form
     {
         public static int index = -1;
+        
         public examform()
         {
             InitializeComponent();
@@ -41,6 +43,10 @@ namespace Solvish
             //utility2.re_init();
             index = -1;
             timer.Stop();
+
+            
+            
+            //result
             ResultForm result = new ResultForm();
             result.Show();
             this.Hide();
@@ -90,6 +96,17 @@ namespace Solvish
             timer.Start();
         }
 
+        public void givenset( string statement, string givenans)
+        {
+            foreach (Question q in utility2.current_questions)
+            {
+                if (statement == q.statement)
+                {
+                    q.givenans = givenans;
+                }
+            }
+        }
+
 
         //option buttons
         private void op_a_btn_Click(object sender, EventArgs e)
@@ -97,6 +114,7 @@ namespace Solvish
             string ans = op_a_btn.Text;         //taking ans
             string st = lab_statement.Text;     //taking statement
             bool corr = iscorr(st, ans);        //checking
+            givenset(st, ans);
             
             if (corr)                           //for correct ans
                 pointct(2);                     //pass value 2
@@ -118,6 +136,7 @@ namespace Solvish
             string ans = op_b_btn.Text;         //taking ans
             string st = lab_statement.Text;     //taking statement
             bool corr = iscorr(st, ans);        //checking
+            givenset(st, ans);
 
             if (corr)                           //for correct ans
                 pointct(2);                     //pass value 2
@@ -140,6 +159,7 @@ namespace Solvish
             string ans = op_c_btn.Text;         //taking ans
             string st = lab_statement.Text;     //taking statement
             bool corr = iscorr(st, ans);        //checking
+            givenset(st, ans);
 
             if (corr)                           //for correct ans
                 pointct(2);                     //pass value 2
@@ -162,6 +182,7 @@ namespace Solvish
             string ans = op_d_btn.Text;         //taking ans
             string st = lab_statement.Text;     //taking statement
             bool corr = iscorr(st, ans);        //checking
+            givenset(st, ans);
 
             if (corr)                           //for correct ans
                 pointct(2);                     //pass value 2
