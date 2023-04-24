@@ -32,6 +32,7 @@ namespace Solvish
 
         private void show_Click(object sender, EventArgs e)
         {
+            ques_listbox.Items.Clear();
             quesread();
             try
             {
@@ -46,7 +47,7 @@ namespace Solvish
                         stat = "Correct Answer";
                         right++;
                     }
-                    else if (q.givenans == null)
+                    else if (q.givenans == "skipped")
                     {
                         stat = "Skipped Question";
                         skipped++;
@@ -57,18 +58,8 @@ namespace Solvish
                         wrong++;
                     }
 
-                    
 
-                    if (ques_listbox.Items.Count == 0)
-                    {
-                        
-                    }
-                    else
-                    {
-                        // The ListBox is not empty
-                    }
-
-                    string status = "\tStatus :  " + stat;
+                    string status = "Status :  " + stat;
                     string statement = Convert.ToString(count) +" .  " + q.statement;
                     count++;
                     ques_listbox.Items.Add(statement);

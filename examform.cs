@@ -195,6 +195,8 @@ namespace Solvish
         {
             try
             {
+                string st = lab_statement.Text;     //taking statement
+                givenset(st, "skipped");
                 pointct(1);
                 if (index <= utility2.num_of_ques - 1)
                 {
