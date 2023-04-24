@@ -30,6 +30,8 @@
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.show = new System.Windows.Forms.Button();
+            this.ques_listbox = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -52,12 +54,38 @@
             this.show.UseVisualStyleBackColor = true;
             this.show.Click += new System.EventHandler(this.show_Click);
             // 
+            // ques_listbox
+            // 
+            this.ques_listbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ques_listbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ques_listbox.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ques_listbox.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ques_listbox.FormattingEnabled = true;
+            this.ques_listbox.ItemHeight = 24;
+            this.ques_listbox.Location = new System.Drawing.Point(86, 106);
+            this.ques_listbox.Name = "ques_listbox";
+            this.ques_listbox.Size = new System.Drawing.Size(1124, 576);
+            this.ques_listbox.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1085, 706);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 45);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // examview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1281, 763);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ques_listbox);
             this.Controls.Add(this.show);
             this.Controls.Add(this.comboBox1);
             this.Name = "examview";
@@ -71,5 +99,7 @@
 
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button show;
+        private System.Windows.Forms.ListBox ques_listbox;
+        private System.Windows.Forms.Button button1;
     }
 }

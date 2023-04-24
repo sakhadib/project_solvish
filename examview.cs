@@ -35,10 +35,56 @@ namespace Solvish
             quesread();
             try
             {
-                foreach(Question q in thisexamques)
+                count = 1;
+                int right = 0, wrong = 0, skipped = 0;
+                foreach (Question q in thisexamques)
                 {
+                    string stat;
+                    
+                    if (q.givenans == q.CorrectAnswer)
+                    {
+                        stat = "Correct Answer";
+                        right++;
+                    }
+                    else if (q.givenans == null)
+                    {
+                        stat = "Skipped Question";
+                        skipped++;
+                    }
+                    else
+                    {
+                        stat = "Incorrect Answer";
+                        wrong++;
+                    }
+
+                    
+
+                    if (ques_listbox.Items.Count == 0)
+                    {
+                        
+                    }
+                    else
+                    {
+                        // The ListBox is not empty
+                    }
+
+                    string status = "\tStatus :  " + stat;
                     string statement = Convert.ToString(count) +" .  " + q.statement;
+                    count++;
+                    ques_listbox.Items.Add(statement);
+                    string options = $"\ta. {q.Option1}\t\tb. {q.Option2}\t\tc. {q.Option3}\t\td. {q.Option4}";
+                    ques_listbox.Items.Add(options);
+                    
+                    ques_listbox.Items.Add(status);
+                    ques_listbox.Items.Add("    ");
+
                 }
+                double point = right - (wrong * 0.25);
+                string result = $"Total Correct : {right}\tTotal Wrong : {wrong}\tTotal skipped : {skipped}\tPoint : {point}";
+                ques_listbox.Items.Add("        ");
+                ques_listbox.Items.Add("        ");
+                ques_listbox.Items.Add(result);
+
             }
             catch(Exception ex)
             {
@@ -51,7 +97,7 @@ namespace Solvish
         {
             try
             {
-                string detailpath = Utility.studentdir + comboBox1.Text;
+                string detailpath = Utility.studentdir + comboBox1.Text + ".txt";
                 StreamReader questread = new StreamReader(detailpath);
                 string quest = questread.ReadLine();
                 while (quest != null)
@@ -77,6 +123,13 @@ namespace Solvish
             {
                 MessageBox.Show("Please select the valid exam time");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ques_listbox.Items.Clear();
+            count = 1;
+            thisexamques.Clear();
         }
     }
 }
