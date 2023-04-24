@@ -30,7 +30,7 @@ namespace Solvish
         //hisab nikash back to zero
         public static void re_init()
         {
-            string format = "dd/MM/yyyy hh:mm:ss";
+            string format = "dd_MM_yyyy__hh-mm";
             string v = DateTime.Now.ToString(format);
             current_exam.time = v;
             current_exam.right_ans_ct = rt_ans;
@@ -48,6 +48,7 @@ namespace Solvish
             ee.q_count = num_of_ques;
 
             Utility.ExamsArray.Add(ee);
+            utility2.current_exam = ee;
 
 
 
