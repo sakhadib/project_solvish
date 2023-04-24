@@ -96,16 +96,7 @@ namespace Solvish
             timer.Start();
         }
 
-        public void givenset( string statement, string givenans)
-        {
-            foreach (Question q in utility2.current_questions)
-            {
-                if (statement == q.statement)
-                {
-                    q.givenans = givenans;
-                }
-            }
-        }
+        
 
 
         //option buttons
@@ -223,6 +214,18 @@ namespace Solvish
 
 
         //methods nessesary for question change and point count
+
+        //for setting the given ans of that question
+        public void givenset(string statement, string givenans)
+        {
+            foreach (Question q in utility2.current_questions)
+            {
+                if (statement == q.statement)
+                {
+                    q.givenans = givenans;
+                }
+            }
+        }
 
         //for question change
         private void quescng(int idx)

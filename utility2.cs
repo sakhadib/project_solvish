@@ -30,17 +30,10 @@ namespace Solvish
         //hisab nikash back to zero
         public static void re_init()
         {
+            Exam ee = new Exam();
             string format = "dd_MM_yyyy__hh-mm";
             string v = DateTime.Now.ToString(format);
-            current_exam.time = v;
-            current_exam.right_ans_ct = rt_ans;
-            current_exam.wrong_ans_ct = wr_ans;
-            current_exam.skipped_ct = sk_ans;
-            current_exam.point = curr_point;
-            current_exam.q_count = num_of_ques;
-
-            Exam ee = new Exam();
-            ee.time = DateTime.Now.ToString();
+            ee.time = v;
             ee.right_ans_ct = rt_ans;
             ee.wrong_ans_ct = wr_ans;
             ee.skipped_ct = sk_ans;
@@ -48,7 +41,7 @@ namespace Solvish
             ee.q_count = num_of_ques;
 
             Utility.ExamsArray.Add(ee);
-            utility2.current_exam = ee;
+            current_exam = ee;
 
 
 
@@ -61,7 +54,6 @@ namespace Solvish
             Utility.current_student.totalPoint += curr_point; 
             curr_point = 0;
 
-            
         }
 
 

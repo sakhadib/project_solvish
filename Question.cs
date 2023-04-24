@@ -27,5 +27,17 @@ namespace Solvish
             Option4 = option4;
             CorrectAnswer = correctAnswer;
         }
+
+        public Question(string statement, string option1, string option2, string option3, string option4, string correctAnswer, string givenAnswer)
+        {
+            
+            this.statement = statement;
+            Option1 = option1;
+            Option2 = option2;
+            Option3 = option3;
+            Option4 = option4;
+            CorrectAnswer = correctAnswer;
+            givenans = givenAnswer;
+        }
     }
 }
