@@ -15,6 +15,8 @@ namespace Solvish
     {
         List<Question> thisexamques = new List<Question>();
         static int count = 1;
+        public static int right = 0, wrong = 0, skipped = 0;
+        static double point = 0;
         public examview()
         {
             InitializeComponent();
@@ -33,11 +35,16 @@ namespace Solvish
         private void show_Click(object sender, EventArgs e)
         {
             ques_listbox.Items.Clear();
+            listBox1.Items.Clear();
+            thisexamques.Clear();
             quesread();
+            init();
+
             try
             {
                 count = 1;
-                int right = 0, wrong = 0, skipped = 0;
+                
+
                 foreach (Question q in thisexamques)
                 {
                     string stat;
@@ -70,11 +77,11 @@ namespace Solvish
                     ques_listbox.Items.Add("    ");
 
                 }
-                double point = right - (wrong * 0.25);
+                point = right - (wrong * 0.25);
                 string result = $"Total Correct : {right}\tTotal Wrong : {wrong}\tTotal skipped : {skipped}\tPoint : {point}";
                 ques_listbox.Items.Add("        ");
                 ques_listbox.Items.Add("        ");
-                ques_listbox.Items.Add(result);
+                listBox1.Items.Add(result);
 
             }
             catch(Exception ex)
@@ -119,8 +126,19 @@ namespace Solvish
         private void button1_Click(object sender, EventArgs e)
         {
             ques_listbox.Items.Clear();
+            listBox1.Items.Clear();
             count = 1;
             thisexamques.Clear();
+
+            init();
+        }
+
+        private void init()
+        {
+            right = 0;
+            wrong = 0;
+            skipped = 0;
+            point = 0;
         }
     }
 }
