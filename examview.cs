@@ -123,6 +123,13 @@ namespace Solvish
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dashboard d = new dashboard();
+            d.Show();
+            this.Hide();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             ques_listbox.Items.Clear();

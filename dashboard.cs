@@ -49,6 +49,33 @@ namespace Solvish
 
         }
 
+        public void renit()
+        {
+            lab_corr.Text = Convert.ToString(Utility.total_corr);
+            lab_wr.Text = Convert.ToString(Utility.total_wrong);
+            lab_skp.Text = Convert.ToString(Utility.total_skip);
+
+            //Add data to the piechart
+            try
+            {
+                right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Right", Utility.total_corr);
+                right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Wrong", Utility.total_wrong);
+                right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Skipped", Utility.total_skip);
+            }
+            catch
+            {
+
+            }
+
+            //Add data to the graph
+            foreach (Exam eq in Utility.ExamsArray)
+            {
+                exam_chart.Series["Exam"].Points.AddXY($"Exam-{utility2.examcount}", eq.point);
+                utility2.examcount++;
+            }
+            utility2.examcount = 1;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
