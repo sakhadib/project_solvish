@@ -35,50 +35,65 @@ namespace Solvish
 
         private void StartExambutton_Click(object sender, EventArgs e)
         {
-            pp = 0;
-            try
+            if(utility2.current_exam_chaps.Count > 0)
             {
-                //initializing the timer
-                Utility.hour = Convert.ToInt32(tb_hour.Text);
-                Utility.minute = Convert.ToInt32(tb_minute.Text);
-                Utility.second = 0;
-
-                //Checking for timer isuues
-
-                if (Utility.minute >= 60)
+                if(Convert.ToInt32(num_of_ques_tb.Text) > 0)
                 {
-                    throw new ArgumentException("Invalid minute value. Value must be between 0 and 60.");
-                }
+                    pp = 0;
+                    try
+                    {
+                        //initializing the timer
+                        Utility.hour = Convert.ToInt32(tb_hour.Text);
+                        Utility.minute = Convert.ToInt32(tb_minute.Text);
+                        Utility.second = 0;
 
-                if (Utility.hour >= 24)
+                        //Checking for timer isuues
+
+                        if (Utility.minute >= 60)
+                        {
+                            throw new ArgumentException("Invalid minute value. Value must be between 0 and 60.");
+                        }
+
+                        if (Utility.hour >= 24)
+                        {
+                            throw new ArgumentException("Invalid hour value. Value must be between 0 and 24.");
+                        }
+
+                    }
+                    catch (Exception z)
+                    {
+                        MessageBox.Show(z.Message + "in the timer");
+                    }
+
+
+
+                    //Aquiring the number of questions
+                    try
+                    {
+                        utility2.num_of_ques = Convert.ToInt32(num_of_ques_tb.Text);
+                    }
+                    catch (Exception w)
+                    {
+                        MessageBox.Show(w.Message);
+                    }
+
+                    utility2.init_ques();
+
+                    // exam form loading
+                    examform e1 = new examform();
+                    e1.Show();
+                    this.Hide();
+                }
+                else
                 {
-                    throw new ArgumentException("Invalid hour value. Value must be between 0 and 24.");
+                    MessageBox.Show("Please input a valid number of questions");
                 }
-
+                
             }
-            catch (Exception z)
+            else
             {
-                MessageBox.Show(z.Message + "in the timer");
+                MessageBox.Show("Please select some chapters for exam");
             }
-
-            
-
-            //Aquiring the number of questions
-            try
-            {
-                utility2.num_of_ques = Convert.ToInt32(num_of_ques_tb.Text);
-            }
-            catch (Exception w)
-            { 
-                MessageBox.Show(w.Message);
-            }
-
-            utility2.init_ques();
-
-            // exam form loading
-            examform e1 = new examform();
-            e1.Show();
-            this.Hide();
         }
 
         

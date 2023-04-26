@@ -54,8 +54,9 @@
             this.tb_hour.ForeColor = System.Drawing.SystemColors.Info;
             this.tb_hour.Location = new System.Drawing.Point(250, 106);
             this.tb_hour.Name = "tb_hour";
-            this.tb_hour.Size = new System.Drawing.Size(63, 33);
+            this.tb_hour.Size = new System.Drawing.Size(84, 33);
             this.tb_hour.TabIndex = 10;
+            this.tb_hour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -98,21 +99,23 @@
             this.tb_minute.ForeColor = System.Drawing.SystemColors.Info;
             this.tb_minute.Location = new System.Drawing.Point(443, 106);
             this.tb_minute.Name = "tb_minute";
-            this.tb_minute.Size = new System.Drawing.Size(63, 33);
+            this.tb_minute.Size = new System.Drawing.Size(90, 33);
             this.tb_minute.TabIndex = 13;
+            this.tb_minute.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // StartExambutton
             // 
-            this.StartExambutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.StartExambutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.StartExambutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(28)))), ((int)(((byte)(0)))));
+            this.StartExambutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
+            this.StartExambutton.FlatAppearance.BorderSize = 3;
             this.StartExambutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.StartExambutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StartExambutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(56)))), ((int)(((byte)(1)))));
             this.StartExambutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StartExambutton.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartExambutton.ForeColor = System.Drawing.Color.Black;
-            this.StartExambutton.Location = new System.Drawing.Point(70, 556);
+            this.StartExambutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
+            this.StartExambutton.Location = new System.Drawing.Point(649, 627);
             this.StartExambutton.Name = "StartExambutton";
-            this.StartExambutton.Size = new System.Drawing.Size(509, 56);
+            this.StartExambutton.Size = new System.Drawing.Size(262, 61);
             this.StartExambutton.TabIndex = 14;
             this.StartExambutton.Text = "Start Exam";
             this.StartExambutton.UseVisualStyleBackColor = false;
@@ -214,6 +217,7 @@
             this.num_of_ques_tb.Name = "num_of_ques_tb";
             this.num_of_ques_tb.Size = new System.Drawing.Size(199, 33);
             this.num_of_ques_tb.TabIndex = 10;
+            this.num_of_ques_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // listBox1
             // 
@@ -222,23 +226,24 @@
             this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(189)))));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 24;
-            this.listBox1.Location = new System.Drawing.Point(630, 92);
+            this.listBox1.Location = new System.Drawing.Point(649, 41);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(529, 580);
             this.listBox1.TabIndex = 17;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(8)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.button3.FlatAppearance.BorderSize = 3;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Location = new System.Drawing.Point(898, 35);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.button3.Location = new System.Drawing.Point(917, 627);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(261, 51);
+            this.button3.Size = new System.Drawing.Size(261, 61);
             this.button3.TabIndex = 18;
             this.button3.Text = "Remove Selection";
             this.button3.UseVisualStyleBackColor = false;
@@ -248,8 +253,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1217, 682);
+            this.ClientSize = new System.Drawing.Size(1217, 700);
+            this.ControlBox = false;
             this.Controls.Add(this.button3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.comboBox3);
@@ -267,6 +274,7 @@
             this.Controls.Add(this.tb_hour);
             this.Controls.Add(this.label4);
             this.Name = "New_Exam";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New_Exam";
             this.ResumeLayout(false);
             this.PerformLayout();

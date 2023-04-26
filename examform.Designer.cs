@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lab_statement = new System.Windows.Forms.Label();
             this.op_a_btn = new System.Windows.Forms.Button();
             this.op_b_btn = new System.Windows.Forms.Button();
@@ -39,7 +38,6 @@
             this.TimeLabel = new System.Windows.Forms.Label();
             this.skp_butt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -51,16 +49,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Solvish.Properties.Resources.Artboard_3;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(245, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // lab_statement
             // 
@@ -83,9 +71,9 @@
             this.op_a_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.op_a_btn.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.op_a_btn.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.op_a_btn.Location = new System.Drawing.Point(329, 333);
+            this.op_a_btn.Location = new System.Drawing.Point(234, 333);
             this.op_a_btn.Name = "op_a_btn";
-            this.op_a_btn.Size = new System.Drawing.Size(314, 76);
+            this.op_a_btn.Size = new System.Drawing.Size(409, 76);
             this.op_a_btn.TabIndex = 5;
             this.op_a_btn.Text = "option 1";
             this.op_a_btn.UseVisualStyleBackColor = false;
@@ -102,7 +90,7 @@
             this.op_b_btn.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.op_b_btn.Location = new System.Drawing.Point(672, 333);
             this.op_b_btn.Name = "op_b_btn";
-            this.op_b_btn.Size = new System.Drawing.Size(314, 76);
+            this.op_b_btn.Size = new System.Drawing.Size(431, 76);
             this.op_b_btn.TabIndex = 5;
             this.op_b_btn.Text = "option 1";
             this.op_b_btn.UseVisualStyleBackColor = false;
@@ -117,9 +105,9 @@
             this.op_c_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.op_c_btn.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.op_c_btn.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.op_c_btn.Location = new System.Drawing.Point(329, 435);
+            this.op_c_btn.Location = new System.Drawing.Point(234, 435);
             this.op_c_btn.Name = "op_c_btn";
-            this.op_c_btn.Size = new System.Drawing.Size(314, 76);
+            this.op_c_btn.Size = new System.Drawing.Size(409, 76);
             this.op_c_btn.TabIndex = 5;
             this.op_c_btn.Text = "option 1";
             this.op_c_btn.UseVisualStyleBackColor = false;
@@ -136,7 +124,7 @@
             this.op_d_btn.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.op_d_btn.Location = new System.Drawing.Point(672, 435);
             this.op_d_btn.Name = "op_d_btn";
-            this.op_d_btn.Size = new System.Drawing.Size(314, 76);
+            this.op_d_btn.Size = new System.Drawing.Size(431, 76);
             this.op_d_btn.TabIndex = 5;
             this.op_d_btn.Text = "option 1";
             this.op_d_btn.UseVisualStyleBackColor = false;
@@ -151,7 +139,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button7.Location = new System.Drawing.Point(1110, 669);
+            this.button7.Location = new System.Drawing.Point(579, 632);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(165, 55);
             this.button7.TabIndex = 5;
@@ -179,7 +167,7 @@
             this.skp_butt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.skp_butt.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skp_butt.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skp_butt.Location = new System.Drawing.Point(329, 568);
+            this.skp_butt.Location = new System.Drawing.Point(559, 548);
             this.skp_butt.Name = "skp_butt";
             this.skp_butt.Size = new System.Drawing.Size(205, 52);
             this.skp_butt.TabIndex = 5;
@@ -203,22 +191,18 @@
             this.Controls.Add(this.op_a_btn);
             this.Controls.Add(this.lab_statement);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "examform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Exam";
             this.Load += new System.EventHandler(this.examform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lab_statement;
         private System.Windows.Forms.Button op_a_btn;

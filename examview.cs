@@ -14,6 +14,8 @@ namespace Solvish
     public partial class examview : Form
     {
         List<Question> thisexamques = new List<Question>();
+        List<string> times = new List<string>();
+        
         static int count = 1;
         public static int right = 0, wrong = 0, skipped = 0;
         static double point = 0;
@@ -23,17 +25,30 @@ namespace Solvish
             foreach(Exam ee in Utility.ExamsArray)
             {
                 string time = ee.time;
+                times.Add(time);
+                
+            }
+            reverse();
+            foreach(string time in times)
+            {
                 comboBox1.Items.Add(time);
             }
         }
 
+        public void reverse()
+        {
+            times.Sort();
+            times.Reverse();
+        }
+
         private void examview_Load(object sender, EventArgs e)
         {
-
+            //ques_listbox.DrawItem += ques_listbox_DrawItem;
         }
 
         private void show_Click(object sender, EventArgs e)
         {
+            
             ques_listbox.Items.Clear();
             listBox1.Items.Clear();
             thisexamques.Clear();
@@ -51,17 +66,17 @@ namespace Solvish
                     
                     if (q.givenans == q.CorrectAnswer)
                     {
-                        stat = "Correct Answer";
+                        stat = "✔\t";
                         right++;
                     }
                     else if (q.givenans == "skipped")
                     {
-                        stat = "Skipped Question";
+                        stat = ">|\t";
                         skipped++;
                     }
                     else
                     {
-                        stat = "Incorrect Answer";
+                        stat = "❌\t";
                         wrong++;
                     }
 
@@ -69,11 +84,12 @@ namespace Solvish
                     string status = "Status :  " + stat;
                     string statement = Convert.ToString(count) +" .  " + q.statement;
                     count++;
-                    ques_listbox.Items.Add(statement);
+                    ques_listbox.Items.Add(stat + statement);
                     string options = $"\ta. {q.Option1}\t\tb. {q.Option2}\t\tc. {q.Option3}\t\td. {q.Option4}";
                     ques_listbox.Items.Add(options);
                     
-                    ques_listbox.Items.Add(status);
+                    //ques_listbox.Items.Add(status);
+                    ques_listbox.Items.Add("    ");
                     ques_listbox.Items.Add("    ");
 
                 }
@@ -88,8 +104,10 @@ namespace Solvish
             {
                 MessageBox.Show(ex.Message);
             }
-
+            //ques_listbox.DrawItem += ques_listbox_DrawItem;
         }
+
+        
 
         private void quesread()
         {
@@ -147,5 +165,8 @@ namespace Solvish
             skipped = 0;
             point = 0;
         }
+
+        
+
     }
 }
