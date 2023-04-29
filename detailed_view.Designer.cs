@@ -28,48 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.result_lb = new System.Windows.Forms.ListBox();
             this.dashboard_btn = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // result_lb
             // 
             this.result_lb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.result_lb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.result_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.result_lb.ForeColor = System.Drawing.SystemColors.Info;
             this.result_lb.FormattingEnabled = true;
             this.result_lb.ItemHeight = 31;
-            this.result_lb.Location = new System.Drawing.Point(12, 74);
+            this.result_lb.Location = new System.Drawing.Point(12, 136);
             this.result_lb.Name = "result_lb";
-            this.result_lb.Size = new System.Drawing.Size(1299, 655);
+            this.result_lb.Size = new System.Drawing.Size(1299, 589);
             this.result_lb.TabIndex = 5;
             // 
             // dashboard_btn
             // 
             this.dashboard_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.dashboard_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
+            this.dashboard_btn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.dashboard_btn.FlatAppearance.BorderSize = 3;
             this.dashboard_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.dashboard_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashboard_btn.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboard_btn.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dashboard_btn.Location = new System.Drawing.Point(12, 17);
+            this.dashboard_btn.Location = new System.Drawing.Point(17, 19);
             this.dashboard_btn.Name = "dashboard_btn";
             this.dashboard_btn.Size = new System.Drawing.Size(321, 51);
             this.dashboard_btn.TabIndex = 12;
             this.dashboard_btn.Text = "Back to Dashboard";
-            this.toolTip1.SetToolTip(this.dashboard_btn, "To go back to dashboard");
             this.dashboard_btn.UseVisualStyleBackColor = false;
             this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.IsBalloon = true;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Click";
             // 
             // button1
             // 
@@ -85,6 +82,37 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1092, 25);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "To see particullar exam detailes please remember the time of the exam. I will be " +
+    "needed to view the exam details.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Solvish.Properties.Resources.Artboard_1_copy_2x;
+            this.pictureBox1.Location = new System.Drawing.Point(473, -4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(183, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(588, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(159, 37);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "SOLVISH";
+            // 
             // detailed_view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,13 +120,18 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
             this.ClientSize = new System.Drawing.Size(1323, 741);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dashboard_btn);
             this.Controls.Add(this.result_lb);
+            this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Name = "detailed_view";
             this.Text = "detailed_view";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -106,7 +139,9 @@
 
         private System.Windows.Forms.ListBox result_lb;
         private System.Windows.Forms.Button dashboard_btn;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

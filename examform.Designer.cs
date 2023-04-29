@@ -37,7 +37,10 @@
             this.button7 = new System.Windows.Forms.Button();
             this.TimeLabel = new System.Windows.Forms.Label();
             this.skp_butt = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -175,6 +178,29 @@
             this.skp_butt.UseVisualStyleBackColor = false;
             this.skp_butt.Click += new System.EventHandler(this.skp_butt_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(79, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(159, 37);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "SOLVISH";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Solvish.Properties.Resources.Artboard_1_copy_2x;
+            this.pictureBox1.Location = new System.Drawing.Point(-36, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(183, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // examform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +208,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
             this.ClientSize = new System.Drawing.Size(1287, 736);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TimeLabel);
             this.Controls.Add(this.skp_butt);
             this.Controls.Add(this.button7);
@@ -197,6 +225,7 @@
             this.Text = "New Exam";
             this.Load += new System.EventHandler(this.examform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +241,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Button skp_butt;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -198,7 +198,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Solvish.Properties.Resources.main_logo;
+            this.pictureBox2.Image = global::Solvish.Properties.Resources.Artboard_1_copy_2x;
             this.pictureBox2.Location = new System.Drawing.Point(72, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(93, 99);

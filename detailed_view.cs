@@ -22,7 +22,7 @@ namespace Solvish
             string uu = "\t\t\t\tYOUR DETAILED EXAM VIEW";
             result_lb.Items.Add(uu);
             string start = "\tNo.\tDate and Time of exam\tn(Q)\tCA\tWA\tSk\tPt";
-            string mid = "\t   \t                     \t    \t  \t  \t  \t   ";
+            string mid = "     ";
             string end = "\t___\t_____________________\t____\t__\t__\t__\t___";
             result_lb.Items.Add(mid);
             result_lb.Items.Add(start);
@@ -30,7 +30,7 @@ namespace Solvish
             result_lb.Items.Add(mid);
             foreach (Exam e in ExamsArrayCopy)
             {
-                string st = $"\t{++x}\t{e.time}    {e.q_count}\t{e.right_ans_ct}\t{e.wrong_ans_ct}\t{e.skipped_ct}\t{e.point}";
+                string st = $"\t{++x}\t{e.time}\t\t{e.q_count}\t{e.right_ans_ct}\t{e.wrong_ans_ct}\t{e.skipped_ct}\t{e.point}";
                 result_lb.Items.Add(st);
                 result_lb.Items.Add(mid);
             }

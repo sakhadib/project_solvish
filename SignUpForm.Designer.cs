@@ -39,7 +39,6 @@
             this.tb_retype_pass = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,10 +46,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -132,13 +133,6 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Solvish.Properties.Resources.Artboard_3;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
@@ -191,11 +185,25 @@
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Solvish.Properties.Resources.Artboard_1_copy_2x;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // signup_form
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button2);
@@ -209,7 +217,6 @@
             this.Controls.Add(this.tb_name);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -220,17 +227,15 @@
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.signup_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tb_name;
@@ -248,5 +253,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
