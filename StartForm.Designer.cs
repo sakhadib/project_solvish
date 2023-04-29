@@ -38,7 +38,8 @@
             // 
             // Start
             // 
-            this.Start.BackColor = System.Drawing.Color.Black;
+            this.Start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.Start.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Start.FlatAppearance.BorderSize = 0;
             this.Start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Start.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(436, 308);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Start);
