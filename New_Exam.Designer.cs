@@ -46,6 +46,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -274,6 +275,19 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.IndianRed;
+            this.label9.Location = new System.Drawing.Point(12, 663);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(179, 25);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Close Application";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // New_Exam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,6 +296,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1217, 700);
             this.ControlBox = false;
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -329,5 +344,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label9;
     }
 }

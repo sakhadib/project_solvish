@@ -40,6 +40,7 @@
             this.save_and_close_button = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,6 +181,19 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.IndianRed;
+            this.label1.Location = new System.Drawing.Point(768, 577);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(179, 25);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Close Application";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +202,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(959, 611);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.save_and_close_button);
@@ -224,5 +239,6 @@
         private System.Windows.Forms.Button save_and_close_button;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

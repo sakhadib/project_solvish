@@ -154,5 +154,10 @@ namespace Solvish
             
             utility2.current_exam_chaps.Add(chapcode);
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

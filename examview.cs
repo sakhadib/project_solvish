@@ -148,6 +148,11 @@ namespace Solvish
             this.Hide();
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             ques_listbox.Items.Clear();
