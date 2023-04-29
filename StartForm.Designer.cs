@@ -44,7 +44,7 @@
             this.Start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Start.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Start.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Start.Location = new System.Drawing.Point(93, 214);
+            this.Start.Location = new System.Drawing.Point(93, 195);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(248, 50);
             this.Start.TabIndex = 3;
@@ -68,7 +68,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(159, 132);
+            this.label2.Location = new System.Drawing.Point(159, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 43);
             this.label2.TabIndex = 16;
@@ -77,7 +77,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Solvish.Properties.Resources.Artboard_1_copy_2x;
-            this.pictureBox1.Location = new System.Drawing.Point(-3, 70);
+            this.pictureBox1.Location = new System.Drawing.Point(-3, 51);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(264, 164);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,7 +89,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(436, 308);
+            this.ClientSize = new System.Drawing.Size(436, 303);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.pictureBox2);

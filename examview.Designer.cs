@@ -120,7 +120,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "examview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "examview";
+            this.Text = "Detailed Exam View";
             this.Load += new System.EventHandler(this.examview_Load);
             this.ResumeLayout(false);
 
