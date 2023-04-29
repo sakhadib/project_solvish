@@ -54,6 +54,7 @@
             // dashboard_btn
             // 
             this.dashboard_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashboard_btn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.dashboard_btn.FlatAppearance.BorderSize = 3;
             this.dashboard_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
@@ -72,6 +73,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,10 +91,11 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1092, 25);
+            this.label1.Size = new System.Drawing.Size(1098, 25);
             this.label1.TabIndex = 14;
-            this.label1.Text = "To see particullar exam detailes please remember the time of the exam. I will be " +
-    "needed to view the exam details.";
+            this.label1.Text = "To see particullar exam detailes please remember the time of the exam. It will be" +
+    " needed to view the exam details.";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
