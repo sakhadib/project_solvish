@@ -111,7 +111,7 @@ namespace Solvish
                 pointct(2);                     //pass value 2
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
-            if (index != utility2.num_of_ques - 1)
+            if (index != utility2.num_of_ques - 2)
             {
                 quescng(index);                     //changing question
                 index++;                            //increamenting index
@@ -134,7 +134,7 @@ namespace Solvish
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
 
-            if (index != utility2.num_of_ques - 1)
+            if (index != utility2.num_of_ques - 2)
             {
                 quescng(index);                     //changing question
                 index++;                            //increamenting index
@@ -157,7 +157,7 @@ namespace Solvish
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
 
-            if (index != utility2.num_of_ques - 1)
+            if (index != utility2.num_of_ques - 2)
             {
                 quescng(index);                     //changing question
                 index++;                            //increamenting index
@@ -180,7 +180,7 @@ namespace Solvish
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
 
-            if (index != utility2.num_of_ques - 1)
+            if (index != utility2.num_of_ques - 2)
             {
                 quescng(index);                     //changing question
                 index++;                            //increamenting index
@@ -198,7 +198,7 @@ namespace Solvish
                 string st = lab_statement.Text;     //taking statement
                 givenset(st, "skipped");
                 pointct(1);
-                if (index <= utility2.num_of_ques - 1)
+                if (index <= utility2.num_of_ques - 2)
                 {
                     quescng(index);                     //changing question
                     index++;                            //increamenting index

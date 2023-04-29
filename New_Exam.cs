@@ -72,7 +72,7 @@ namespace Solvish
                         //Aquiring the number of questions
                         try
                         {
-                            utility2.num_of_ques = Convert.ToInt32(num_of_ques_tb.Text);
+                            utility2.num_of_ques = Convert.ToInt32(num_of_ques_tb.Text) + 1;
                         }
                         catch (Exception w)
                         {
