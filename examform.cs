@@ -21,7 +21,7 @@ namespace Solvish
             InitializeComponent();
             //initializing randomized questions for exam
             utility2.init_ques();
-            label1.Text = Convert.ToString(utility2.current_questions.Count);
+            //label1.Text = Convert.ToString(utility2.current_questions.Count);
             TimeLabel.Text = $"{Utility.hour} : {Utility.minute} : {Utility.second}";
             quescng(index);
             index++;

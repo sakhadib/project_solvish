@@ -104,7 +104,7 @@ namespace Solvish
                 }
                 //MessageBox.Show(Convert.ToString(x));
             }
-            MessageBox.Show(Convert.ToString(xxx));
+            //MessageBox.Show(Convert.ToString(xxx));
             
             //making the question list random so it wont look like its in serial in chapter.
             ShuffleQuestions(current_questions);
