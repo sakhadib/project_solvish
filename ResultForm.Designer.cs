@@ -94,7 +94,7 @@
             this.lab_c_ans.AutoSize = true;
             this.lab_c_ans.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_c_ans.ForeColor = System.Drawing.Color.Lime;
-            this.lab_c_ans.Location = new System.Drawing.Point(288, 242);
+            this.lab_c_ans.Location = new System.Drawing.Point(293, 241);
             this.lab_c_ans.Name = "lab_c_ans";
             this.lab_c_ans.Size = new System.Drawing.Size(137, 29);
             this.lab_c_ans.TabIndex = 11;
@@ -115,7 +115,7 @@
             // 
             this.lab_sk_ans.AutoSize = true;
             this.lab_sk_ans.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_sk_ans.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.lab_sk_ans.ForeColor = System.Drawing.Color.Yellow;
             this.lab_sk_ans.Location = new System.Drawing.Point(293, 285);
             this.lab_sk_ans.Name = "lab_sk_ans";
             this.lab_sk_ans.Size = new System.Drawing.Size(206, 29);
@@ -185,6 +185,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Solvish.Properties.Resources.CROSS;
             this.pictureBox2.Location = new System.Drawing.Point(949, 12);
             this.pictureBox2.Name = "pictureBox2";
@@ -218,6 +219,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "ResultForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Result";
             this.Load += new System.EventHandler(this.ResultForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
