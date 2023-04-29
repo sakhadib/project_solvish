@@ -64,10 +64,11 @@ namespace Solvish
             int chapter_count = current_exam_chaps.Count();
             int perchap = num_of_ques/ chapter_count;
             int rem = num_of_ques % chapter_count;
-
+            int xxx = 0;
             for(int i=0; i<chapter_count; i++)
             {
                 int[] quesids = Utility.GenerateRandomNumbers(perchap, current_exam_chaps[i] + 1, current_exam_chaps[i] + 20);
+                //x = 0;
                 foreach(int id in quesids)
                 {
                     foreach(Question q in Utility.QuestionsArray)
@@ -75,16 +76,40 @@ namespace Solvish
                         if(q.id == id)
                         {
                             utility2.current_questions.Add(q);
+                            
                             break;
                         }
                     }
-                    
+                    xxx++;
                 }
+                //MessageBox.Show(Convert.ToString(x));
             }
 
+            for (int i = 0; i < 1; i++)
+            {
+                int[] quesids = Utility.GenerateRandomNumbers(rem, current_exam_chaps[0] + 1, current_exam_chaps[0] + 20);
+                //x = 0;
+                foreach (int id in quesids)
+                {
+                    foreach (Question q in Utility.QuestionsArray)
+                    {
+                        if (q.id == id)
+                        {
+                            utility2.current_questions.Add(q);
+
+                            break;
+                        }
+                    }
+                    xxx++;
+                }
+                //MessageBox.Show(Convert.ToString(x));
+            }
+            MessageBox.Show(Convert.ToString(xxx));
             
             //making the question list random so it wont look like its in serial in chapter.
             ShuffleQuestions(current_questions);
+
+
             
         }
 

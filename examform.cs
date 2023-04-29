@@ -21,7 +21,7 @@ namespace Solvish
             InitializeComponent();
             //initializing randomized questions for exam
             utility2.init_ques();
-
+            label1.Text = Convert.ToString(utility2.current_questions.Count);
             TimeLabel.Text = $"{Utility.hour} : {Utility.minute} : {Utility.second}";
             quescng(index);
             index++;
@@ -111,7 +111,7 @@ namespace Solvish
                 pointct(2);                     //pass value 2
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
-            if (index != utility2.num_of_ques - 2)
+            if (index != utility2.num_of_ques - 1)
             {
                 quescng(index);                     //changing question
                 index++;                            //increamenting index
@@ -134,7 +134,7 @@ namespace Solvish
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
 
-            if (index != utility2.num_of_ques - 2)
+            if (index != utility2.num_of_ques - 1)
             {
                 quescng(index);                     //changing question
                 index++;                            //increamenting index
@@ -157,7 +157,7 @@ namespace Solvish
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
 
-            if (index != utility2.num_of_ques - 2)
+            if (index != utility2.num_of_ques - 1)
             {
                 quescng(index);                     //changing question
                 index++;                            //increamenting index
@@ -180,7 +180,7 @@ namespace Solvish
             else                                //for incorrect ans   
                 pointct(0);                     //pass value 0
 
-            if (index != utility2.num_of_ques - 2)
+            if (index != utility2.num_of_ques - 1)
             {
                 quescng(index);                     //changing question
                 index++;                            //increamenting index
@@ -198,7 +198,7 @@ namespace Solvish
                 string st = lab_statement.Text;     //taking statement
                 givenset(st, "skipped");
                 pointct(1);
-                if (index <= utility2.num_of_ques - 2)
+                if (index <= utility2.num_of_ques - 1)
                 {
                     quescng(index);                     //changing question
                     index++;                            //increamenting index
@@ -210,7 +210,7 @@ namespace Solvish
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + "etatei somossa");
             }
         }
 
@@ -244,7 +244,7 @@ namespace Solvish
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message + "change e somossa");
                 //Application.Exit();
             }
         }
