@@ -67,100 +67,7 @@ namespace Solvish
         private void Start_Click(object sender, EventArgs e)
         {
             
-            try
-            {
-                StreamReader questread = new StreamReader(quespath);
-                string quest = questread.ReadLine();
-                while (quest != null)
-                {
-                    string[] quesfrags = quest.Split(',');
-                    //stored as statement,op1,op2,op3,op4,ans
-                    string ID = quesfrags[0];
-                    string statement = quesfrags[1];
-                    string op1 = quesfrags[2];
-                    string op2 = quesfrags[3];
-                    string op3 = quesfrags[4];
-                    string op4 = quesfrags[5];
-                    string corr = quesfrags[6];
-                    int id = Convert.ToInt32(ID);
-                    Question q = new Question(id, statement, op1, op2, op3, op4, corr);
-                    Utility.QuestionsArray.Add(q);
-                    quest = questread.ReadLine();
-                }
-                questread.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Bye");
-            }
-
-            try
-            {
-                //initializing student list
-                if (System.IO.File.Exists(studentpath))
-                {
-                    StreamReader studentread = new StreamReader(studentpath);
-                    string students = studentread.ReadLine();
-                    while (students != null)
-                    {
-                        string[] studentfrags = students.Split(',');
-                        //stored as name,username,password
-                        string name = studentfrags[0];
-                        string username = studentfrags[1];
-                        string password = studentfrags[2];
-
-                        student s = new student(name, username, password);
-                        Utility.studentsArray.Add(s);
-                        students = studentread.ReadLine();
-                    }
-                    studentread.Close();
-                }
-
-
-                else
-                {
-                    System.IO.File.Create(studentpath);
-                    StreamReader studentread = new StreamReader(studentpath);
-                    string students = studentread.ReadLine();
-                    while (students != null)
-                    {
-                        string[] studentfrags = students.Split(',');
-                        //stored as name,username,password
-                        string name = studentfrags[0];
-                        string username = studentfrags[1];
-                        string password = studentfrags[2];
-
-                        student s = new student(name, username, password);
-                        Utility.studentsArray.Add(s);
-                        students = studentread.ReadLine();
-                    }
-                    studentread.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            utility_form.signup_Form = new signup_form();
-            utility_form.login_form = new Login_form();
-            utility_form.login_form.Show();
-            /*test_form tf = new test_form();
-            tf.Show();*/
-            this.Hide();
-
-            //testing
-            /*foreach(student s in Utility.studentsArray)
-            {
-                string wp = $"{s.name}\t{s.username}\t{s.password}";
-                listBox1.Items.Add(wp);
-            }
-            foreach (Question qqqt in Utility.QuestionsArray)
-            {
-                string qp = $"{qqqt.id}\t{qqqt.statement}\t{qqqt.Option1}\t{qqqt.Option2}\t{qqqt.Option3}\t{qqqt.Option4}\t{qqqt.CorrectAnswer}";
-                listBox2.Items.Add(qp);
-            }*/
-
+           
         }
 
         private void filedw(object sender, AsyncCompletedEventArgs e)
@@ -171,6 +78,128 @@ namespace Solvish
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StartForm_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(progressBar1.Value<100)
+            {
+                progressBar1.Value++;
+                PercentageLabel.Text = progressBar1.Value.ToString()+"%";
+            }
+            else 
+            {
+                timer1.Stop();
+                try
+                {
+                    StreamReader questread = new StreamReader(quespath);
+                    string quest = questread.ReadLine();
+                    while (quest != null)
+                    {
+                        string[] quesfrags = quest.Split(',');
+                        //stored as statement,op1,op2,op3,op4,ans
+                        string ID = quesfrags[0];
+                        string statement = quesfrags[1];
+                        string op1 = quesfrags[2];
+                        string op2 = quesfrags[3];
+                        string op3 = quesfrags[4];
+                        string op4 = quesfrags[5];
+                        string corr = quesfrags[6];
+                        int id = Convert.ToInt32(ID);
+                        Question q = new Question(id, statement, op1, op2, op3, op4, corr);
+                        Utility.QuestionsArray.Add(q);
+                        quest = questread.ReadLine();
+                    }
+                    questread.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Bye");
+                }
+
+                try
+                {
+                    //initializing student list
+                    if (System.IO.File.Exists(studentpath))
+                    {
+                        StreamReader studentread = new StreamReader(studentpath);
+                        string students = studentread.ReadLine();
+                        while (students != null)
+                        {
+                            string[] studentfrags = students.Split(',');
+                            //stored as name,username,password
+                            string name = studentfrags[0];
+                            string username = studentfrags[1];
+                            string password = studentfrags[2];
+
+                            student s = new student(name, username, password);
+                            Utility.studentsArray.Add(s);
+                            students = studentread.ReadLine();
+                        }
+                        studentread.Close();
+                    }
+
+
+                    else
+                    {
+                        System.IO.File.Create(studentpath);
+                        StreamReader studentread = new StreamReader(studentpath);
+                        string students = studentread.ReadLine();
+                        while (students != null)
+                        {
+                            string[] studentfrags = students.Split(',');
+                            //stored as name,username,password
+                            string name = studentfrags[0];
+                            string username = studentfrags[1];
+                            string password = studentfrags[2];
+
+                            student s = new student(name, username, password);
+                            Utility.studentsArray.Add(s);
+                            students = studentread.ReadLine();
+                        }
+                        studentread.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                utility_form.signup_Form = new signup_form();
+                utility_form.login_form = new Login_form();
+                utility_form.login_form.Show();
+                /*test_form tf = new test_form();
+                tf.Show();*/
+                this.Hide();
+
+                //testing
+                /*foreach(student s in Utility.studentsArray)
+                {
+                    string wp = $"{s.name}\t{s.username}\t{s.password}";
+                    listBox1.Items.Add(wp);
+                }
+                foreach (Question qqqt in Utility.QuestionsArray)
+                {
+                    string qp = $"{qqqt.id}\t{qqqt.statement}\t{qqqt.Option1}\t{qqqt.Option2}\t{qqqt.Option3}\t{qqqt.Option4}\t{qqqt.CorrectAnswer}";
+                    listBox2.Items.Add(qp);
+                }*/
+
+            }
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
