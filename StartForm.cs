@@ -58,12 +58,6 @@ namespace Solvish
 
         }
 
-        
-
-
-
-        
-
         private void Start_Click(object sender, EventArgs e)
         {
             
