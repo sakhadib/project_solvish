@@ -35,6 +35,7 @@ namespace Solvish
 
         private void StartExambutton_Click(object sender, EventArgs e)
         {
+            bool flag = false;
             try
             {
                 if (utility2.current_exam_chaps.Count > 0)
@@ -64,6 +65,7 @@ namespace Solvish
                         }
                         catch (Exception z)
                         {
+                            flag = true;
                             MessageBox.Show(z.Message + "in the timer");
                         }
 
@@ -82,9 +84,16 @@ namespace Solvish
                         utility2.init_ques();
 
                         // exam form loading
-                        examform e1 = new examform();
-                        e1.Show();
-                        this.Hide();
+                        if(!flag)
+                        {
+                            examform e1 = new examform();
+                            e1.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            this.Show();
+                        }
                     }
                     else
                     {
@@ -99,7 +108,9 @@ namespace Solvish
             }
             catch
             {
-                MessageBox.Show("Please input numbers in every box");
+                MessageBox.Show("Please input numbers in every box or " +
+                    "may be you want more than 20 questions from a " +
+                    "chapter. Which is not available write now");
             }
         }
 

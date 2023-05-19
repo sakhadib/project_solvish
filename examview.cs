@@ -153,6 +153,16 @@ namespace Solvish
             Application.Exit();
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             ques_listbox.Items.Clear();
