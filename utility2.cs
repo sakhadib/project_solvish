@@ -131,16 +131,23 @@ namespace Solvish
             string folderdir = @"C:\solvish\";
             //public string studentdir = folderdir + 
             string quespath = folderdir + "questions.txt"; //for initializing the question list
-            StreamReader sr = new StreamReader(quespath);
-            string s = sr.ReadLine();
-            sr.Close();
-            if(s == null)
+            try
+            {
+                StreamReader sr = new StreamReader(quespath);
+                string s = sr.ReadLine();
+                sr.Close();
+                if (s == null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch(Exception ex)
             {
                 return true;
-            }
-            else
-            {
-                return false;
             }
         }
     }
