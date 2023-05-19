@@ -56,6 +56,7 @@
             // 
             // lab_statement
             // 
+            this.lab_statement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lab_statement.AutoSize = true;
             this.lab_statement.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_statement.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -137,6 +138,8 @@
             // 
             // button7
             // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
             this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -154,6 +157,7 @@
             // 
             // TimeLabel
             // 
+            this.TimeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -165,6 +169,8 @@
             // 
             // skp_butt
             // 
+            this.skp_butt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.skp_butt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(13)))));
             this.skp_butt.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.skp_butt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -236,7 +242,6 @@
             this.Controls.Add(this.op_a_btn);
             this.Controls.Add(this.lab_statement);
             this.Controls.Add(this.pictureBox2);
-            this.MaximizeBox = false;
             this.Name = "examform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Exam";

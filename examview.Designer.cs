@@ -141,9 +141,11 @@
             this.Controls.Add(this.ques_listbox);
             this.Controls.Add(this.show);
             this.Controls.Add(this.comboBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "examview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detailed Exam View";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.examview_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -82,10 +82,7 @@ namespace Solvish
             
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit(); 
-        }
+        
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -104,7 +101,7 @@ namespace Solvish
                 if (progressBar1.Value < 100)
                 {
                     progressBar1.Value++;
-                    PercentageLabel.Text = progressBar1.Value.ToString() + "%";
+                    //PercentageLabel.Text = progressBar1.Value.ToString() + "%";
                 }
                 else
                 {
