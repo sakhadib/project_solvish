@@ -39,18 +39,28 @@ namespace Solvish
                 
             }
 
-            try
+            if(utility2.ReDownloadNeedCheck())
             {
-                string url = "https://sakhawatadib.com/wp-content/uploads/2023/04/questions.txt";
-                string ok = quespath;
-                wc.DownloadFileCompleted += new AsyncCompletedEventHandler(filedw);
-                Uri questions = new Uri(url);
-                wc.DownloadFileAsync(questions, ok);
+                try
+                {
+                    string url = "https://sakhawatadib.com/wp-content/uploads/2023/05/questions.txt";
+                    string ok = quespath;
+                    wc.DownloadFileCompleted += new AsyncCompletedEventHandler(filedw);
+                    Uri questions = new Uri(url);
+                    wc.DownloadFileAsync(questions, ok);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Questions not found. Connect to the internet and restart the application");
+                Application.Exit();
             }
+
+            
 
            // counter();
 

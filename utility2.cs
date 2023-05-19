@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -123,6 +124,24 @@ namespace Solvish
             // Use the List<T>.Sort method with a custom comparison function that
             // compares two elements randomly using the Random class
             current_questions.Sort((a, b) => rng.Next(2) == 0 ? -1 : 1);
+        }
+
+        public static bool ReDownloadNeedCheck()
+        {
+            string folderdir = @"C:\solvish\";
+            //public string studentdir = folderdir + 
+            string quespath = folderdir + "questions.txt"; //for initializing the question list
+            StreamReader sr = new StreamReader(quespath);
+            string s = sr.ReadLine();
+            sr.Close();
+            if(s == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
     

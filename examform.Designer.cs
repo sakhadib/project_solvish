@@ -59,7 +59,8 @@
             this.lab_statement.AutoSize = true;
             this.lab_statement.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_statement.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lab_statement.Location = new System.Drawing.Point(98, 259);
+            this.lab_statement.Location = new System.Drawing.Point(103, 205);
+            this.lab_statement.MaximumSize = new System.Drawing.Size(1000, 0);
             this.lab_statement.Name = "lab_statement";
             this.lab_statement.Size = new System.Drawing.Size(810, 29);
             this.lab_statement.TabIndex = 2;
