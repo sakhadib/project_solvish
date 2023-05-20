@@ -25,6 +25,8 @@ namespace Solvish
             TimeLabel.Text = $"{Utility.hour} : {Utility.minute} : {Utility.second}";
             quescng(index);
             index++;
+
+            //this.FormClosing += MainForm_FormClosing;
         }
 
         System.Timers.Timer timer;
@@ -40,7 +42,12 @@ namespace Solvish
         //submit button
         private void button7_Click(object sender, EventArgs e)
         {
-            //utility2.re_init();
+            if (utility2.num_of_ques > index)
+            {
+                utility2.sk_ans += (utility2.num_of_ques - index);
+            }
+
+                //utility2.re_init();
             index = -1;
             timer.Stop();
 
@@ -97,6 +104,8 @@ namespace Solvish
         }
 
         
+
+
 
 
         //option buttons

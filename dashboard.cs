@@ -15,6 +15,8 @@ namespace Solvish
 {
     public partial class dashboard : Form
     {
+        
+        
         WebClient wc = new WebClient(); //declaring the web cliant.
         static string folderdir = @"C:\solvish\";
         public string studentpath = folderdir + @"username.txt";
@@ -27,7 +29,7 @@ namespace Solvish
             InitializeComponent();
             name_label.Text = Convert.ToString(Utility.current_student.name) + " !!";
 
-            
+            //this.FormClosing += MainForm_FormClosing;
 
             lab_corr.Text = Convert.ToString(Utility.total_corr);
             lab_wr.Text = Convert.ToString(Utility.total_wrong);
@@ -48,6 +50,8 @@ namespace Solvish
 
 
         }
+
+        
 
         public void renit()
         {

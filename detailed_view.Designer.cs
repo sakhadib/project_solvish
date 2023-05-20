@@ -155,6 +155,7 @@
             this.Controls.Add(this.result_lb);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.MaximizeBox = false;
             this.Name = "detailed_view";
             this.Text = "detailed_view";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

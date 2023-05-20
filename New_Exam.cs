@@ -116,7 +116,8 @@ namespace Solvish
 
         
 
-
+        
+        
         private void button3_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();

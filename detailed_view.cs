@@ -34,6 +34,8 @@ namespace Solvish
                 result_lb.Items.Add(st);
                 result_lb.Items.Add(mid);
             }
+
+            //this.FormClosing += MainForm_FormClosing;
         }
 
         private void dashboard_btn_Click(object sender, EventArgs e)
@@ -60,5 +62,7 @@ namespace Solvish
         {
 
         }
+
+        
     }
 }
