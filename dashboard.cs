@@ -37,8 +37,9 @@ namespace Solvish
 
             //Add data to the piechart
             right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Right", Utility.total_corr);
-            right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Wrong", Utility.total_wrong);
             right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Skipped", Utility.total_skip);
+            right_wrong_chart.Series["Right_Wrong"].Points.AddXY("Wrong", Utility.total_wrong);
+            
 
             //Add data to the graph
             foreach (Exam eq in Utility.ExamsArray)

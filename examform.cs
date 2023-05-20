@@ -45,6 +45,7 @@ namespace Solvish
             if (utility2.num_of_ques > index)
             {
                 utility2.sk_ans += (utility2.num_of_ques - index);
+                utility2.sk_ans -= 1;
             }
 
                 //utility2.re_init();
